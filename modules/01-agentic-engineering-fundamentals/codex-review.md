@@ -8,7 +8,7 @@ module verified, approved, published, or public-ready.
 
 - Status: ready for Claude independent adversarial review
 - Validated content revision reviewed/submitted:
-  `6380db1837654b2d812ed404bcb49dbf1a31b5f2`
+  `9bb82901a0b2ec4184239e1b3f4f939301e3b874`
 - Review-record commit: intentionally not named here; this record cannot review
   the commit that contains it.
 - Provisional decisions: D-007 and D-008 remain proposed with learner decision
@@ -21,7 +21,7 @@ module verified, approved, published, or public-ready.
 ## Review metadata
 
 - Module: 01 — Agentic Engineering Fundamentals
-- Revision or commit: `6380db1837654b2d812ed404bcb49dbf1a31b5f2`
+- Revision or commit: `9bb82901a0b2ec4184239e1b3f4f939301e3b874`
 - Review type: lead self-review
 - Reviewer: Codex (`gpt-5.6-terra`, high)
 - Review date: 2026-09-02
@@ -30,6 +30,8 @@ module verified, approved, published, or public-ready.
   evidence-pack files, lab, advanced lab, workshop, facilitator guide, sources,
   DECISIONS, ROADMAP, RUBRIC, P01 evidence, Task 12 pilot reports, and the SDD
   dispatch/review ledger.
+- Findings recorded: 32 (all have a disposition; six final-review findings are
+  added below).
 - Model/effort routing and escalation history: Tasks 1–2 and 10–11 used Terra
   medium for bounded semantic/document work; Tasks 4 and 8 used Terra high for
   evidence-grounded technical teaching; Task 12 used Terra high for the pilot
@@ -44,8 +46,8 @@ module verified, approved, published, or public-ready.
 | --- | --- | --- |
 | Outcomes are measurable and fully covered. | pass | `brief.md` has five outcome/artifact acceptance mappings; `curriculum.md` and `lab.md` connect all five artifacts plus the decision record. |
 | Technical correctness has no known material error. | pass | P01 pins resolve; phase 1 reproduced baseline 110/110 and reference 121/121, plus the named Unit 4 and Unit 5 focused tests. Current content keeps claims local and qualified. |
-| No open blocker findings remain. | pass | Final fix-round re-review found none. Release prerequisites are not internal blockers for independent review. |
-| No unaccepted major findings remain. | pass | Fresh-learner, critic, mixed-path, oracle, D-007, D-008, compact-summary, and cold-reader findings have recorded dispositions and re-review evidence. |
+| No open blocker findings remain. | pass | Final fix-round and six final-review findings are closed in the reviewed content; release prerequisites are not internal blockers for independent review. |
+| No unaccepted major findings remain. | pass | Fresh-learner, critic, mixed-path, oracle, D-007, D-008, compact-summary, cold-reader, prepared-gate, and fresh-context findings have recorded dispositions and re-review evidence. |
 | Fast-moving claims satisfy the source-freshness policy. | pass | `sources.md` is the sole registry; current product/engineering sources were checked 2026-09-02, the cutoff date. |
 | Important claims use primary sources when available. | pass | S01–S10 are first-party product/engineering sources; P01 is primary local repository evidence; S11 is optional official NIST material. |
 | The lab exercises the stated skills rather than adjacent skills. | pass | Units 1–5 respectively exercise trace, context, knowledge, harness, and workflow decisions; prepared paths label analysis rather than execution. |
@@ -176,6 +178,12 @@ module verified, approved, published, or public-ready.
 | R1-005 | major | D-007 | Record invented learner assent. | Curriculum re-review. | Make controller proposal, learner pending. | accepted and fixed; D-007 proposed. |
 | R2-001 | major | D-008 | Record stated controller deferral as learner-pending decision. | Fix-round re-review. | Make controller proposal with pending learner decision. | accepted and fixed; D-008 proposed. |
 | R2-002 | minor | Unit 5 cold reader | Live validation lacked fixture/selection rule and external command. | Fresh re-review. | Add P01 default, withheld evaluator test, and exact gates. | accepted and fixed in `6380db`. |
+| F3-001 | important | Unit 4 prepared acceptance | The unconditional candidate-seam evaluator gate made a prepared dossier impossible to complete truthfully. | Final technical review. | Split live and prepared contracts; prepared analysis records absent candidate execution/oracle results. | accepted and fixed in `9bb8290`. |
+| F3-002 | important | Unit 5 cold-reader gate | An unmatched Node `--test-name-pattern` can exit 0 with a file-level pass. | Controller reproduced an absent pattern: exit 0, one file-level pass. | Require withheld evaluator artifact, negative control, exact named TAP output, and 1 pass/0 fail. | accepted and fixed in `9bb8290`. |
+| F3-003 | important | Unit 2 prediction ordering | The worked example revealed the decisive prepared result before prospective A/B prediction. | Final technical review. | Put a prediction gate before result-bearing material and preserve the precommitted record. | accepted and fixed in `9bb8290`. |
+| F3-004 | important | Task 6 / Unit 3 discovery probe | Named inventory and prepared routes contaminated a root-only before probe. | Final technical review. | Require a closed fresh root-listing-only before context before inventory/results, then a second fresh after context with only the map added. | accepted and fixed in `9bb8290`. |
+| F3-005 | minor | Unit 2 template | One aggregate conclusion could not satisfy a per-B-only-item decision requirement. | Final technical review. | Add item, decision, rationale/cost, falsifier, and follow-up evidence table. | accepted and fixed in `9bb8290`. |
+| F3-006 | minor | Unit 3 vocabulary | Unit/template/pack decision terms conflicted with `keep | revise | reject`. | Final technical review. | Standardize Unit 3 decision vocabulary. | accepted and fixed in `9bb8290`. |
 
 ## Verdict
 
@@ -192,7 +200,8 @@ module verified, approved, published, or public-ready.
   template/pack comparisons; isolated P01 baseline/reference and focused test
   evidence; fresh learner simulations; independent curriculum critiques;
   fix-round link/anchor, count, matrix, authority, oracle, and cold-reader
-  contract checks.
+  contract checks; final-review Unit 2/3/4/5 fresh-context and negative-control
+  checks.
 - Concise rationale: `35/40` meets the review-readiness threshold, no dimension
   is below 3, technical correctness and lab validity are at least 4, and no
   internal blocker/major remains. Claude must independently challenge this

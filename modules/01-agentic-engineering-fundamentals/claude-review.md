@@ -8,7 +8,7 @@ Claude is the adversarial reviewer and final verifier for Module 01. Claude must
 
 - Status: ready for independent adversarial review
 - Review date: not run
-- Revision or commit: `6380db1837654b2d812ed404bcb49dbf1a31b5f2`
+- Revision or commit: `9bb82901a0b2ec4184239e1b3f4f939301e3b874`
 - Verdict: not issued
 
 ## Independent research pass
