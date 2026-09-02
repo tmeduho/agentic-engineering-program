@@ -1,222 +1,147 @@
-# Module 01 Lab — Context and Harness Experiment
+# Module 01 Lab — Core Artifact Chain
 
 - Status: designed, not run
-- Lead: Codex
-- Independent reviewer: Claude
-- Estimated effort: 8–12 hours across setup, five runs, verification, and synthesis
+- Core timebox: 405 minutes (6 hours 45 minutes)
+- Advanced experiment: [optional and elective, not a core requirement](advanced-lab.md)
 
-## Objective
+## Module outcome
 
-Measure how context design and harness choice affect a real engineering outcome, then convert the strongest observed practice into a reusable workflow and validate it on a fresh task.
+Build an evidence-backed, provider-neutral workflow for bounded engineering
+work. The completed chain distinguishes the model, context, harness, tools,
+environment, authority, observations, and verification; then turns the
+strongest locally supported practice into a bounded workflow decision.
 
-This is not a model benchmark. It is a controlled, local experiment intended to improve the learner's own engineering system.
+The five unit exercises **are the five stages of this lab**. The core lab adds
+no sixth implementation task. It accepts a live execution, prepared evidence,
+or the documented combination permitted by each unit; a prepared path still
+requires the learner's analysis and completed artifact.
 
-## Required evidence
+## Time budget and sequence
 
-When the lab is run, create:
+| Stage | Time | Artifact and unit | Live path | Prepared path |
+| --- | ---: | --- | --- | --- |
+| 1 | 45 min | [Annotated run trace](exercises/run-trace-template.md), [Unit 1](units/01-models-loops-harnesses.md) | Trace a sanitized run in a disposable checkout. | Analyze [the initialization reconstruction](exercises/evidence/unit-01-run-trace.md). |
+| 2 | 60 min | [Context comparison](exercises/context-comparison-template.md), [Unit 2](units/02-context-engineering.md) | Run the frozen read-only packets under the stated controls. | Analyze [the prepared packet comparison](exercises/evidence/unit-02-context-comparison.md). |
+| 3 | 75 min | [Knowledge map](exercises/knowledge-map-template.md), [Unit 3](units/03-project-knowledge.md) | Run the before/after discovery probe in a disposable checkout. | Analyze [the prepared knowledge audit](exercises/evidence/unit-03-knowledge-audit.md). |
+| 4 | 90 min | [N=1 harness case study](exercises/harness-case-study-template.md), [Unit 4](units/04-harness-comparison.md) | Perform the bounded task in an isolated checkout. | Analyze [the prepared case study](exercises/evidence/unit-04-harness-case-study.md). |
+| 5 | 60 min | [`workflow-v1`](exercises/workflow-template.md), [Unit 5](units/05-reusable-workflows.md) | Validate the workflow on the frozen report task in a fresh isolated checkout. | Analyze [the prepared validation dossier](exercises/evidence/unit-05-workflow-validation.md). |
+| Decision record | 75 min | [Team decision record](exercises/team-decision-template.md) | Use the async, synchronous, or solo path. | Use the same path with prepared evidence clearly labeled. |
 
-```text
-runs/YYYY-MM-DD-<task-slug>/
-├── experiment-plan.md
-├── run-metrics.csv
-├── observations.md
-├── verification.md
-├── experiment-report.md
-└── workflow-v1.md
+The total is exactly 405 minutes. Timeboxes include required reading. Stop live
+work at the unit's limit and use its prepared pack rather than extending the
+task, widening authority, or presenting a partial run as a complete one.
+
+## Setup, isolation, and privacy
+
+Run these commands **from the curriculum repository root**. They assume the
+internal-pilot Agent Experiment Ledger checkout is the sibling directory
+`../agent-experiment-ledger`:
+
+```bash
+export MODULE01_LEDGER_REPO="$(cd ../agent-experiment-ledger && pwd -P)"
+export MODULE01_WORK_ROOT="$(mktemp -d /tmp/module-01-work.XXXXXX)"
+git -C "$MODULE01_LEDGER_REPO" rev-parse bb65b5cec8c96c3ba3d89b0025473561c7c8146f
+git -C "$MODULE01_LEDGER_REPO" rev-parse 2c498f616583d1fd6aeeaa381552b47acdb71ab7
 ```
 
-The `runs/` directory is deliberately absent from the initial scaffold. Create it only when a real experiment exists. Do not commit raw transcripts, secrets, proprietary code, or sensitive prompts without an explicit data review.
+The two command results must resolve to these immutable commits:
 
-## Safety boundary
+- Exercise baseline: `bb65b5cec8c96c3ba3d89b0025473561c7c8146f`
+- Verified reference: `2c498f616583d1fd6aeeaa381552b47acdb71ab7`
 
-- Use a non-production repository or an isolated copy of a representative repository.
-- Start each run from the same immutable baseline commit in a separate branch or worktree.
-- Use test credentials and synthetic or approved data only.
-- Disable deployment, release, billing, account administration, destructive infrastructure actions, and access to unrelated directories.
-- Keep network access off unless the task requires a named endpoint; record every allowed endpoint and why it is needed.
-- Require human approval for dependency changes, data migrations, destructive commands, scope changes, and access expansion.
-- Define a time and spend ceiling before the first run.
+For another directory layout, set these same task-specific variables to their
+resolved absolute paths before continuing. During the internal pilot, the
+facilitator distributes or grants access to the sibling repository. Public
+checkout instructions belong to the later release plan.
 
-Stop the lab if equivalent isolation cannot be established.
+Create a disposable baseline checkout and an evidence directory outside it:
 
-## Step 1 — Select the task
-
-Choose one task that:
-
-- represents 45–120 minutes of experienced human engineering work;
-- requires repository discovery and at least one nontrivial decision;
-- changes several related code paths but fits in one coherent review;
-- has deterministic automated checks and observable behavioral acceptance;
-- does not depend on production credentials or unstable external services;
-- is unfamiliar enough that memorized task-specific solutions are unlikely.
-
-Good candidates include a bounded feature across API and UI boundaries, a defect requiring root-cause analysis, or a small reliability improvement with measurable behavior.
-
-Avoid greenfield toy apps, mechanical renames, dependency-only updates, or open-ended rewrites.
-
-## Step 2 — Freeze the experiment plan
-
-Write `experiment-plan.md` before any agent sees the task:
-
-```markdown
-# Experiment Plan
-
-## Task outcome
-<observable user or system outcome>
-
-## Baseline
-- Repository:
-- Commit:
-- Environment:
-
-## Constraints and non-goals
-- ...
-
-## Acceptance checks
-- Command or observable check:
-- Expected result:
-
-## Human approval boundaries
-- ...
-
-## Stop conditions
-- Time ceiling:
-- Spend ceiling:
-- Repeated-failure threshold:
-- Safety or ambiguity conditions:
-
-## Predicted failure modes
-- Treatment A:
-- Treatment B:
-- Treatment C:
+```bash
+mkdir -p "$MODULE01_WORK_ROOT/evidence"
+git -C "$MODULE01_LEDGER_REPO" worktree add --detach \
+  "$MODULE01_WORK_ROOT/ledger-baseline" \
+  bb65b5cec8c96c3ba3d89b0025473561c7c8146f
 ```
 
-The task outcome, constraints, acceptance checks, time budget, and safety boundary must remain constant across comparison runs.
+`$MODULE01_WORK_ROOT/ledger-baseline` is code under test. Store each completed
+template, command output reference, review record, and sanitized evidence in
+`$MODULE01_WORK_ROOT/evidence` or another approved location outside every code
+worktree. Units 4 and 5 require their own fresh disposable checkouts at the
+baseline; do not reuse a mutated checkout or the ledger's main checkout.
 
-## Step 3 — Prepare three context treatments
+Use only synthetic, sanitized, or approved data. Do not retain raw private
+transcripts, credentials, proprietary prompts, private source, or absolute
+private paths. Do not enable deployment, release, billing, account
+administration, destructive infrastructure, or unrelated-directory access.
+Measured live work has no network authority unless the unit explicitly records
+an approved named endpoint; setup access, if needed, is separate from the
+measured run. Dependency changes, scope changes, destructive commands, and
+authority expansion require a human decision before they occur.
 
-Use the same initial harness and model version for these runs.
+## Stage contract
 
-### Treatment A — Task-only
+For every stage, keep the unit's frozen task, baseline, acceptance, authority,
+and stop rule. Record the selected path and label evidence as actual repository
+evidence, prepared comparison material, or a hypothetical counterexample.
+Write unavailable telemetry as `unknown`; do not estimate it from another
+harness, provider, or evidence pack.
 
-Provide the frozen task outcome, constraints, and acceptance checks. Allow normal repository discovery. Do not add special project instructions for the experiment.
+1. Unit 1 produces an annotated run trace with competing hypotheses. It
+   separates completion language from external repository or environment
+   evidence.
+2. Unit 2 produces a bounded context inventory and comparison. It keeps
+   observations separate from explanations, records packet cost and orientation
+   advantages as confounders, and decides whether each added item earns its
+   cost.
+3. Unit 3 produces a knowledge map plus before/after discovery evidence. It
+   distinguishes an index from a source of truth and does not merge the
+   disposable exercise map into the ledger.
+4. Unit 4 produces an N=1 case study of two stated agent-system
+   configurations or its explicitly asymmetric prepared fallback. It preserves
+   the frozen initialization task and obtains external source, test, and diff
+   evidence.
+5. Unit 5 produces `workflow-v1` and a validation record for the frozen
+   report-request task. It records each workflow step, deviations, external
+   acceptance, and the local keep, revise, or remove decision.
 
-### Treatment B — Repository-guided
+Use the async discussion when peers are available, the synchronous discussion
+when scheduled, or the solo challenge path when neither is available. Complete
+one [decision record](exercises/team-decision-template.md) in any of those
+paths. Peer availability cannot block core completion.
 
-Provide Treatment A plus concise repository-level instructions and an architecture/orientation document. Include only rules expected to recur across tasks.
+## Completion rubric
 
-### Treatment C — Curated progressive disclosure
+Core completion requires all of the following:
 
-Provide Treatment A plus a small task packet that links to relevant decisions, entry points, raw evidence, and deeper documentation. The initial packet should explain when to retrieve each item rather than loading all content upfront.
+- all five unit artifacts are marked `complete`, not merely present;
+- one decision record is complete through the async, synchronous, or solo
+  path;
+- no open safety violation, including unapproved authority expansion, retained
+  sensitive material, production use, or evidence kept in a code worktree;
+- Units 4 and 5 include external verification: acceptance and regression
+  evidence plus an independent source or diff review, rather than producing
+  agent self-report;
+- every artifact records material uncertainty and confounders, including
+  live-versus-prepared limits where applicable; and
+- every conclusion stays within its recorded task, baseline, configuration,
+  and evidence boundary.
 
-Record exact context artifacts and byte/token counts when the harness exposes them. Never silently repair a treatment after seeing a prior result.
+The optional advanced lab is never required for core completion and does not
+add a core outcome.
 
-## Step 4 — Run the context comparison
+## Stop, recovery, and handoff
 
-Before starting, choose and record the run order to reduce convenience bias. For every run:
+Stop immediately for a safety or privacy boundary, missing immutable commit,
+wrong checkout, failed prerequisite, ambiguous authority, failed acceptance,
+timebox expiry, spend ceiling, or the unit's repeated-failure limit. Preserve
+the current diff, exact command/result references, stop reason, failed
+approaches, and unresolved question outside the code worktree. Do not delete
+evidence to make a check pass.
 
-1. Create a fresh isolated worktree at the baseline commit.
-2. Start a fresh agent session with no generated output from another treatment.
-3. Record harness, model, model settings, tool versions, permissions, network access, and start time.
-4. Apply the assigned context treatment.
-5. Let the agent work within the frozen boundaries. Record every human intervention and why it occurred.
-6. Stop at the predefined limit or when the agent claims completion.
-7. Preserve the final diff and sanitized event summary for verification.
-8. Run the same acceptance and regression checks.
-9. Have a human inspect the diff without seeing which treatment produced it when practical.
-
-Do not allow the producing agent to grade its own outcome as the only verifier.
-
-## Step 5 — Compare harnesses
-
-Select the strongest context treatment based on verified outcome quality, not speed alone.
-
-Run that treatment from the same baseline in both Codex and Claude Code. Keep the task, acceptance checks, authority, time budget, and available external systems equivalent. Record unavoidable differences in tools, sandboxing, telemetry, and model settings as confounders.
-
-Do not generalize beyond the tested harness/model/version/task combination.
-
-## Step 6 — Capture measurements
-
-Use one row per run in `run-metrics.csv`.
-
-| Field | Definition |
-| --- | --- |
-| `run_id` | Stable identifier without model or treatment leakage for blinded review. |
-| `baseline_commit` | Exact starting revision. |
-| `harness_version` | Product and version. |
-| `model` | Exact model identifier and reasoning setting when visible. |
-| `context_treatment` | A, B, or C. |
-| `context_size` | Bytes or tokens supplied initially and retrieved later. |
-| `permissions` | Filesystem, network, command, and approval policy. |
-| `wall_minutes` | Start to stop. |
-| `reported_tokens` | Input/output/cached tokens when available; otherwise blank. |
-| `reported_cost` | Provider-reported or explicitly calculated cost; otherwise blank. |
-| `human_interventions` | Count of decisions, corrections, approvals, and restarts. |
-| `wrong_turns` | Evidence-backed abandoned approaches, not stylistic disagreement. |
-| `files_changed` | Final changed-file count. |
-| `diff_lines` | Added plus removed lines, with generated files identified separately. |
-| `acceptance_result` | Pass/fail for each frozen acceptance check. |
-| `regression_result` | Pass/fail for the full relevant test suite. |
-| `review_findings` | Blocker/major/minor counts from independent diff review. |
-| `verified_outcome` | Yes only when behavior and repository state satisfy acceptance. |
-
-Record missing telemetry as missing. Do not estimate it from another harness.
-
-## Step 7 — Verify independently
-
-`verification.md` must include:
-
-1. Exact commands or procedures and their outputs/results.
-2. Behavioral acceptance evidence outside the producing agent's narrative.
-3. Relevant regression checks.
-4. Human diff review findings.
-5. Security, permission, and dependency-change review.
-6. Whether the implementation solves the stated outcome rather than only passing tests.
-7. Any evidence contamination, harness asymmetry, or other confounder.
-
-If an acceptance check was corrected after a run exposed a gap, rerun every treatment affected by the change or clearly invalidate the comparison.
-
-## Step 8 — Synthesize without overclaiming
-
-In `experiment-report.md`, separate:
-
-- **Observations:** directly measured results.
-- **Explanations:** plausible mechanisms supported by evidence.
-- **Confounders:** uncontrolled differences and missing telemetry.
-- **Decisions:** practices to adopt, reject, or test again.
-- **Scope:** the exact situations to which each conclusion applies.
-
-At least one result should be allowed to challenge the original hypothesis. A report in which every preferred practice wins needs extra scrutiny for confirmation bias.
-
-## Step 9 — Build and validate `workflow-v1`
-
-Write a concise workflow containing:
-
-- task framing and falsifiable acceptance;
-- inspect-before-edit behavior;
-- context selection and retrieval rules;
-- tool, environment, and permission boundaries;
-- human decision rights and escalation;
-- progress and handoff state;
-- verification and review gates;
-- stop conditions and recovery;
-- metrics retained for later comparison.
-
-Apply `workflow-v1` to a fresh, comparable task. Capture the same metrics. Keep the workflow only if the validation run improves a stated outcome or reduces risk without moving disproportionate work to the human.
-
-## Lab acceptance criteria
-
-- Three context treatments were run under one fixed harness/model baseline.
-- The strongest treatment was compared across Codex and Claude from the same repository baseline.
-- `workflow-v1` was validated on a fresh task, for at least five total runs.
-- Every run stayed within the declared safety, time, and spend boundaries.
-- Acceptance and regression checks were executed after each final change.
-- A human or independent agent reviewed each final diff; human review remains required for product and risk judgment.
-- Observations, explanations, and confounders are separated.
-- At least one hypothesis was rejected, narrowed, or left unresolved.
-- One durable improvement was adopted with before/after evidence, or the report explains why no change earned adoption.
-
-## Optional extension
-
-Build a minimal agent loop with one safe read tool and one reversible write tool. Add structured event logging, explicit approval, a stop condition, and an external outcome check. Compare the loop with the same model called without tools. This is a mechanism probe, not a production agent platform.
+Recover only by returning to the pinned baseline in a new disposable checkout,
+switching to the unit's prepared pack, or obtaining the required human
+decision. A handoff names the checkout and commit, retained evidence location,
+authority already used, last external result, next safe action, and why work
+stopped. A recovery must not silently change the frozen task, acceptance
+criteria, baseline, or authority boundary.
 
