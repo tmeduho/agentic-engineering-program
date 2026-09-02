@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Develop a rigorous, tool-independent mental model of agentic engineering and use it to build a measured workflow for real software work.
+Develop a rigorous, provider-neutral mental model of agentic engineering and use it to build a bounded, evidence-backed workflow for real software work.
 
 The module should replace vague ideas such as “the model did well” with explicit reasoning about the model, context, agent loop, harness, tools, environment, authority, observations, and verification.
 
@@ -20,19 +20,19 @@ Which parts of an agentic engineering result come from the model, which come fro
 
 By the end of the module, the learner can:
 
-1. Trace a coding-agent run through context assembly, inference, tool use, environment changes, observations, approvals, and termination.
-2. Diagnose failures at the correct layer instead of defaulting to prompt changes.
-3. Design a context strategy with explicit inclusion, exclusion, freshness, and progressive-disclosure rules.
-4. Build a repository knowledge structure that supports discovery without dumping the entire project into context.
-5. Compare Codex and Claude on a controlled engineering task using observable outcome, intervention, cost, latency, and review data.
-6. Turn the experiment into a reusable engineering workflow with decision rights, safety boundaries, quality gates, recovery, and escalation.
+1. Trace model inference, context assembly, agent-loop decisions, tool execution, environment effects, authority, observations, and verification.
+2. Compare bounded context configurations while separating observations, explanations, and confounders.
+3. Design and test a repository knowledge structure with authority, freshness, discovery, precedence, and retirement rules.
+4. Conduct an N=1 comparison of two agent-system configurations without generalizing beyond the observed case.
+5. Write and execute a bounded workflow with decision rights, safety, escalation, evidence, and verification gates.
 
 ## Prerequisites
 
-- A non-sensitive software repository with deterministic checks and a representative bounded task.
-- Working access to Codex and Claude Code, or learner approval to substitute another pair of harnesses.
-- Ability to create isolated branches or worktrees.
-- Permission to record aggregate run metrics and sanitized observations.
+- One supported coding-agent configuration or the prepared evidence packs.
+- A local copy of Agent Experiment Ledger at exercise baseline `bb65b5cec8c96c3ba3d89b0025473561c7c8146f` and verified reference revision `2c498f616583d1fd6aeeaa381552b47acdb71ab7`.
+- Git, Node.js 22 or newer, and pnpm 10.26.1 for live code exercises.
+- An isolated worktree or equivalent disposable checkout.
+- Permission to retain sanitized learning artifacts.
 
 ## Non-goals
 
@@ -47,33 +47,50 @@ By the end of the module, the learner can:
 1. Model, agent loop, and harness boundaries.
 2. Context engineering as allocation of a finite resource.
 3. Durable project knowledge and progressive disclosure.
-4. Harness engineering, authority, and empirical comparison.
+4. Harness engineering, authority, and N=1 comparison.
 5. Reusable workflows with verification and feedback.
+
+The five unit timeboxes are 45, 60, 75, 90, and 60 minutes. The async or
+optional synchronous discussion is 75 minutes, for a core total of 405 minutes.
 
 ## Required deliverables
 
-- An annotated agent-loop trace from a real run.
-- A context and repository-knowledge design for the selected project.
-- A controlled comparison report covering at least two harnesses and three context treatments.
-- A reusable workflow specification with safety, escalation, and verification gates.
-- One durable project improvement justified by experiment evidence.
+- An annotated run trace and competing failure hypotheses.
+- A bounded context inventory and comparison.
+- A repository knowledge map and before/after discovery evidence.
+- An N=1 comparative case study of two agent-system configurations.
+- `workflow-v1` and its validation record.
+- One decision record from async, synchronous, or solo review.
+
+`advanced-lab.md` is elective. Its controlled experiment may extend the core
+artifacts, but it cannot block core completion or add a core outcome.
 
 ## Acceptance criteria
 
-- Every outcome maps to curriculum material and lab evidence.
-- All time-sensitive claims meet `../../RUBRIC.md` freshness rules at verification time.
-- The comparison uses the same baseline, task, acceptance checks, and controlled variables where technically possible.
-- The report distinguishes observed facts, plausible explanations, confounders, and opinions.
-- Success is verified through repository state and checks, not agent self-report.
-- The module passes the shared rubric and Claude verifies the final revision.
+Every core artifact is either complete, revise, or not attempted. File
+existence alone is not complete. The mapping below defines the required
+artifact and a falsifiable acceptance condition for each outcome.
+
+| Outcome | Required artifact | Falsifiable acceptance condition |
+| --- | --- | --- |
+| Trace the agent system | Annotated run trace and competing failure hypotheses | The trace labels model inference, context assembly, agent-loop decision, tool execution, environment effect, authority, observation, and verification where they occur; for one failure it records competing hypotheses and evidence that rejects or leaves each unresolved. |
+| Compare bounded context | Bounded context inventory and comparison | The comparison records configurations and held-constant conditions, then separates observations, explanations, and confounders; it fails if it treats an explanation as an observation or omits a material uncontrolled variable. |
+| Design and test project knowledge | Repository knowledge map and before/after discovery evidence | The map assigns authority, freshness trigger, discovery path, precedence, and retirement rule to every listed knowledge artifact, and the evidence shows whether the proposed structure changed a specified discovery task. |
+| Conduct an N=1 comparison | N=1 comparative case study | The case study holds the stated task, baseline, acceptance checks, and authority boundary constant where possible; it records unavoidable differences and limits every conclusion to the observed configuration and case. |
+| Execute a bounded workflow | `workflow-v1` and validation record | The workflow names decision rights, safety boundaries, escalation and stop conditions, required evidence, and verification gates; its validation record includes the external acceptance result rather than agent self-report. |
+
+The decision record states an evidence-backed practice to adopt, test further,
+or reject. It supports the artifact chain but does not add another core outcome.
+
+All time-sensitive claims must meet `../../RUBRIC.md` freshness rules at
+verification time. The module must pass the shared rubric and Claude must
+verify the final revision.
 
 ## Known risks
 
-- Model updates during the experiment can invalidate comparisons.
-- Harnesses expose different telemetry and permission models, limiting strict equivalence.
-- Repeated runs can contaminate later prompts or allow task-specific memorization.
-- Token and cost data may be incomplete or calculated differently.
+- Agent-system configurations can expose different telemetry and permission models, limiting strict equivalence.
+- N=1 evidence can support a local workflow decision but not a general provider or harness ranking.
+- Prepared evidence packs may omit telemetry; record unavailable values as unknown rather than inventing estimates.
 - A task that is too easy will hide context and harness differences; a task that is too broad will introduce uncontrolled variance.
 
 Document these limitations rather than hiding them.
-

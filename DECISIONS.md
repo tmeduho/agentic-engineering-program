@@ -84,3 +84,15 @@ This is an append-only record of material curriculum decisions and agent disagre
 - Change made: `ROADMAP.md` defines four modules; only Module 01 exists.
 - Revisit when: A module becomes too large to review or execute coherently.
 
+## D-006 — Adopt a free hybrid course and separate the advanced experiment
+
+- Date: 2026-09-02
+- Status: accepted
+- Decider: learner
+- Context: The initial Module 01 draft made a five-run controlled experiment a core requirement. The learner wants an original course that coworkers can use without a curriculum fee, with comparable coverage to MEGA's public progression and realistic participation during a busy schedule.
+- Proposal or critique: Use five concise self-paced units, async-first discussion, an optional synchronous workshop, provider-neutral core exercises, evidence-backed artifacts, and an optional advanced controlled experiment.
+- Decision: Adopt the hybrid delivery model in docs/superpowers/specs/2026-09-02-module-01-hybrid-curriculum-design.md. Make the five-run experiment elective. Prepare the repositories for eventual public distribution without selecting licenses or publishing them in this change.
+- Reason: This retains the desired subject coverage while reducing core workload, avoiding unnecessary provider requirements, and supporting coworkers who cannot attend live sessions.
+- Evidence: Learner approvals recorded during the 2026-09-02 design discussion and the independent design critique incorporated into the approved spec.
+- Change made: Module 01 outcomes, curriculum, lab, exercises, workshop, facilitation, and reviews will be aligned with the approved hybrid design.
+- Revisit when: A pilot shows that the timeboxes, artifact chain, provider-neutral fallbacks, or async format do not produce the intended learning.
