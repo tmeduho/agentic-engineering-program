@@ -1,7 +1,7 @@
 # Module 01 Hybrid Curriculum Design
 
 - Date: 2026-09-02
-- Status: draft for learner review
+- Status: approved by the learner on 2026-09-02
 - Scope: Module 01 and the reusable delivery pattern for later modules
 - Audience: experienced software engineers
 - Shared project: Agent Experiment Ledger
