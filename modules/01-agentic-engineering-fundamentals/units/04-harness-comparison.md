@@ -178,7 +178,12 @@ case study instead of claiming a live second run. It changes only the named
 evidence source to a prepared anonymous dossier. Copy its actual repository
 evidence, its prepared review, and its unknown telemetry into the template.
 Do not supply a model, provider, prompt, elapsed time, token count, or tool
-trace that the dossier does not contain.
+trace that the dossier does not contain. Its completion contract is critical
+analysis: analyze the exact reference test as evidence for `2c498f6`, the
+frozen behavior invariants, and how an independent evaluator would adapt a
+post-run test to a documented candidate seam. Explicitly record that no
+candidate run, candidate seam, evaluator post-run test, or focused candidate
+result exists. Do not call this path `executed`.
 
 For either path, use the baseline source/test and reference diff as external
 evidence. Do not execute against P01’s main checkout, do not publish a
@@ -210,10 +215,15 @@ The artifact is complete only if it:
   and records every unavoidable live-versus-prepared difference;
 - records setup separately from the measured run, including package-store and
   network observations, and gives the measured task no network authority;
-- includes the evaluator-owned behavior-level post-run test, its documented
-  candidate seam and focused result, final `pnpm check`, `pnpm test`, and
-  `pnpm build` evidence, destination/staging inspection, agent-authored test
-  review, and an external diff or source review;
+- for a live path, includes the evaluator-owned behavior-level post-run test,
+  its documented candidate seam and focused result, final `pnpm check`,
+  `pnpm test`, and `pnpm build` evidence, destination/staging inspection,
+  agent-authored test review, and an external diff or source review;
+- for a prepared path, critically analyzes the reference test, frozen behavior
+  invariants, and evaluator adaptation to a documented candidate seam, and
+  explicitly records that no candidate run, seam, evaluator test, or focused
+  candidate result exists; it may cite prepared/reference full verification but
+  does not substitute it for live acceptance;
 - identifies the independent reviewer or clearly labels the prepared review,
   and records permissions, approval events, interventions, stop reason, CPU,
   RAM, disk, concurrency, resource-enforcement, and infrastructure
@@ -232,7 +242,9 @@ measurement; omits setup-network evidence; or attributes a result to the
 harness without separating model, context, permissions, and stochastic effects.
 Mark it `revise` if it forces the reference `publicationHooks.beforePublish`
 API onto a candidate, changes production behavior to create a seam, or accepts
-a candidate with no observable deterministic publication seam.
+a live candidate with no observable deterministic publication seam. Mark a
+prepared artifact `revise` if it claims a candidate seam, evaluator result, or
+execution that the dossier does not contain.
 
 ## Async discussion
 

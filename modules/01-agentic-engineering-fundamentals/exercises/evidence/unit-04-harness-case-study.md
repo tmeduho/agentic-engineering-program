@@ -210,6 +210,16 @@ tool calls, approvals, and private reasoning, are `unknown`. The actual source
 and deterministic verification establish a bounded implementation property;
 the anonymous approaches are a case-study aid.
 
+**Prepared-path completion boundary:** this dossier can be completed only as
+`critically analyzed`. It analyzes the exact reference test as evidence for
+`2c498f6`, its frozen behavior invariants (failure immediately before
+publication; failure result; absent destination; no unpublished staging; clean
+retry; blocker-free ledger check), and how a future independent evaluator would
+adapt a behavior-level test to a documented candidate seam. It contains no
+candidate run, candidate-documented seam, evaluator post-run test, or focused
+candidate result. Those absences are limitations, not fields a prepared learner
+may fill from the reference test.
+
 For a live path, preserve the learner/agent-authored test separately. The exact
 reference test above is not preseeded into the measured task and is not applied
 to the candidate. After the run, an independent verifier writes or runs a

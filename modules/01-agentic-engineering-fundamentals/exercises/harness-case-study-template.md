@@ -10,7 +10,8 @@
 - Task outcome:
 - Baseline repository and commit:
 - Acceptance checks and expected results:
-- Candidate documented deterministic injection seam (or `none`):
+- Path capability: live `executed` | prepared `critically analyzed`:
+- Live only — candidate documented deterministic injection seam (or `none`):
 - Stop condition (time, spend, repeated failure, safety, ambiguity):
 - Conditions held constant:
 
@@ -44,7 +45,8 @@ as learner-run measurements.
 
 | Gate | Configuration A | Configuration B | Evidence provenance: learner-run actual \| prepared/reference \| hypothetical | Independent evidence/reviewer |
 | --- | --- | --- | --- | --- |
-| Evaluator behavior-level acceptance (failure immediately before candidate publication; rejection/failure; no destination or unpublished staging; clean retry; blocker-free check) |  |  |  |  |
+| Live only — evaluator behavior-level acceptance (candidate seam; failure immediately before candidate publication; rejection/failure; no destination or unpublished staging; clean retry; blocker-free check) |  |  |  |  |
+| Prepared only — reference-test/invariant/seam-adaptation analysis; explicitly no candidate run, seam, evaluator post-run test, or focused candidate result | n/a unless live |  |  |  |
 | Regression result |  |  |  |  |
 | Independent diff or evidence review |  |  |  |  |
 | Permission/safety boundary respected |  |  |  |  |
@@ -55,4 +57,5 @@ as learner-run measurements.
 - Claims supported by this case:
 - Claims this case cannot support:
 - Seam/test-design variance and candidate-production-change check:
+- Prepared-path absence statement (candidate run/seam/evaluator test/focused result):
 - Residual uncertainty and next evidence needed:

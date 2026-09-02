@@ -29,6 +29,14 @@ the exercise. No elapsed time was measured for these prepared paths. Their hop
 count and order are illustrative navigation evidence only and cannot substitute
 for the learner's own timed before/after claim.
 
+**Live-ordering boundary:** a live learner must copy the template and complete
+the root-listing-only before question in a fresh context before opening this
+prepared audit, the required inventory, or any worked result. They preserve and
+close that context, then inspect/build the map, and run the after question in a
+second fresh context with only the proposed map added. A prepared learner may
+critically analyze the recorded routes below, but cannot label them as their
+own prospective measurement.
+
 ## Prepared current-state knowledge map
 
 The map distinguishes sources of truth from indexes. “Ledger maintainers” is
@@ -174,8 +182,12 @@ Use this checklist after completing the live or prepared path:
   precedence, and retirement; indexes are labeled and sources of truth named.
 - [ ] The artifact records baseline/reference commits, exact P01 paths, and
   raw-evidence provenance rather than only conclusions.
-- [ ] The before route started with only a repository-root listing; the after
-  route started in a fresh session from a project-orientation link.
+- [ ] Live path: the before route used only a repository-root listing in a
+  fresh context before this prepared audit, the named inventory, or a
+  result-bearing example; that context was preserved and closed. The after
+  route used a second fresh context with only the project-orientation map
+  added. Prepared path: both recorded paths are labeled prepared analysis, not
+  prospective learner measurement.
 - [ ] Prepared timings are labeled illustrative or `unknown`; no time claim is
   based on hop count or this pack.
 - [ ] One package/dependency item and one source-registry claim record
@@ -183,6 +195,6 @@ Use this checklist after completing the live or prepared path:
   unsupported or stale conclusion is marked `revise`.
 - [ ] The proposed map links all three source boundaries and both test files,
   but does not duplicate their rules.
-- [ ] The decision says keep, narrow, or reject, and states who would review
+- [ ] The decision says keep, revise, or reject, and states who would review
   and maintain the map if adopted.
 - [ ] No exercise map was merged into P01's main branch.

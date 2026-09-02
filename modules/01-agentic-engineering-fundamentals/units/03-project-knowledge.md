@@ -91,6 +91,23 @@ configuration can change with the installed product and settings. In
 particular, context-loaded instructions are not an enforcement mechanism. Do
 not infer the same behavior for Codex or another harness.
 
+**Live-ordering gate — stop before worked results.** Before reading the worked
+example, opening the prepared audit, or seeing the named source/test inventory,
+copy [knowledge-map-template.md](../exercises/knowledge-map-template.md)
+outside the code-under-test worktree. In a fresh context with only a
+repository-root listing, run this exact before question:
+
+```text
+Where is direct comparison eligibility decided, which facts make two
+controlled runs comparable, and which checks prevent an ineligible report?
+Provide the shortest evidence path from repository orientation to source and
+tests.
+```
+
+Record and close that context before reading further. A prepared learner may
+read the recorded routes after this gate but may not call them their own
+prospective measurement.
+
 ## Worked example
 
 Use the prepared audit in
@@ -113,29 +130,13 @@ to the Agent Experiment Ledger main branch.
 
 1. Copy [knowledge-map-template.md](../exercises/knowledge-map-template.md)
    outside the code-under-test worktree. Record whether you use the prepared
-   material or a live discovery probe.
-2. At both pinned revisions, inspect `AGENTS.md`, `README.md`,
-   `docs/superpowers/specs/2026-08-27-agent-experiment-ledger-design.md`,
-   `docs/superpowers/plans/2026-08-27-agent-experiment-ledger-v0.md`, and
-   `package.json`. Inspect the representative source files
-   `src/comparison/eligibility.ts`, `src/checks/check-ledger.ts`, and
-   `src/reports/service.ts`, plus `test/check.test.ts` and
-   `test/report.test.ts`. Inspect Git history at baseline
-   `bb65b5cec8c96c3ba3d89b0025473561c7c8146f` and reference
-   `2c498f616583d1fd6aeeaa381552b47acdb71ab7`; record the paths and commands
-   used.
-3. Fill one map row per artifact. Give every row an owner, authority,
-   discovery path, load strategy, freshness trigger, precedence, and
-   supersession/deletion rule. Mark an index as an index and link it to its
-   source of truth; preserve revision and raw-evidence provenance.
-4. Within the same current-state-map/probe work, assess one package or
-   dependency knowledge item from `package.json` and one research/source-registry
-   claim from [sources.md](../sources.md). For each, record authority,
-   provenance, freshness or corroboration, and retirement/recheck rule. A
-   conclusion is `revise` when it relies on an unsupported or stale claim; do
-   not add time beyond the existing map/probe allocation.
-5. Run the before probe from **only** a repository root listing. Use this exact
-   question:
+   material or a live discovery probe. **Live path: before reading the prepared
+   audit, this named inventory, or any result-bearing worked example, open a
+   fresh context with only a repository-root listing and run the exact before
+   question below.** Preserve and close that session before inspecting any
+   further material. A prepared learner may inspect the recorded before/after
+   paths later, but may not call them a prospective measurement.
+2. For the live before probe, start with only the root listing and ask:
 
    ```text
    Where is direct comparison eligibility decided, which facts make two
@@ -146,13 +147,36 @@ to the Agent Experiment Ledger main branch.
 
    Record the actual path, result, start/end evidence, and unavailable
    telemetry. Do not add ambient context after the root listing and call it a
-   before result.
+   before result. Close and preserve this fresh context before continuing.
+3. At both pinned revisions, inspect `AGENTS.md`, `README.md`,
+   `docs/superpowers/specs/2026-08-27-agent-experiment-ledger-design.md`,
+   `docs/superpowers/plans/2026-08-27-agent-experiment-ledger-v0.md`, and
+   `package.json`. Inspect the representative source files
+   `src/comparison/eligibility.ts`, `src/checks/check-ledger.ts`, and
+   `src/reports/service.ts`, plus `test/check.test.ts` and
+   `test/report.test.ts`. Inspect Git history at baseline
+   `bb65b5cec8c96c3ba3d89b0025473561c7c8146f` and reference
+   `2c498f616583d1fd6aeeaa381552b47acdb71ab7`; record the paths and commands
+   used.
+4. Fill one map row per artifact. Give every row an owner, authority,
+   discovery path, load strategy, freshness trigger, precedence, and
+   supersession/deletion rule. Mark an index as an index and link it to its
+   source of truth; preserve revision and raw-evidence provenance.
+5. Within the same current-state-map/probe work, assess one package or
+   dependency knowledge item from `package.json` and one research/source-registry
+   claim from [sources.md](../sources.md). For each, record authority,
+   provenance, freshness or corroboration, and retirement/recheck rule. A
+   conclusion is `revise` when it relies on an unsupported or stale claim; do
+   not add time beyond the existing map/probe allocation.
 6. In the disposable checkout, propose the smallest architecture and evidence
    navigation map and link it from project orientation. Start a **fresh
-   session** for the after probe with that concise map available from the
-   orientation link. Run or inspect the after path, preserving the same
-   question and recording the path rather than inferring a timing improvement.
-7. Review duplication and source-of-truth boundaries. Keep, narrow, or reject
+   session** for the after probe with only that concise proposed map added to
+   the root-listing starting context. Run the same question, preserving the
+   after path and distinguishing it from a timing claim.
+7. Prepared path only: after reading the prepared audit, critically analyze its
+   recorded before/after paths, map, and limits. Label both paths
+   `prepared comparison material`; they are not your own prospective probe.
+8. Review duplication and source-of-truth boundaries. Keep, revise, or reject
    the map based on whether its discovery benefit justifies its maintenance and
    context cost. A rejected or narrowed proposal is a valid result. Leave the
    proposed map as disposable exercise material; do not merge it into P01's
@@ -177,8 +201,9 @@ The artifact is complete only if it:
 - distinguishes every index from its source of truth and keeps the source path,
   commit, and raw-evidence provenance for material claims;
 - records the exact before and after discovery paths, with the before starting
-  from a root listing and the after starting in a fresh session from an
-  orientation-linked map;
+  from a fresh root-listing-only context before named inventory or prepared
+  results, and the after starting in a second fresh context with only the
+  orientation-linked map added;
 - identifies duplication and drift risk, retains existing sources of truth,
   and narrows or rejects a proposal that merely copies material;
 - states where the proposed map would be reviewed and maintained if adopted;
@@ -191,7 +216,8 @@ The artifact is complete only if it:
   versus maintenance and context cost.
 
 Mark it `revise` if it calls an index authoritative, replaces source/tests with
-a summary, claims a timing gain without a learner measurement, or merges the
+a summary, claims a timing gain without a learner measurement, exposes a live
+before probe to the named inventory or prepared results first, or merges the
 exercise proposal into P01.
 
 ## Async discussion

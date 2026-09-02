@@ -28,7 +28,8 @@ exercise. A stale or unsupported conclusion is `revise`.
 ## Before discovery probe
 
 - Exact question:
-- Starting context:
+- Fresh-context identity and closure/preservation evidence:
+- Starting context: root listing only; no prepared audit, named inventory, or result-bearing example opened
 - Steps:
 - Elapsed time:
 - Result:
@@ -38,7 +39,8 @@ exercise. A stale or unsupported conclusion is `revise`.
 ## After discovery probe
 
 - Exact question:
-- Starting context:
+- Fresh-context identity:
+- Starting context: a second fresh context with only the proposed map added to the root-listing start
 - Steps:
 - Elapsed time:
 - Result:
@@ -49,5 +51,5 @@ exercise. A stale or unsupported conclusion is `revise`.
 
 - Observed change in discovery or decision quality:
 - Confounders:
-- Keep, revise, or remove decision:
+- Keep, revise, or reject decision:
 - Residual uncertainty and next probe:

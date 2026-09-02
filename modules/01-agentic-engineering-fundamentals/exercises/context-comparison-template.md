@@ -47,6 +47,15 @@ not a learner-run measurement.
 - Observations (not explanations):
 - Plausible explanation and supporting evidence:
 - Confounders and uncontrolled differences:
-- Decision: keep | revise | reject
-- Decision rationale, including residual uncertainty:
-- Follow-up evidence required before a broader claim:
+
+## Per-item decisions
+
+Record a decision for every B-only item; do not replace this table with a
+single treatment-level conclusion.
+
+| B-only item | Decision: keep \| revise \| reject | Rationale and context cost | Falsifier | Follow-up evidence |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+- Optional bounded overall conclusion:
+- Residual uncertainty:

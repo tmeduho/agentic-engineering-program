@@ -16,6 +16,15 @@ ambient model-visible inputs. If these collapse or obscure the intended packet
 difference, mark the result non-comparable and use an isolatable configuration
 or this prepared analysis without a causal treatment claim.
 
+## Prediction gate — stop before prepared results
+
+Before reading any later section, copy
+[the context-comparison template](../context-comparison-template.md) and
+record a prospective A and B failure prediction plus a falsifier for each.
+Preserve that record when you read this pack. This requirement applies on the
+prepared path too: the pack is result-bearing comparison material, so a
+prediction made after opening it is not prospective.
+
 ## Frozen task and held constants
 
 For both configurations, hold model, harness, permissions, baseline,
@@ -310,7 +319,8 @@ or both packets, or use the prepared responses. In every case record:
 - wrong turns, human interventions, unavailable telemetry, and a cost proxy;
 - packet-size and file-pointer/orientation advantages as confounders; and
 - a keep, revise, or reject decision for every B-only item, its rationale,
-  falsifying evidence, and residual uncertainty.
+  context cost, falsifying evidence, follow-up evidence, and residual
+  uncertainty.
 
 The artifact is complete only if it preserves frozen variables, makes
 predictions before results, cites raw traversal and reference tests, labels

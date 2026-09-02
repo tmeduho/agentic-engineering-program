@@ -168,8 +168,12 @@ checkout at `bb65b5cec8c96c3ba3d89b0025473561c7c8146f`, receives this
 `workflow-v1` and the frozen report-validation task, and has the same
 workspace-only, no-network authority and 20-minute/two-failed-approaches stop
 rule. Withhold the evaluator's exact reference acceptance test during that
-run. After it ends, an independent evaluator applies the named behavior check
-from `2c498f6` and runs:
+run. After it ends, an independent evaluator derives and applies a retained,
+evaluator-owned test artifact from `2c498f6` **only after the producer run**.
+The evaluator first records a negative control: with that artifact absent (or
+with an unmatched test name), the focused command is not a satisfied gate even
+if Node exits 0 and reports a file-level pass. The evaluator then verifies the
+candidate checkout contains the exact named test, and runs:
 
 ```sh
 node --import tsx --test --test-name-pattern='runtime-validates the complete report request before ledger access or output' test/report.test.ts
@@ -178,11 +182,15 @@ pnpm test
 pnpm build
 ```
 
-Record the reader's ambiguity, deviations, unsafe actions, and those external
-results outside the code-under-test worktree. Repeating this known task tests
-whether the workflow is usable without author help; it does not establish
-generalization to another task class. A prepared path may only design or
-critically analyze this validation and must state that it did not execute it.
+The gate passes only when the TAP output names
+`runtime-validates the complete report request before ledger access or output`
+and reports exactly 1 pass and 0 fail. Exit 0 or `pass 1` alone is insufficient.
+Record the withheld artifact, negative control, reader ambiguity, deviations,
+unsafe actions, and external results outside the code-under-test worktree.
+Repeating this known task tests whether the workflow is usable without author
+help; it does not establish generalization to another task class. A prepared
+path may only design or critically analyze this validation and must state that
+it did not execute it.
 
 ## Deliverable
 
@@ -213,9 +221,10 @@ The artifact is complete only if it:
 - includes cold-reader validation on a clean comparable task without author
   help, recording ambiguity, deviation, unsafe action, external result, and a
   discriminating failure scenario. For the internal pilot, use the stated P01
-  default fixture, withheld evaluator test, named behavior command, and full
-  check/test/build gates; a prepared path may only design/analyze that
-  validation and must state that it was not executed;
+  default fixture, withheld evaluator test artifact, required absent/unmatched
+  negative control, exact named TAP output, and full check/test/build gates; a
+  prepared path may only design/analyze that validation and must state that it
+  was not executed;
 - identifies one keep, revise, or remove decision that is proportional to the
   evidence and adoption cost; and
 - makes no general performance, provider, or workflow-improvement claim from

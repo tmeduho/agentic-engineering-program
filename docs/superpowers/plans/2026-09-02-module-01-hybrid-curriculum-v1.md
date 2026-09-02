@@ -871,10 +871,14 @@ Provide the shortest evidence path from repository orientation to source and
 tests.
 ~~~
 
-The before measurement starts with only the repository root listing. The
-proposed improvement is a concise architecture and evidence navigation map in
-the learner's disposable worktree. The after measurement starts a fresh
-session with that map linked from project orientation.
+Before the learner reads the prepared audit, named inventory, or any
+result-bearing example, they copy the template and start a fresh context with
+only the repository root listing. They run the exact before question, preserve
+and close that context, then inspect/build the map. The proposed improvement is
+a concise architecture and evidence navigation map in the learner's disposable
+worktree. The after measurement starts a second fresh session with only that
+map added from project orientation. Prepared learners analyze the recorded
+paths and cannot claim them as their prospective measurement.
 
 - [ ] **Step 5: Build the fallback evidence**
 
@@ -892,10 +896,14 @@ Include:
 
 - [ ] **Step 6: Write the exercise**
 
-Learners create the knowledge map, run the before probe, propose the smallest
-improvement, run or inspect the after probe, and decide whether the discovery
-benefit justifies maintenance and context cost. They do not merge the exercise
-change into the sample project's main branch.
+Live learners copy the template and run the root-listing-only before probe in a
+fresh context before seeing the named inventory, prepared audit, or worked
+results; they preserve and close it, build the map, then run the same after
+probe in a second fresh context with only the proposed map added. Prepared
+learners critically analyze the recorded paths without calling them their own
+prospective measurement. Both paths decide whether the discovery benefit
+justifies maintenance and context cost. They do not merge the exercise change
+into the sample project's main branch.
 
 - [ ] **Step 7: Write acceptance checks**
 

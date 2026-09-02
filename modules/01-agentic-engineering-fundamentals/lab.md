@@ -98,13 +98,19 @@ harness, provider, or evidence pack.
    evidence.
 2. Unit 2 produces a bounded context inventory and comparison. It keeps
    observations separate from explanations, records packet cost and orientation
-   advantages as confounders, and decides whether each added item earns its
-   cost.
+   advantages as confounders, records A/B predictions and falsifiers before any
+   result-bearing prepared or live material, and decides per added item whether
+   it earns its cost.
 3. Unit 3 produces a knowledge map plus before/after discovery evidence. It
-   distinguishes an index from a source of truth and does not merge the
-   disposable exercise map into the ledger.
+   distinguishes an index from a source of truth: live work completes the
+   root-listing-only before probe in a fresh context before named inventory or
+   prepared results, then uses a second fresh context with only the proposed
+   map for after. It does not merge the disposable exercise map into the ledger.
 4. Unit 4 produces an N=1 case study. A live path evidences `executed`; its
-   prepared fallback evidences `critically analyzed` only. The frozen task owns
+   prepared fallback evidences `critically analyzed` only: it analyzes the
+   reference test, frozen behavior invariants, and evaluator seam adaptation
+   while explicitly recording no candidate run, seam, evaluator post-run test,
+   or focused candidate result. The frozen task owns
    test design; after the measured run, an independent verifier uses the
    candidate's documented deterministic seam for a behavior-level acceptance
    test: inject failure immediately before candidate publication; require
@@ -116,8 +122,11 @@ harness, provider, or evidence pack.
 5. Unit 5 produces `workflow-v1` and a validation record for the frozen
    report-request task. It records each workflow step, deviations, external
    acceptance, cold-reader validation or prepared analysis, and the local keep,
-   revise, or remove decision. A prepared dossier evidences `critically
-   analyzed`, not `executed` workflow skill.
+   revise, or remove decision. A live cold-reader gate withholds an
+   evaluator-owned test until after the producer run, records an
+   absent/unmatched-test negative control, then requires the exact named TAP
+   test with 1 pass/0 fail before check/test/build. A prepared dossier evidences
+   `critically analyzed`, not `executed` workflow skill.
 
 Use the async discussion when peers are available, the synchronous discussion
 when scheduled, or the solo challenge path when neither is available. Complete

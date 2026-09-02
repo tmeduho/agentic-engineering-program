@@ -114,6 +114,13 @@ summaries behave identically in another harness.
 
 ## Worked example
 
+**Prediction gate — stop before results.** Before reading this worked example,
+opening the prepared pack, or running a live treatment, copy the
+[context-comparison template](../exercises/context-comparison-template.md) and
+record one predicted failure mode and falsifier for both A and B. Preserve that
+record unchanged when you later see results. A prepared learner performs this
+same prospective prediction before opening result-bearing material.
+
 The prepared comparison in
 [unit-02-context-comparison.md](../exercises/evidence/unit-02-context-comparison.md)
 uses the Agent Experiment Ledger at frozen baseline
@@ -145,10 +152,10 @@ checkout at the exact baseline, or use the prepared fallback. Do not modify
 files. Stop at 20 minutes if running an agent, preserve what was observed, and
 record unavailable telemetry as `unknown`.
 
-1. Before reading the prepared responses, use
-   [context-comparison-template.md](../exercises/context-comparison-template.md)
-   to predict one failure mode for A and B. State what evidence would falsify
-   each prediction.
+1. Confirm that the prediction record made at the prediction gate precedes
+   every prepared response or live result. Do not revise its A/B failure
+   predictions or falsifiers after seeing results; record any surprise in the
+   interpretation instead.
 2. Before A and B, capture every model-visible or ambient input you cannot
    suppress: automatic repository instructions, memory, system/developer
    context, tool descriptions, inherited session state, and environment facts.

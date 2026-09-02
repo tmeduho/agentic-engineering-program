@@ -224,12 +224,18 @@ For internal-pilot live cold-reader validation, use a fresh isolated P01
 checkout at `bb65b5cec8c96c3ba3d89b0025473561c7c8146f`, the frozen
 report-validation task, workspace-only/no-network authority, and the
 20-minute/two-failed-approaches stop rule. Withhold the evaluator's exact
-reference test from the reader. After the run, an independent evaluator applies
-the named `runtime-validates the complete report request before ledger access
-or output` behavior check from `2c498f6`, then runs `node --import tsx --test
---test-name-pattern='runtime-validates the complete report request before ledger
-access or output' test/report.test.ts`, `pnpm check`, `pnpm test`, and `pnpm
-build`. Record the independent reader,
+reference test from the reader. After the run, an independent evaluator derives
+and applies the evaluator-owned test artifact from `2c498f6`. First retain a
+negative control: with that artifact absent or an unmatched test name, the
+focused command is a failed gate even if Node exits 0 with a file-level pass.
+Then verify the candidate checkout contains the exact named
+`runtime-validates the complete report request before ledger access or output`
+test, run `node --import tsx --test --test-name-pattern='runtime-validates the
+complete report request before ledger access or output' test/report.test.ts`,
+and require TAP output naming the test with exactly 1 pass and 0 fail before
+running `pnpm check`, `pnpm test`, and `pnpm build`. Exit 0 or `pass 1` alone is
+insufficient. Retain evaluator evidence outside learner self-report. Record the
+independent reader,
 one discriminating failure scenario, ambiguity/deviation/unsafe-action
 observations, and the external results. This repeat of a known task tests
 workflow usability, not generalization. This prepared dossier may support only
