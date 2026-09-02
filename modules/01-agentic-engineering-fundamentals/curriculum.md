@@ -1,221 +1,129 @@
-# Module 01 Curriculum — Agentic Engineering Fundamentals
+# Module 01 — Agentic Engineering Fundamentals
 
-Status: draft for adversarial review.
+**Status:** draft being prepared for public distribution.
 
-Estimated effort: 12–18 focused hours, dominated by the lab. This is an initial estimate, not a deadline.
+This text-first module is for experienced software engineers who want to make
+agentic engineering choices with bounded authority and evidence, rather than
+learn a catalog of products or prompt patterns. It is a self-paced, async-first
+course with an optional meeting and a solo completion path.
 
-Use source IDs from `sources.md`. Treat tool behavior as versioned and empirical.
+## Before you start
 
-## Unit 1 — Model, agent loop, and harness
+**Free** means the curriculum is shared at no participation cost. It is not a
+license claim. A learner-selected agent subscription, API usage, or other tool
+may still cost money.
 
-### Engineering question
+You need one supported coding-agent configuration **or** the prepared evidence
+packs; Git; Node.js 22 or newer and pnpm 10.26.1 for live code exercises; a
+disposable checkout or isolated worktree; and permission to retain sanitized
+learning artifacts. The core does not require both Codex and Claude.
 
-When an agent succeeds or fails, which layer deserves credit or blame?
+For the internal pilot, the facilitator provides access to the sibling Agent
+Experiment Ledger repository described in [the lab](lab.md). Its public release
+location and access method are not finalized. The curriculum license and the
+sample-project license are also not finalized.
 
-### Working model
+Use synthetic, sanitized, or approved data. Keep artifacts, command output,
+and evidence outside code-under-test worktrees; do not share credentials, raw
+private transcripts, proprietary prompts, private source, or private absolute
+paths. The setup, authority limits, pinned revisions, stop rules, and recovery
+path are in [the lab](lab.md#setup-isolation-and-privacy).
 
-```text
-intent and constraints
-        ↓
-harness assembles context and authority
-        ↓
-model selects a response or tool call
-        ↓
-tool executes inside an environment
-        ↓
-observation returns to the harness
-        ↓
-context/state update, approval, retry, recovery, or termination
-        ↓
-independent verification of the outcome
-```
+## Core path — 405 minutes
 
-A model produces decisions from context. A harness maintains the loop around it: task state, context, tool routing, execution boundaries, approvals, progress, failures, and result delivery. The deployed agent is the combined system, not the model alone. See S01, S02, and S03.
+Complete these in order. The timeboxes include required reading and the
+decision-record activity.
 
-### Advanced focus
+| Order | Time | What to complete |
+| --- | ---: | --- |
+| 1 | 45 min | [Unit 1 — Models, loops, and harnesses](units/01-models-loops-harnesses.md) and an [annotated run trace](exercises/run-trace-template.md) |
+| 2 | 60 min | [Unit 2 — Context engineering](units/02-context-engineering.md) and a [context comparison](exercises/context-comparison-template.md) |
+| 3 | 75 min | [Unit 3 — Project knowledge](units/03-project-knowledge.md) and a [repository knowledge map](exercises/knowledge-map-template.md) |
+| 4 | 90 min | [Unit 4 — Harness comparison](units/04-harness-comparison.md) and an [N=1 harness case study](exercises/harness-case-study-template.md) |
+| 5 | 60 min | [Unit 5 — Reusable workflows](units/05-reusable-workflows.md) and [`workflow-v1`](exercises/workflow-template.md) |
+| Decision | 75 min | [Workshop](workshop.md) and a [team decision record](exercises/team-decision-template.md) |
 
-- Hidden coupling between model capabilities and harness assumptions.
-- State represented in messages, files, an append-only session, external stores, or environment state.
-- The difference between reasoning about a task and observing the actual environment.
-- Termination conditions, false completion, and the gap between a plausible report and a correct outcome.
-- Why model upgrades can turn formerly useful scaffolding into dead weight.
+The [core lab](lab.md) connects these five artifacts into one artifact chain;
+it adds no sixth implementation task. If live access, time, or safety prevents
+a run, use the matching sanitized [evidence pack index](exercises/evidence/README.md)
+and complete the same analysis honestly as prepared comparison material.
 
-### Exercise
+## Collaboration and completion
 
-Take one completed coding-agent run and annotate each meaningful event with:
+Async is the default: post an artifact summary, receive or author an
+evidence-backed challenge, respond or revise, synthesize, and complete the
+decision record. Follow [the workshop](workshop.md) for the exact path. When a
+meeting is useful, use its optional 75-minute agenda; attendance never replaces
+the async path. If peers are unavailable, use the solo fallback and label the
+decision record `solo`.
 
-`intent`, `context`, `inference`, `tool`, `environment`, `observation`, `state`, `authority`, `verification`, or `human decision`.
+Only the learner can approve a decision or expand authority. Facilitators and
+peers can challenge and synthesize evidence, but cannot approve work for the
+learner. [The facilitator guide](facilitator-guide.md) covers preparation,
+evaluation, and recovery.
 
-For every wrong turn, identify the earliest layer where a different design could have prevented it. Do not label every failure “the prompt.”
+Core completion follows [the lab rubric](lab.md#completion-rubric):
 
-### Exit evidence
+- all five artifacts are `complete`, not merely present;
+- one async, synchronous, or solo decision record is complete;
+- no safety violation occurred;
+- Units 4 and 5 include external acceptance and regression evidence plus an
+  independent source or diff review; and
+- every artifact records uncertainty and confounders within its stated scope.
 
-- An agent-loop trace another engineer can follow.
-- At least three competing root-cause hypotheses for one failure and the evidence that separates them.
+The [advanced lab](advanced-lab.md) is optional and elective. It does not gate
+core completion.
 
-## Unit 2 — Context engineering
+## MEGA Week 1 public-agenda coverage
 
-### Engineering question
+This is a coverage and format provenance map based on the public snapshot in
+[sources](sources.md#scope-and-local-evidence). It is not evidence of paid
+content depth or equivalence. Module 01 uses original teaching and assessment;
+the public labels below neither reproduce nor characterize unreleased lessons.
 
-What is the smallest high-signal context that reliably produces the desired behavior?
+**Teach** means the topic is explained, exercised, and assessed here. **Touch**
+means it is introduced operationally and connected to an exercise; later
+modules own deeper treatment. This matrix has 18 Teach rows and 9 Touch rows.
 
-Context includes more than the user prompt: system and repository instructions, tool descriptions, selected files, retrieved documents, prior messages, summaries, durable notes, current environment observations, and model-visible state. Context engineering is the repeated selection and maintenance of those inputs, not a one-time wording exercise. See S02.
-
-### Design dimensions
-
-- **Relevance:** Does the information change a decision in this task?
-- **Authority:** Is it an instruction, evidence, preference, or untrusted data?
-- **Freshness:** Could the fact have changed since it was recorded?
-- **Placement:** Should it be always loaded, discovered, retrieved on demand, or exposed through a tool?
-- **Resolution:** Is the agent seeing raw evidence, a lossy summary, or a conclusion?
-- **Cost:** What token, latency, privacy, and maintenance cost does it impose?
-- **Failure behavior:** What happens when the context is missing, contradictory, stale, or too large?
-
-### Three treatments for the lab
-
-1. **Task-only:** concise task, constraints, and acceptance criteria; normal repository discovery.
-2. **Repository-guided:** task plus well-scoped `AGENTS.md`/`CLAUDE.md` and project documentation.
-3. **Curated progressive disclosure:** a small initial brief with explicit links or tools for task-local evidence, decisions, and deeper material.
-
-The hypothesis is not that more context wins. Each treatment should state why every additional token earns its place.
-
-### Exit evidence
-
-- A context inventory classified by authority, freshness, placement, and cost.
-- A prediction of how each treatment will fail before observing the results.
-
-## Unit 3 — Durable project knowledge
-
-### Engineering question
-
-How should knowledge persist without turning repository instructions into an unmaintainable context dump?
-
-### Knowledge layers
-
-| Layer | Examples | Loading strategy |
+| MEGA Week 1 public agenda | Coverage | Module 01 connection |
 | --- | --- | --- |
-| Operating policy | Safety boundaries, review rules, non-negotiable commands | Small, always available where the harness supports it. |
-| Project orientation | Architecture map, ownership, entry points | Discover early; concise and link-rich. |
-| Decisions | ADRs, rejected alternatives, constraints | Retrieve when the affected boundary is in scope. |
-| Task state | Brief, plan, acceptance checks, open questions | Task-local and current. |
-| Reference | APIs, library docs, research, runbooks | Search or retrieve on demand. |
-| Evidence | Logs, test output, measurements, traces | Inject at the decision point; preserve raw provenance. |
-| Learned corrections | Repeated failure and its prevention | Promote into the narrowest durable instruction, test, tool, or design change. |
+| Introduction | Touch | Orientation and the model, agent, harness, workflow distinction |
+| Model mechanics | Teach | Unit 1 |
+| Limitations | Teach | Unit 1 |
+| Providers | Touch | Provider-neutral core setup |
+| Interactions | Teach | Unit 1 |
+| Steering | Teach | Unit 2 |
+| Settings | Teach | Units 1 and 4 |
+| Context | Teach | Unit 2 |
+| Processing | Teach | Unit 2 |
+| Skills | Touch | Reusable instruction context; deeper construction later |
+| Tools | Touch | Tool execution and observations; deeper design later |
+| Subagents | Touch | Delegated output as context; coordination later |
+| Files | Teach | Unit 3 |
+| Style guides | Teach | Unit 3 |
+| Specifications | Teach | Units 3 and 5 |
+| Tasks | Teach | Units 1 and 5 |
+| Libraries | Teach | Unit 3 |
+| Research | Teach | Unit 3 |
+| Harnesses | Teach | Unit 4 |
+| Interfaces | Teach | Unit 4 |
+| Workflows | Teach | Unit 5 |
+| Teamwork | Touch | Workshop evidence review and decision record |
+| Product | Touch | Outcome framing and decision rights; deeper judgment later |
+| Quality | Teach | Units 4 and 5 |
+| User experience and UI | Touch | Workflow usability and human interaction cost; deeper treatment later |
+| Security | Teach | Lab and Units 4–5 |
+| Business | Touch | Time, cost, risk, and adoption constraints; deeper treatment later |
 
-### Failure modes
+## Reference material
 
-- Instruction files become a chronological dumping ground.
-- Summaries replace evidence and hide uncertainty.
-- Conflicting rules lack precedence.
-- Old product behavior remains presented as current.
-- Retrieval returns semantically similar but operationally irrelevant material.
-- The same fact is copied into several files and drifts.
-
-### Exercise
-
-Design a knowledge map for the lab repository. For each artifact, specify owner, authority, discovery path, refresh trigger, and deletion/supersession rule. Remove any artifact whose expected decision value does not justify its maintenance and context cost.
-
-### Exit evidence
-
-- A project knowledge map with explicit precedence and freshness rules.
-- One example of progressive disclosure from orientation to raw evidence.
-
-## Unit 4 — Harness engineering and controlled comparison
-
-### Engineering question
-
-Which surrounding mechanisms materially improve outcomes, and which encode stale assumptions about the model?
-
-### Harness responsibilities to inspect
-
-- context assembly and compaction;
-- tool schemas, routing, and observations;
-- session and task state;
-- sandbox and filesystem boundaries;
-- permission and approval policy;
-- concurrency and isolation;
-- progress visibility and handoff artifacts;
-- retry, recovery, and termination;
-- output structure and integration with the system of record;
-- telemetry needed to evaluate the complete system.
-
-S01 describes the current open Codex harness as the layer managing context, tools, conversation state, sandboxing, approvals, and work across turns. S03 and S04 show that harness components should be stress-tested as models improve rather than preserved as folklore.
-
-### Comparison rule
-
-Do not ask “Which agent is better?” Ask narrower questions such as:
-
-- Which context treatment reduces unnecessary exploration without hiding important constraints?
-- Which harness exposes enough evidence to diagnose failure?
-- Which approval model matches the task's risk?
-- Which system reaches verified completion with fewer human decisions?
-- Which apparent advantage disappears when the baseline, model version, or tools change?
-
-### Exercise
-
-Execute the controlled comparison in `lab.md`. Capture the task, baseline revision, harness/model versions, context treatment, tools, permissions, outcomes, interventions, wall time, cost/token data when available, diff characteristics, automated checks, and independent review findings.
-
-### Exit evidence
-
-- A comparison report that separates observations from explanations.
-- At least one harness or context hypothesis rejected by the data.
-
-## Unit 5 — Workflows, gates, and durable improvement
-
-### Engineering question
-
-How do we turn a successful run into a repeatable system without freezing accidental details?
-
-### Workflow skeleton
-
-```text
-frame intent and risk
-        ↓
-inspect current state
-        ↓
-define falsifiable acceptance
-        ↓
-select context, tools, environment, and authority
-        ↓
-plan and execute within boundaries
-        ↓
-observe, steer, recover, or escalate
-        ↓
-run independent acceptance checks
-        ↓
-review the system diff and outcome
-        ↓
-capture the smallest durable improvement
-```
-
-### Required design decisions
-
-- What the agent may decide without approval.
-- Which actions require approval and who grants it.
-- Stop conditions for ambiguity, risk, repeated failure, budget, and time.
-- What evidence must exist before implementation and before completion.
-- What checks are synthetic, independent, or human.
-- How a partial or failed run hands off state without claiming success.
-- Which metric would show that the workflow is getting worse.
-
-### Exercise
-
-Turn the lab's strongest treatment into `workflow-v1`: a concise specification another agent can execute. Apply it once to a fresh but comparable task. Compare the second run with the original baseline and record whether the durable change improved outcome quality or merely moved effort elsewhere.
-
-### Exit evidence
-
-- A reusable workflow with explicit interfaces and decision rights.
-- Before/after evidence for one durable change.
-- A decision to keep, revise, or remove that change.
-
-## Module completion review
-
-Before requesting adversarial review:
-
-- Map each outcome in `brief.md` to a curriculum section and lab artifact.
-- Refresh time-sensitive sources.
-- Remove claims that outrun their evidence.
-- Remove beginner material that does not unlock an advanced mechanism.
-- State confounders and negative results.
-- Complete the lead self-review in `codex-review.md`.
-
+- [Module brief](brief.md) defines outcomes, prerequisites, and the normative
+  artifact contract.
+- [Sources](sources.md) is the sole source metadata and claim registry.
+- [Evidence packs](exercises/evidence/README.md) provide bounded prepared
+  fallbacks for Units 1–5.
+- [Core lab](lab.md) defines the integration exercise, setup, and completion
+  rubric.
+- [Workshop](workshop.md) and [facilitator guide](facilitator-guide.md) define
+  async, meeting, and solo participation.
+- [Advanced lab](advanced-lab.md) contains the elective controlled experiment.

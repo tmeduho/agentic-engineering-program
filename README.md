@@ -17,6 +17,20 @@ Read these files in order:
 
 `research/mega-dev-curriculum.md` preserves the public MEGA curriculum and the earlier evaluation that led to this program. It is a reference and comparison baseline, not an authority.
 
+## How to take the course
+
+1. Read the active module's [start page](modules/01-agentic-engineering-fundamentals/curriculum.md).
+2. Complete its units in order.
+3. Retain sanitized artifacts outside code-under-test worktrees.
+4. Participate asynchronously, or use the documented solo fallback.
+5. Use the optional meeting only when it is useful.
+6. Treat the advanced lab as elective.
+
+Module 01 is a draft being prepared for public distribution. Its sample-project
+release location and access method, plus both the curriculum and sample-project
+licenses, are not finalized. During the internal pilot, access uses the sibling
+repository described in the Module 01 lab.
+
 ## Alternating lead and reviewer
 
 Ownership alternates by module:
@@ -81,4 +95,3 @@ Only the learner may mark a module `approved`. A module may not reach `verified`
 - Treat model and tool behavior as empirical and version-dependent.
 - Log disagreement. Do not erase it by silently rewriting history.
 - Keep the program mastery-paced. The four-week structure is organizational, not a deadline.
-
