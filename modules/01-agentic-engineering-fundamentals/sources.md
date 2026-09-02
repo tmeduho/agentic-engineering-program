@@ -21,10 +21,10 @@
 
 ## Scope and local evidence
 
-| ID | Source | Type | Checked | Use and constraint |
-| --- | --- | --- | --- | --- |
-| R01 | [`../../research/mega-dev-curriculum.md`](../../research/mega-dev-curriculum.md) | Local research snapshot | 2026-08-26 | Supports only MEGA's public agenda and format snapshot. It does not establish paid lesson depth, technical truth, or parity. |
-| P01 | Agent Experiment Ledger — repository: `/Users/tmeduho/dev/learning/agent-experiment-ledger`; exercise baseline: `bb65b5cec8c96c3ba3d89b0025473561c7c8146f`; reference revision: `2c498f616583d1fd6aeeaa381552b47acdb71ab7` | Primary local repository evidence | 2026-09-02 | Git history, source, tests, and README support the prepared cases, their lifecycle/evidence boundaries, and their deterministic checks. The absolute path is authoring evidence, not a public distribution location. |
+| ID | Source | Publisher/author | Type | Published/version | Checked | Status | Use and constraint |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| R01 | [`../../research/mega-dev-curriculum.md`](../../research/mega-dev-curriculum.md) | not stated | Local research snapshot | not stated | 2026-08-26 | supporting | Supports only MEGA's public agenda and format snapshot. It does not establish paid lesson depth, technical truth, or parity. |
+| P01 | Agent Experiment Ledger — repository: `/Users/tmeduho/dev/learning/agent-experiment-ledger` | not stated | Primary local repository evidence | reference revision `2c498f616583d1fd6aeeaa381552b47acdb71ab7`; exercise baseline `bb65b5cec8c96c3ba3d89b0025473561c7c8146f` | 2026-09-02 | core | Git history, source, tests, and README support the prepared cases, their lifecycle/evidence boundaries, and their deterministic checks. The absolute path is authoring evidence, not a public distribution location. |
 
 ## Unit-to-source map
 
