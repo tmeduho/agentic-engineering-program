@@ -1,48 +1,72 @@
 # Module 01 Sources
 
-- Last checked: 2026-08-26
+- Last checked: 2026-09-02
 - Freshness policy: `../../RUBRIC.md`
-- Status: initial source set; Claude must add an independent candidate during adversarial review.
+- Status: current registry for all five units. Unit files reference these stable IDs and do not repeat source metadata.
 
-## Core technical sources
+## Technical sources
 
-| ID | Source | Type | Published/version | Checked | Module use | Freshness note |
-| --- | --- | --- | --- | --- | --- | --- |
-| S01 | [Codex as a platform: build on the open agent harness](https://developers.openai.com/blog/codex-as-a-platform) — OpenAI | Primary engineering article | 2026-08-19 | 2026-08-26 | Model/harness boundary; agent loop; context, tools, state, sandbox, approvals, and integration layers. | Current inside 30-day window. |
-| S02 | [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic | Primary engineering article | 2025-09-29 | 2026-08-26 | Finite context, prompt versus context engineering, compaction, note-taking, and multi-agent context strategy. | Older than 90 days but foundational; relevance rechecked. Recheck for superseding guidance before verification. |
-| S03 | [Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps) — Anthropic | Primary engineering report | 2026-03-24 | 2026-08-26 | Planner/generator/evaluator design, measurable criteria, long-running execution, context resets, cost, and harness simplification. | Recheck within 90 days at module verification. |
-| S04 | [Scaling Managed Agents: Decoupling the brain from the hands](https://www.anthropic.com/engineering/managed-agents) — Anthropic | Primary engineering article | 2026-04-08 | 2026-08-26 | Session/harness/sandbox separation and the expiration of model-specific harness assumptions. | Recheck within 90 days at module verification. |
-| S05 | [Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) — Anthropic | Primary engineering report | 2025-11-26 | 2026-08-26 | Durable handoffs, incremental progress, session boundaries, and limits of compaction. | Foundational historical baseline; compare with S03/S04 rather than treating every tactic as current. |
+| ID | Source | Publisher | Type | Published/version | Checked | Relevance | Status and freshness |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| S01 | [Codex as a platform: build on the open agent harness](https://developers.openai.com/blog/codex-as-a-platform) | OpenAI | First-party engineering article | 2026-08-19 | 2026-09-02 | Describes the agent loop and a Codex harness's context, tools, sandbox, approval, state, and integration responsibilities. | core; current product/harness article checked inside the 30-day window. |
+| S02 | [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) | Anthropic | First-party engineering article | 2025-09-29 | 2026-09-02 | Defines context as model-visible tokens beyond prompts and discusses finite-context curation, compaction, note-taking, and multi-agent context. | core; older engineering guidance rechecked within the 90-day window; do not treat provider examples as universal behavior. |
+| S03 | [Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps) | Anthropic | First-party engineering report | 2026-03-24 | 2026-09-02 | Provides a case study of structured handoffs, context resets, planner/generator/evaluator roles, and measured harness iteration. | core; current engineering report checked within the 90-day window; its observed tactics are case-specific. |
+| S04 | [Scaling Managed Agents: Decoupling the brain from the hands](https://www.anthropic.com/engineering/managed-agents) | Anthropic | First-party engineering article | 2026-04-08 | 2026-09-02 | Separates session, harness, and sandbox interfaces and explains why model-specific harness assumptions can become stale. | supporting; current engineering article checked within the 90-day window. |
+| S05 | [Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) | Anthropic | First-party engineering report | 2025-11-26 | 2026-09-02 | Documents incremental progress, durable handoffs, session boundaries, and a false-completion failure mode in one long-running-agent setup. | supporting; older report rechecked within the 90-day window; compare it with newer evidence rather than generalizing its tactics. |
+| S06 | [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works) | Anthropic | First-party product documentation | not stated | 2026-09-02 | Current Claude Code architecture, agent loop, tool use, context, and working-directory behavior. | core; current product behavior checked inside the 30-day window; applies only to the documented Claude Code version/configuration. |
+| S07 | [Claude Code settings](https://code.claude.com/docs/en/settings) | Anthropic | First-party product documentation | not stated | 2026-09-02 | Current configuration scopes, precedence, environment settings, and extensibility controls in Claude Code. | supporting; current product behavior checked inside the 30-day window; settings depend on the installed version and configured scopes. |
+| S08 | [Configure permissions](https://code.claude.com/docs/en/permissions) | Anthropic | First-party product documentation | not stated | 2026-09-02 | Current Claude Code permission rules, modes, sandboxing, and approval boundaries. | core; current product behavior checked inside the 30-day window; permissions, sandboxing, and approvals are documented control surfaces, not universal equivalents. |
+| S09 | [How Claude remembers your project](https://code.claude.com/docs/en/memory) | Anthropic | First-party product documentation | not stated | 2026-09-02 | Current Claude Code memory files, scopes, imports, discovery, and project instruction behavior. | core; current product behavior checked inside the 30-day window; memory behavior is Claude Code-specific and configuration-dependent. |
+| S10 | [Model guidance](https://developers.openai.com/api/docs/guides/latest-model) | OpenAI | First-party product documentation | not stated | 2026-09-02 | Visible model-family settings, reasoning/context management, tool behavior, and guidance to benchmark configuration changes on representative work. | core; current model documentation checked inside the 30-day window; names, defaults, settings, and tool support can change by family and version. |
 
-## Free workshops and demonstrations
+## Scope and local evidence
 
-| ID | Source | Type | Published | Checked | Use | Caveat |
-| --- | --- | --- | --- | --- | --- | --- |
-| V01 | [Build Hour: API & Codex](https://www.youtube.com/watch?v=rhsSqr0jdFw) — OpenAI | First-party workshop video | 2026-03-10 | 2026-08-26 | Agentic delegation, harness engineering, reusable workflows, and evaluation. | Product/API details must still be checked against current official documentation. |
-| V02 | [Claude Agent SDK — Full Workshop](https://www.youtube.com/live/TqC1qOfiVcQ) — Thariq Shihipar | Technical workshop video | Date not captured | 2026-08-26 | Builds an agent loop and demonstrates tools and filesystem-based context engineering. | Supporting source; verify current SDK behavior before following code. |
+| ID | Source | Type | Checked | Use and constraint |
+| --- | --- | --- | --- | --- |
+| R01 | [`../../research/mega-dev-curriculum.md`](../../research/mega-dev-curriculum.md) | Local research snapshot | 2026-08-26 | Supports only MEGA's public agenda and format snapshot. It does not establish paid lesson depth, technical truth, or parity. |
+| P01 | Agent Experiment Ledger — repository: `/Users/tmeduho/dev/learning/agent-experiment-ledger`; exercise baseline: `bb65b5cec8c96c3ba3d89b0025473561c7c8146f`; reference revision: `2c498f616583d1fd6aeeaa381552b47acdb71ab7` | Primary local repository evidence | 2026-09-02 | Git history, source, tests, and README support the prepared cases, their lifecycle/evidence boundaries, and their deterministic checks. The absolute path is authoring evidence, not a public distribution location. |
 
-## Curriculum reference
+## Unit-to-source map
 
-| ID | Source | Use | Constraint |
+Each unit has one required 10–15 minute source selection. Every other source in
+its row is optional or facilitator material; P01 supplies the shared prepared
+case rather than a required reading.
+
+| Unit | Stable source IDs | Required 10–15 minute selection | Optional or facilitator material |
 | --- | --- | --- | --- |
-| R01 | [`../../research/mega-dev-curriculum.md`](../../research/mega-dev-curriculum.md) | Comparison baseline for MEGA Week 1 topics and value proposition. | Does not establish technical truth or require parity. |
+| 1. Models, loops, and harnesses | S01, S06, S10, P01 | S01 | S06, S10, P01 |
+| 2. Context engineering | S02, S06, S09, P01 | S02 | S06, S09, P01 |
+| 3. Project knowledge | S02, S09, P01 | S09 | S02, P01 |
+| 4. Harness comparison | S01, S03, S07, S08, P01 | S08 | S01, S03, S07, P01 |
+| 5. Reusable workflows | S03, S04, S05, P01 | S03 | S04, S05, P01 |
+
+R01 maps to the program's public-agenda/format provenance only. It is not a
+unit reading or technical authority, so it is intentionally absent from the
+five unit source lists.
 
 ## Claim-to-source map
 
-| Claim | Support | Qualification |
-| --- | --- | --- |
-| An agent's behavior depends on a surrounding harness, not only the model and prompt. | S01, S03, S04 | Harness boundaries differ by product; inspect the version actually used. |
-| Context engineering includes instructions, tools, retrieved data, history, and evolving state. | S02 | Exact context assembly is harness-specific and may be partly hidden. |
-| Long-running work benefits from durable state/handoff artifacts and explicit progress. | S03, S05 | Specific tactics such as forced context resets may become obsolete with newer models. |
-| More harness structure is not automatically better. | S03, S04 | Validate components through controlled removal or comparison. |
-| Agent completion text is not proof of the environment outcome. | S01 plus the lab's verification design | This is a system-design conclusion; the module must demonstrate it empirically. |
+| Claim family | Support | Taught in | Qualification |
+| --- | --- | --- | --- |
+| Model output and agent-system outcome are not the same thing. | S01, S06, P01 | Unit 1 | A model response is one event inside a configured loop; the observed outcome also depends on context assembly, tool execution, environment, authority, and verification. |
+| Context contains more than the user prompt. | S02, S06, S09 | Unit 2 | The exact model-visible inputs and their ordering are harness-specific; the examples are not a universal context schema. |
+| Context and memory behavior are harness-specific and versioned. | S09, S10, S04 | Units 2 and 3 | Claude Code memory behavior and OpenAI model settings are provider documentation checked on 2026-09-02; recheck them for the installed harness and selected model family. |
+| Tools, permissions, sandboxing, and approvals are separate control surfaces. | S01, S08 | Unit 4 | These controls can interact in a product, but neither source establishes that every harness exposes or enforces them in the same way. |
+| Completion text is not environment verification. | S01, S05, P01 | Units 1 and 5 | Completion text is an agent claim; the module requires external acceptance results, state inspection, and deterministic checks for the prepared case. |
+| Repository knowledge needs authority, freshness, and discovery rules. | S09, S02, P01 | Unit 3 | The rules are a maintainability design for the learner's repository, not a claim that a provider's memory mechanism is sufficient. |
+| More context and more harness structure are not automatically better. | S02, S03, S04, S10 | Units 2 and 4 | These sources support bounded, representative comparisons; benefits and costs depend on the task, model family, and configuration. |
+| One case study cannot establish universal model or harness superiority. | S03, S04, P01 | Unit 4 | Unit 4 is an N=1 comparison with recorded confounders; it can support a local workflow decision only. |
 
-## Source gaps for review
+## Verification notes
 
-- Current first-party Claude Code documentation for repository instructions, permissions, and observable run metadata.
-- A strong independent source that challenges or limits the context-engineering claims above.
-- A practical source on experimental design for nondeterministic coding-agent comparisons.
-- Exact telemetry available from the learner's installed Codex and Claude versions.
-
-Claude should fill at least one gap before scoring source quality.
-
+- S01 was opened at its “The reusable part is the agent loop” section; S02 at
+  “Context engineering vs. prompt engineering”; S03 at “Why naive
+  implementations fall short”; S04 at its session/harness/sandbox interface
+  discussion; and S05 at “The long-running agent problem.”
+- S06–S09 were opened at their current architecture, settings, permissions,
+  and memory documentation respectively. No visible publication or version
+  date was supplied on those pages, so this registry records `not stated`.
+- S10 was opened at its GPT-5.6 model guidance, including model-family naming,
+  reasoning effort, persisted reasoning/context, tool calling, and
+  representative-workload comparison guidance. No visible publication or
+  version date was supplied on the page, so this registry records `not stated`.
