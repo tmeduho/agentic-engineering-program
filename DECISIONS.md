@@ -110,15 +110,15 @@ This is an append-only record of material curriculum decisions and agent disagre
 - Change made: Provisional updates to Module 01 outcome/completion language, Unit 4/5 instructions and templates, lab, workshop, and prepared packs.
 - Revisit when: The learner explicitly decides this proposal and a timed human/cohort pilot establishes whether the labels and post-run evaluation procedure are understandable and usable without author assistance.
 
-## D-008 — Defer required non-vendor reading selection
+## D-008 — Proposed boundary for required non-vendor reading selection
 
 - Date: 2026-09-02
-- Status: deferred
+- Status: proposed
 - Decider: learner (pending)
 - Context: S11 is an optional official non-vendor facilitator/security source, while product documentation remains qualified for product behavior.
-- Proposal or critique: Defer making a non-vendor source a required learner reading until a bounded learner-facing selection and its purpose are designed.
-- Decision: Deferred pending learner decision; S11 remains optional and vendor documentation remains qualified to its product behavior.
+- Proposal or critique: The Task 12 controller proposes keeping S11 optional and not making a non-vendor source a required learner reading until a bounded learner-facing selection and its purpose are designed.
+- Decision: Pending learner decision. The provisional implementation leaves S11 optional and keeps vendor documentation qualified to its product behavior; it does not record a learner deferral or decision.
 - Reason: An optional facilitator source does not by itself establish a focused required-reading experience.
 - Evidence: Task 12 independent-review finding I-008 and controller disposition for fix round 1.
-- Change made: None beyond recording the deferred distribution/curriculum prerequisite.
-- Revisit when: A bounded learner-facing source selection is proposed for explicit learner decision.
+- Change made: Provisional documentation only; no required reading was added.
+- Revisit when: A bounded learner-facing source selection is proposed for the learner's explicit decision.

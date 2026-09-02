@@ -220,11 +220,21 @@ output, stop condition, verifier, retained evidence, and authority for any
 deviation. Preserve command outputs and review evidence; do
 not retain raw private transcripts, credentials, or proprietary prompts.
 
-For cold-reader validation, this prepared dossier may support only a design or
-critical analysis of a clean comparable-task check. It did not execute a
-cold-reader run; a live record must name the independent reader/source, one
-discriminating failure scenario, ambiguity/deviation/unsafe-action observations,
-and the external result.
+For internal-pilot live cold-reader validation, use a fresh isolated P01
+checkout at `bb65b5cec8c96c3ba3d89b0025473561c7c8146f`, the frozen
+report-validation task, workspace-only/no-network authority, and the
+20-minute/two-failed-approaches stop rule. Withhold the evaluator's exact
+reference test from the reader. After the run, an independent evaluator applies
+the named `runtime-validates the complete report request before ledger access
+or output` behavior check from `2c498f6`, then runs `node --import tsx --test
+--test-name-pattern='runtime-validates the complete report request before ledger
+access or output' test/report.test.ts`, `pnpm check`, `pnpm test`, and `pnpm
+build`. Record the independent reader,
+one discriminating failure scenario, ambiguity/deviation/unsafe-action
+observations, and the external results. This repeat of a known task tests
+workflow usability, not generalization. This prepared dossier may support only
+a design or critical analysis of that check; it did not execute a cold-reader
+run and may not be presented as execution.
 
 The validation record is complete only if it:
 

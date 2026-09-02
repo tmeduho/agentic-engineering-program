@@ -162,6 +162,28 @@ not a reason to silently rewrite the workflow. Revise
 awkward step, missing tool, or isolated result is evidence to investigate, not
 enough to add durable machinery.
 
+For the internal-pilot **live cold-reader validation**, use this default fixture:
+an independent engineer or fresh-context agent starts a new isolated P01
+checkout at `bb65b5cec8c96c3ba3d89b0025473561c7c8146f`, receives this
+`workflow-v1` and the frozen report-validation task, and has the same
+workspace-only, no-network authority and 20-minute/two-failed-approaches stop
+rule. Withhold the evaluator's exact reference acceptance test during that
+run. After it ends, an independent evaluator applies the named behavior check
+from `2c498f6` and runs:
+
+```sh
+node --import tsx --test --test-name-pattern='runtime-validates the complete report request before ledger access or output' test/report.test.ts
+pnpm check
+pnpm test
+pnpm build
+```
+
+Record the reader's ambiguity, deviations, unsafe actions, and those external
+results outside the code-under-test worktree. Repeating this known task tests
+whether the workflow is usable without author help; it does not establish
+generalization to another task class. A prepared path may only design or
+critically analyze this validation and must state that it did not execute it.
+
 ## Deliverable
 
 A completed `workflow-v1` using the shared template and a validation record
@@ -190,7 +212,9 @@ The artifact is complete only if it:
   limitation;
 - includes cold-reader validation on a clean comparable task without author
   help, recording ambiguity, deviation, unsafe action, external result, and a
-  discriminating failure scenario; a prepared path may only design/analyze that
+  discriminating failure scenario. For the internal pilot, use the stated P01
+  default fixture, withheld evaluator test, named behavior command, and full
+  check/test/build gates; a prepared path may only design/analyze that
   validation and must state that it was not executed;
 - identifies one keep, revise, or remove decision that is proportional to the
   evidence and adoption cost; and
