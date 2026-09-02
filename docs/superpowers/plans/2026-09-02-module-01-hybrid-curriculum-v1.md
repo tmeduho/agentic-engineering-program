@@ -3,7 +3,9 @@
 > **For agentic workers:** REQUIRED SUB-SKILL: Use
 > superpowers:subagent-driven-development (recommended) or
 > superpowers:executing-plans to implement this plan task-by-task. Steps use
-> checkbox - [ ] syntax for tracking.
+> checkbox - [ ] syntax for tracking. When using subagents, follow the model
+> routing policy below; do not default every task to GPT-5.6 Sol or maximum
+> reasoning effort.
 
 **Goal:** Produce the complete, review-ready Module 01 hybrid curriculum with
 five original units, evidence-backed exercises, async facilitation, a core lab,
@@ -50,6 +52,54 @@ commits.
   bb65b5cec8c96c3ba3d89b0025473561c7c8146f.
 - Use Agent Experiment Ledger verified reference revision
   2c498f616583d1fd6aeeaa381552b47acdb71ab7.
+
+## Subagent Model Routing
+
+Choose the route from the task shape, risk, and required quality. When multiple
+routes can meet the acceptance criteria, prefer the less expensive one. Treat
+these as initial assignments, not permanent labels:
+
+| Work shape | Initial route | Escalate when |
+| --- | --- | --- |
+| Deterministic checks, link and path audits, metadata normalization, evidence extraction, and other bounded mechanical work | `gpt-5.6-luna`, `medium` | The work requires unresolved semantic judgment rather than a better-defined procedure |
+| Contract interpretation, curriculum authoring, exercise design, facilitation design, and cross-file synthesis | `gpt-5.6-terra`, `medium` or `high` | Review finds a material correctness or reasoning gap after one focused revision |
+| Independent adversarial critique, difficult conflict resolution, and quality-first final review | `gpt-5.6-sol`, `high` | A defined review criterion still fails and the failure plausibly needs deeper reasoning; try `xhigh` before `max` |
+
+Use these task defaults:
+
+| Plan work | Default route |
+| --- | --- |
+| Task 1 contract and decision alignment | Terra, `medium` |
+| Task 2 source metadata and mechanical claim mapping | Luna, `medium`; Terra, `medium` for the semantic claim audit |
+| Task 3 artifact and evidence-pack contracts | Terra, `medium` |
+| Tasks 4-8 unit authoring | Terra, `high` |
+| Task 9 core and advanced lab design | Terra, `high` |
+| Task 10 async and workshop facilitation | Terra, `high` |
+| Task 11 navigation, links, and file assembly | Luna, `medium`; Terra, `medium` for learner-facing synthesis |
+| Task 12 deterministic validation | Luna, `medium` |
+| Task 12 fresh-context learner simulation | Terra, `medium` |
+| Task 12 independent curriculum critique | Sol, `high` |
+| Task-scoped review | Terra, `medium`; Luna, `medium` only for a small mechanical diff with deterministic checks; Sol, `high` for subtle or high-risk cross-file judgment |
+| Final whole-module review | Sol, `high` |
+
+For every subagent dispatch:
+
+- set `model` and `reasoning_effort` explicitly;
+- use `fork_turns: "none"` and provide a self-contained prompt with the exact
+  files, constraints, acceptance checks, and expected output;
+- keep authoring and independent review in separate contexts;
+- raise effort or move up one model tier only in response to a named task risk
+  or observed quality failure;
+- use a model at least one tier above the stuck implementer for fix rounds four
+  and five, as required by the subagent-driven-development workflow;
+- do not use Sol `max` as a first pass; reserve it for a still-failing,
+  quality-first task after `high` or `xhigh` has been evaluated; and
+- record the actual model, effort, selection reason, and any escalation in the
+  plan's subagent progress ledger and task handoff. Summarize the routing used
+  in codex-review.md during Task 12.
+
+If a task changes shape, reroute it. Cost alone does not justify assigning a
+review to a model that cannot evaluate the relevant failure modes.
 
 ## Plan Boundary
 
@@ -1568,6 +1618,7 @@ Copy the worksheet structure from evals/curriculum-rubric.md into
 codex-review.md and complete:
 
 - metadata;
+- subagent model, effort, selection rationale, and escalation history;
 - every hard gate;
 - all eight scored dimensions with evidence;
 - source audit;
