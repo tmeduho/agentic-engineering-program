@@ -66,10 +66,14 @@ Core completion follows [the lab rubric](lab.md#completion-rubric):
 
 - all five artifacts are `complete`, not merely present;
 - one async, synchronous, or solo decision record is complete;
-- no safety violation occurred;
+- no open safety violation occurred, including unapproved authority expansion,
+  retained sensitive material, production use, or evidence in a code worktree;
 - Units 4 and 5 include external acceptance and regression evidence plus an
-  independent source or diff review; and
-- every artifact records uncertainty and confounders within its stated scope.
+  independent source or diff review, not producing-agent self-report;
+- every artifact records material uncertainty and confounders, including
+  live-versus-prepared limits where applicable; and
+- every conclusion stays within its recorded task, baseline, configuration,
+  and evidence boundary.
 
 The [advanced lab](advanced-lab.md) is optional and elective. It does not gate
 core completion.
