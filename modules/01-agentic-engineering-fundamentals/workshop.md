@@ -89,10 +89,26 @@ synthesis, not an approval or a substitute for independent verification.
 - Recurring supported observation:
 - Repeated unsupported inference or missing control:
 - Evidence types represented and gaps:
-- Candidate practice to discuss: adopt | further-test | reject
+- Candidate decision state: adopted | rejected | further-test
 - Limits that remain after discussion:
 - Follow-up evidence or course correction to capture:
 ```
+
+For a solo path, the learner authors this fourth-stage synthesis after the
+prepared or self-authored critique and the author response. It must distinguish
+claims supported by cited evidence, unresolved disagreement or uncertainty, and
+what carries into the decision record:
+
+```markdown
+## Solo synthesis — <artifact and date>
+
+- Claims supported by cited evidence:
+- Unresolved disagreement, uncertainty, or missing evidence:
+- Evidence types represented and limits:
+- What carries into the decision record:
+```
+
+This self-synthesis is neither independent verification nor approval.
 
 ### 5. Decision record
 
@@ -100,14 +116,14 @@ Copy [the shared decision-record template](exercises/team-decision-template.md)
 and complete it. The record must name evidence provenance, uncertainty,
 dissent, owner, revisit trigger, and what the decision does not establish.
 Choose only `adopted`, `rejected`, or `further-test`. A solo learner uses the
-same template, identifies the prepared critique as the challenge source, and
-sets `Participants: solo`.
+same template, identifies the prepared critique as the challenge source,
+authors the solo synthesis, and sets `Participants: solo`.
 
 ## Solo and group variants
 
 | Group size | Path |
 | --- | --- |
-| Solo | Select a prepared evidence-pack counterexample or write the strongest alternative explanation; respond to it; complete a solo decision record. |
+| Solo | Select a prepared evidence-pack counterexample or write the strongest alternative explanation; respond to it; author the solo synthesis; complete a solo decision record. |
 | Two people | Exchange reciprocal critiques: each person challenges the other’s artifact, then each responds before one shared or two linked decision records. |
 | Three to eight people | Work as one group. Rotate facilitator, evidence presenter, skeptic, and recorder through the review; record dissent rather than forcing consensus. |
 | More than eight people | Use breakout groups. Each group has one synthesis recorder, produces a bounded synthesis, and sends it to the whole cohort for a final decision record or explicitly scoped records. |
@@ -123,7 +139,7 @@ make attendance a completion requirement. The agenda totals exactly 75 minutes.
 | 15 min | Paired failure diagnosis | Identify the earliest preventable layer and competing hypotheses for one run trace or workflow failure. |
 | 20 min | Artifact comparison | Compare context, knowledge, or harness artifacts; separate observations, explanations, and confounders. |
 | 15 min | Adversarial workflow review | Challenge authority, stop, recovery, and independent-verification gates in `workflow-v1`. |
-| 10 min | Team decision | Complete the decision record with a bounded adopt, further-test, or reject result. |
+| 10 min | Team decision | Complete the decision record with a bounded `adopted`, `rejected`, or `further-test` result. |
 | 5 min | Debrief | Capture unresolved evidence and course-feedback candidates. |
 
 Rotate these roles when the group size permits:

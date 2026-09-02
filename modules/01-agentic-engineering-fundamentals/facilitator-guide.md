@@ -37,8 +37,8 @@ Before opening async review or a meeting:
 6. **Publish the timeboxes.** State unit limits, stop conditions, the async
    deadline, and, if used, the fixed 75-minute meeting agenda in advance.
 7. **Create async threads.** Open one copyable Markdown thread per artifact
-   summary/challenge pair and one decision-record thread; give solo learners a
-   prepared critique at the same time.
+   summary/challenge pair, synthesis, and decision record; give solo learners a
+   prepared critique and the solo-synthesis block at the same time.
 8. **Decide feedback capture.** Name the location, owner, privacy review, and
    cadence for course feedback. Record proposed corrections with their evidence;
    do not silently change frozen tasks during a cohort.
@@ -51,13 +51,20 @@ record. Peer availability cannot block completion. A facilitator can prompt for
 provenance, competing hypotheses, a narrower claim, and a revisit trigger; do
 not fill gaps with assumed tool behavior or approve a conclusion.
 
+For solo work, the learner completes the same five records: artifact summary,
+prepared or self-authored evidence-backed challenge, author response or
+revision, solo synthesis, and decision record. The solo synthesis follows the
+response and separates claims supported by cited evidence, unresolved
+disagreement or uncertainty, and the material that carries into the decision
+record. It is self-synthesis, not independent verification or approval.
+
 For an optional meeting, use the exact agenda in [workshop.md](workshop.md):
 10 minutes calibration, 15 paired failure diagnosis, 20 artifact comparison,
 15 adversarial workflow review, 10 decision, and 5 debrief. Assign or rotate
 facilitator, evidence presenter, skeptic, and recorder. Use the group variants
-there exactly: solo prepared critique and solo record; two-person reciprocal
-critique; one rotating-role group for 3–8; breakouts with one synthesis recorder
-per group for more than 8.
+there exactly: solo prepared critique, solo synthesis, and solo record;
+two-person reciprocal critique; one rotating-role group for 3–8; breakouts
+with one synthesis recorder per group for more than 8.
 
 ## Evaluation examples
 
@@ -87,7 +94,7 @@ are omitted. A clear disagreement with decisive evidence absent is a valid
 | Expired source link | Do not treat memory or a search snippet as evidence. Use a current registered primary source if already verified, or mark the claim unavailable and narrow the discussion. | URL, check date, failure, replacement provenance or `unavailable`, and affected claim. |
 | Live run exceeds its timebox | Stop at the published limit; preserve diff and evidence, then switch to the prepared pack without widening task or authority. | Elapsed time, stop condition, approaches attempted, state/diff location, and live-versus-prepared limit. |
 | Private evidence accidentally selected | Stop sharing; remove access through the available platform process, replace with sanitized evidence, and seek the appropriate human/privacy escalation before continuing. | That private material was selected (without repeating it), containment action, escalation recipient/status, replacement evidence, and residual limitation. |
-| Absent peers | Use a prepared critique or strongest alternative explanation and complete the solo decision record. | `Participants: solo`, critique source, missing peer interaction, and same evidence/uncertainty fields. |
+| Absent peers | Use a prepared critique or strongest alternative explanation, author the solo synthesis, and complete the solo decision record. | `Participants: solo`, critique source, solo synthesis, missing peer interaction, and same evidence/uncertainty fields. |
 | Disagreement without decisive evidence | Preserve both positions; choose `further-test` or no adoption; define the smallest discriminating evidence and owner. | Dissent, competing explanations, missing evidence, proposed probe, revisit trigger, and decision scope. |
 
 ## Closeout
