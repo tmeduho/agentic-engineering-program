@@ -131,9 +131,15 @@ failure-injection test. Do not add dependencies or change unrelated lifecycle
 behavior. Stop after 35 minutes or two failed implementation approaches.
 ```
 
-Acceptance requires a test named `failed initialization publishes no partial
-ledger and can be retried`; no destination after injected failure; no staging
-entry; a successful retry; and a blocker-free check.
+Live acceptance is behavior-level, not a fixed reference-test API: the
+evaluator-owned post-run test must inject deterministic failure immediately
+before **candidate publication** through the candidate's documented test seam,
+observe rejection/failure, observe an absent destination and no unpublished
+staging entry, retry cleanly, and observe a blocker-free ledger check. The
+candidate's agent-authored test is reviewed separately. The evaluator may adapt
+only to the documented deterministic injection seam and may not change
+production behavior. If the candidate exposes no observable seam, acceptance
+fails. Preserve seam/test-design variance as a confounder.
 
 **Configuration A — live, bounded run.** Use one available coding agent with
 the frozen task, P01 `AGENTS.md`, normal repository discovery, workspace-only
@@ -156,13 +162,16 @@ for a dependency or scope change. Before starting the measured run:
 5. Record agent/harness and visible model/settings, context sources,
    permissions, approval policy, start time, interventions, each failed
    approach, and stop reason. Mark unavailable telemetry `unknown`.
-6. After the measured run, an independent verifier applies or runs the
-   evaluator-owned exact reference acceptance test named `failed initialization
-   publishes no partial ledger and can be retried`. The verifier records its
-   result, reviews the agent-authored test separately, then runs `pnpm check`,
-   `pnpm test`, and `pnpm build`, inspects destination/staging state, and
-   reviews acceptance, CLI/error-contract scope, cleanup, publication boundary,
-   and unrelated changes.
+6. After the measured run, an independent verifier writes or runs an
+   evaluator-owned behavior-level test through the candidate's documented
+   deterministic injection seam. It must inject failure immediately before
+   candidate publication; assert rejection/failure, absent destination, no
+   unpublished staging entry, clean retry, and blocker-free `checkLedger`.
+   The verifier may adapt only to that seam and must not change production
+   behavior. If no observable seam exists, mark acceptance failed. Record seam
+   and test-design variance as confounders, review the agent-authored test
+   separately, then run `pnpm check`, `pnpm test`, and `pnpm build` and inspect
+   scope, cleanup, publication boundary, and unrelated changes.
 
 **Configuration B — prepared dossier fallback.** Review the linked prepared
 case study instead of claiming a live second run. It changes only the named
@@ -201,10 +210,10 @@ The artifact is complete only if it:
   and records every unavoidable live-versus-prepared difference;
 - records setup separately from the measured run, including package-store and
   network observations, and gives the measured task no network authority;
-- includes the named failure-injection test, focused result, final
-  `pnpm check`, `pnpm test`, and `pnpm build` evidence, destination/staging
-  inspection, evaluator-owned post-run acceptance-test result, agent-authored
-  test review, and an external diff or source review;
+- includes the evaluator-owned behavior-level post-run test, its documented
+  candidate seam and focused result, final `pnpm check`, `pnpm test`, and
+  `pnpm build` evidence, destination/staging inspection, agent-authored test
+  review, and an external diff or source review;
 - identifies the independent reviewer or clearly labels the prepared review,
   and records permissions, approval events, interventions, stop reason, CPU,
   RAM, disk, concurrency, resource-enforcement, and infrastructure
@@ -221,6 +230,9 @@ Mark it `revise` if it changes task, baseline, acceptance, or authority while
 calling the comparison controlled; treats a prepared dossier as a learner-run
 measurement; omits setup-network evidence; or attributes a result to the
 harness without separating model, context, permissions, and stochastic effects.
+Mark it `revise` if it forces the reference `publicationHooks.beforePublish`
+API onto a candidate, changes production behavior to create a seam, or accepts
+a candidate with no observable deterministic publication seam.
 
 ## Async discussion
 

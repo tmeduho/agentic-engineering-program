@@ -190,6 +190,25 @@ learner or historical agent executed a live repair.
 
 ## Learner use and acceptance record
 
+## Compact prepared-prior-artifact summary
+
+This is a bounded substitute for completed Unit 1–4 learner artifacts on the
+prepared path. It is **prepared/reference** evidence, not learner execution,
+and it cannot establish that a learner or provider performed the prior work.
+Use it directly for the Unit 5 workflow record; consult the linked full packs
+only when you need deeper source detail.
+
+| Prior unit/artifact | Bounded input and provenance | Candidate workflow implication | Evidence type | Limitation |
+| --- | --- | --- | --- | --- |
+| Unit 1 / run trace | [Initialization reconstruction](unit-01-run-trace.md) at `bb65b5c..2c498f6`: green baseline tests lacked directory-publication fault injection. | Require an independent behavior-level failure boundary before accepting completion. | prepared/reference | No producer transcript or live learner trace. |
+| Unit 2 / context comparison | [Symlink comparison](unit-02-context-comparison.md) at `bb65b5c..2c498f6`: A/B packets and raw traversal/diff evidence. | Capture ambient context and treatment differences; mark unbounded A/B evidence non-comparable. | prepared/reference | Prepared responses are not causal provider measurements. |
+| Unit 3 / knowledge map | [Knowledge audit](unit-03-knowledge-audit.md) at the pinned revisions: source/tests outrank navigation indexes. | Inspect authoritative source/tests; record freshness, provenance, and recheck/retirement rules. | prepared/reference | Prepared routes do not measure learner discovery speed. |
+| Unit 4 / harness case study | [Harness dossier](unit-04-harness-case-study.md) at `bb65b5c..2c498f6`: staged publication and reference test evidence. | Freeze task/authority, preserve test-design variance, and obtain independent behavior-level verification after the run. | prepared/reference | Reference test is evidence for `2c498f6`, not a universal evaluator oracle. |
+
+The selected Unit 5 prepared capability is `critically analyzed`. Record each
+row's use in the workflow template and do not relabel this summary as a
+learner-run artifact.
+
 Copy `workflow-template.md` outside the code-under-test worktree. Completed
 Units 1–4 artifacts are normal input; a prepared path uses only their named
 packs or a concise prepared-prior-artifact summary with provenance. Use the

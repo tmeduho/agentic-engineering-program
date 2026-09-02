@@ -162,6 +162,17 @@ results, independent diff-review findings, and a permission/dependency safety
 review. If an acceptance check changes, rerun affected conditions or invalidate
 the comparison. Do not use agent self-report as external verification.
 
+For an initialization-publication task modeled on Unit 4, the independent
+verifier owns a behavior-level post-run test, not a reference-solution API.
+Use only the candidate's documented deterministic seam to inject failure
+immediately before candidate publication; require rejection/failure, no
+destination, no unpublished staging entry, a clean retry, and a blocker-free
+ledger check. Review the agent-authored test separately, record seam/test-design
+variance as a confounder, and fail acceptance if no observable seam exists.
+Do not change production behavior to create a seam or require
+`publicationHooks.beforePublish`; that exact reference test remains evidence
+only for its reference revision.
+
 ## 5. Synthesize and validate a workflow
 
 In `experiment-report.md`, keep these categories separate:

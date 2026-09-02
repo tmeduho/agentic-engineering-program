@@ -52,10 +52,10 @@ human/cohort pilot is required before learner approval or public release.
 The [core lab](lab.md) connects these five artifacts into one artifact chain;
 it adds no sixth implementation task. If live access, time, or safety prevents
 a run, use the matching sanitized [evidence pack index](exercises/evidence/README.md)
-and complete the same analysis honestly as prepared comparison material. Mark
-the final decision-record capability as `executed` only for the relevant live
-path, or `critically analyzed` for a prepared path; both can complete the
-course, but neither label may imply the other.
+and complete the same analysis honestly as prepared comparison material. The
+final decision record labels capability **per unit/artifact**: `executed` only
+for the relevant live path and `critically analyzed` for a prepared path. A
+mixed chain must preserve both labels and neither may imply the other.
 
 ## Collaboration and completion
 
@@ -74,7 +74,8 @@ evaluation, and recovery.
 
 Core completion follows [the lab rubric](lab.md#completion-rubric):
 
-- all five artifacts are `complete`, not merely present;
+- all five artifacts are `complete` under their selected contracts, not merely
+  present; `complete` never by itself means `executed`;
 - one async, synchronous, or solo decision record is complete;
 - no open safety violation occurred, including unapproved authority expansion,
   retained sensitive material, production use, or evidence in a code worktree;

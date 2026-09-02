@@ -95,6 +95,12 @@ material is represented as a learner run, or when required unknowns and limits
 are omitted. A clear disagreement with decisive evidence absent is a valid
 `further-test` decision, not a facilitation failure.
 
+`Artifact status: complete` means that the selected artifact contract is
+complete; it never means that a learner executed a live path. During grading or
+facilitation, inspect the decision record's per-unit capability/evidence table,
+its provenance, and limitations. Mark the artifact `revise` when a prepared or
+reference analysis is presented as execution.
+
 ## Recovery procedures
 
 | Failure | Immediate fallback | Record the limitation |

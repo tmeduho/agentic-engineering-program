@@ -97,15 +97,28 @@ This is an append-only record of material curriculum decisions and agent disagre
 - Change made: Module 01 outcomes, curriculum, lab, exercises, workshop, facilitation, and reviews will be aligned with the approved hybrid design.
 - Revisit when: A pilot shows that the timeboxes, artifact chain, provider-neutral fallbacks, or async format do not produce the intended learning.
 
-## D-007 — Separate capability evidence from prepared analysis and preserve Unit 4 test ownership
+## D-007 — Proposed capability evidence and Unit 4 evaluation contract
 
 - Date: 2026-09-02
-- Status: accepted
-- Decider: learner
+- Status: proposed
+- Decider: learner (pending)
 - Context: The internal pilot needs a no-cost prepared path without allowing a prepared dossier to masquerade as live implementation/workflow execution. Unit 4 also needs deterministic evaluation without preloading the agent's test-design task with the evaluator-owned test.
-- Proposal or critique: Label the capability evidenced by a path as `executed` or `critically analyzed`; allow either label to complete the course when the associated artifact contract is met. Keep Unit 4's exact frozen task responsible for designing/adding a test, then have an independent verifier apply/run the evaluator-owned reference acceptance test after the measured run and review the authored test separately.
-- Decision: Adopt both labels in the learner artifacts and decision record. Preserve immutable Unit 4 task/baseline/acceptance; do not preseed the evaluator-owned test in a measured run. Record test-design variance as a confounder.
-- Reason: This keeps prepared participation accessible while making assessment evidence honest, and avoids turning the evaluator's reference test into hidden task context.
-- Evidence: Task 12 fresh-learner and independent-review findings I-002, I-003, and I-005; the prepared dossier already distinguishes repository evidence from a live agent trace.
-- Change made: Updated Module 01 outcome/completion language, Unit 4/5 instructions and templates, lab, workshop, and prepared packs.
-- Revisit when: A timed human/cohort pilot establishes whether the labels and post-run evaluation procedure are understandable and usable without author assistance.
+- Proposal or critique: The Task 12 controller proposes per-unit `executed` or `critically analyzed` evidence labels, with either satisfying its selected artifact contract. The frozen Unit 4 task keeps test design with the learner or agent. After a measured run, an independent evaluator uses only the candidate's documented deterministic seam for a behavior-level test; the exact `2c498f6` reference test remains reference evidence, not a candidate API or universal oracle.
+- Decision: Pending learner decision. The implementation is provisional for review and requires the learner's explicit decision before it is treated as an approved curriculum decision.
+- Reason: The proposal preserves no-cost prepared participation without overstating execution and evaluates the intended publication behavior without exposing or forcing a reference-only seam.
+- Evidence: Task 12 fresh-learner and independent-review findings I-002, I-003, and I-005; Task 12 controller disposition for fix round 1; the prepared dossier distinguishes repository evidence from a live agent trace.
+- Change made: Provisional updates to Module 01 outcome/completion language, Unit 4/5 instructions and templates, lab, workshop, and prepared packs.
+- Revisit when: The learner explicitly decides this proposal and a timed human/cohort pilot establishes whether the labels and post-run evaluation procedure are understandable and usable without author assistance.
+
+## D-008 — Defer required non-vendor reading selection
+
+- Date: 2026-09-02
+- Status: deferred
+- Decider: learner (pending)
+- Context: S11 is an optional official non-vendor facilitator/security source, while product documentation remains qualified for product behavior.
+- Proposal or critique: Defer making a non-vendor source a required learner reading until a bounded learner-facing selection and its purpose are designed.
+- Decision: Deferred pending learner decision; S11 remains optional and vendor documentation remains qualified to its product behavior.
+- Reason: An optional facilitator source does not by itself establish a focused required-reading experience.
+- Evidence: Task 12 independent-review finding I-008 and controller disposition for fix round 1.
+- Change made: None beyond recording the deferred distribution/curriculum prerequisite.
+- Revisit when: A bounded learner-facing source selection is proposed for explicit learner decision.

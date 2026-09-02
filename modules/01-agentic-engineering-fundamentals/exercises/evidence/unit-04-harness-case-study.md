@@ -16,9 +16,11 @@
 The frozen task, acceptance conditions, authority, and stop condition are the
 ones in [Unit 4](../../units/04-harness-comparison.md#exercise). The task is at
 the baseline and ends after 35 minutes or two failed implementation approaches.
-The evaluator-owned post-run acceptance test is named `failed initialization publishes no partial ledger
-and can be retried`; it requires no destination after injected failure, no
-staging entry, a successful retry, and a blocker-free check.
+The exact reference test named `failed initialization publishes no partial
+ledger and can be retried` is evidence for the reference solution at
+`2c498f6` only. It records no destination after injected failure, no staging
+entry, a successful retry, and a blocker-free check; it is not a universal
+candidate evaluator oracle.
 
 | Item | Consumer | Evidence type | Provenance | Supports | Remains uncertain |
 | --- | --- | --- | --- | --- | --- |
@@ -145,9 +147,8 @@ is one writer per ledger root; that model matters to the conclusion.
 
 ## Deterministic test and verification records
 
-**Evaluator-owned deterministic failure test** (actual repository evidence at
-`2c498f6`, applied/run by an independent verifier only after a measured live
-run):
+**Exact reference deterministic failure test** (actual repository evidence at
+`2c498f6` only, not a required candidate API or universal evaluator test):
 
 ```ts
 test("failed initialization publishes no partial ledger and can be retried", async () => {
@@ -209,11 +210,17 @@ tool calls, approvals, and private reasoning, are `unknown`. The actual source
 and deterministic verification establish a bounded implementation property;
 the anonymous approaches are a case-study aid.
 
-For a live path, preserve the learner/agent-authored test separately. The
-evaluator-owned test above is not preseeded into the measured task; after the
-run, an independent verifier applies/runs it and reviews the authored test for
-coverage and scope. Test-design differences are a confounder, not a reason to
-alter the frozen task.
+For a live path, preserve the learner/agent-authored test separately. The exact
+reference test above is not preseeded into the measured task and is not applied
+to the candidate. After the run, an independent verifier writes or runs a
+behavior-level test through the candidate's documented deterministic injection
+seam only. It injects deterministic failure immediately before candidate
+publication; requires operation rejection/failure, an absent destination, no
+unpublished staging entry, a clean retry, and a blocker-free ledger check; and
+reviews the authored test separately. The verifier may adapt only to that
+documented seam and may not change production behavior. If no observable seam
+exists, acceptance fails. Seam and test-design variance are confounders, not
+reasons to alter the frozen task or force `publicationHooks.beforePublish`.
 
 **Case conclusion:** the reference test and source support a local conclusion:
 for the injected pre-publication failure in this repository’s one-writer local

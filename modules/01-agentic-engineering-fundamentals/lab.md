@@ -105,10 +105,14 @@ harness, provider, or evidence pack.
    disposable exercise map into the ledger.
 4. Unit 4 produces an N=1 case study. A live path evidences `executed`; its
    prepared fallback evidences `critically analyzed` only. The frozen task owns
-   test design; after the measured run, an independent verifier applies/runs
-   the evaluator-owned exact reference acceptance test and reviews the
-   agent-authored test. It preserves the frozen initialization task and obtains
-   external source, test, and diff evidence.
+   test design; after the measured run, an independent verifier uses the
+   candidate's documented deterministic seam for a behavior-level acceptance
+   test: inject failure immediately before candidate publication; require
+   rejection/failure, no destination, no unpublished staging, a clean retry,
+   and a blocker-free ledger check. The verifier separately reviews the
+   agent-authored test, records seam/test design variance as a confounder, and
+   fails acceptance when no observable seam exists. It preserves the frozen
+   initialization task and obtains external source, test, and diff evidence.
 5. Unit 5 produces `workflow-v1` and a validation record for the frozen
    report-request task. It records each workflow step, deviations, external
    acceptance, cold-reader validation or prepared analysis, and the local keep,
@@ -124,9 +128,10 @@ paths. Peer availability cannot block core completion.
 
 Core completion requires all of the following:
 
-- all five unit artifacts are marked `complete`, not merely present, and the
-  decision record states whether each applicable capability was `executed` or
-  `critically analyzed`;
+- all five unit artifacts are marked `complete` under their selected contracts,
+  not merely present; `complete` does not by itself mean `executed`. The
+  decision record provides a per-unit/artifact `executed` or `critically
+  analyzed` evidence table for live, prepared, or mixed chains;
 - one decision record is complete through the async, synchronous, or solo
   path;
 - no open safety violation, including unapproved authority expansion, retained

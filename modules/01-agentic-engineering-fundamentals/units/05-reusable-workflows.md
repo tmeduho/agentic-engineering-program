@@ -115,9 +115,11 @@ not claim a baseline test failure that was never run.
 Create a copy of [workflow-template.md](../exercises/workflow-template.md)
 outside the P01 code-under-test worktree. Completed Units 1–4 artifacts are the
 normal prerequisite. For a prepared path, use only a bounded substitute built
-from the named Unit 1–4 prepared packs or a concise prepared-prior-artifact
-summary with commit/pack provenance; label it `critically analyzed`, never
-learner execution. Derive `workflow-v1` from that evidence, not preferences.
+from the named Unit 1–4 prepared packs or the linked
+[prepared-prior-artifact summary](../exercises/evidence/unit-05-workflow-validation.md#compact-prepared-prior-artifact-summary);
+label it `critically analyzed`, never learner execution. The summary is the
+direct compact input; links to the full packs remain optional for deeper
+inspection. Derive `workflow-v1` from that evidence, not preferences.
 For **every** step,
 state all six fields: inputs; authority; observable output; stop condition;
 verifier; and retained evidence. Remove a step if its only support is personal

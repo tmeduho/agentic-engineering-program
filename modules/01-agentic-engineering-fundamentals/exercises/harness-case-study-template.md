@@ -10,6 +10,7 @@
 - Task outcome:
 - Baseline repository and commit:
 - Acceptance checks and expected results:
+- Candidate documented deterministic injection seam (or `none`):
 - Stop condition (time, spend, repeated failure, safety, ambiguity):
 - Conditions held constant:
 
@@ -43,7 +44,7 @@ as learner-run measurements.
 
 | Gate | Configuration A | Configuration B | Evidence provenance: learner-run actual \| prepared/reference \| hypothetical | Independent evidence/reviewer |
 | --- | --- | --- | --- | --- |
-| Acceptance result |  |  |  |  |
+| Evaluator behavior-level acceptance (failure immediately before candidate publication; rejection/failure; no destination or unpublished staging; clean retry; blocker-free check) |  |  |  |  |
 | Regression result |  |  |  |  |
 | Independent diff or evidence review |  |  |  |  |
 | Permission/safety boundary respected |  |  |  |  |
@@ -53,4 +54,5 @@ as learner-run measurements.
 - Confounders and asymmetries:
 - Claims supported by this case:
 - Claims this case cannot support:
+- Seam/test-design variance and candidate-production-change check:
 - Residual uncertainty and next evidence needed:

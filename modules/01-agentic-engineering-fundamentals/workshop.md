@@ -33,7 +33,8 @@ change a workflow decision.
 ## Artifact summary — <artifact and date>
 
 - Path: live | prepared | mixed
-- Capability evidenced: executed | critically analyzed
+- Per-unit capability/evidence record: complete the decision template table;
+  do not collapse a mixed chain to one label.
 - What I attempted or analyzed:
 - Observation: <directly evidenced result>
 - Evidence and provenance: <commit, command/result, sanitized pack item, or review>
