@@ -136,14 +136,27 @@ Spend 18 minutes producing your own annotated trace.
 1. Copy [run-trace-template.md](../exercises/run-trace-template.md) outside the
    code-under-test worktree. Start from the prepared pack if you do not have a
    suitable sanitized live run.
-2. Annotate every material event with one or more applicable layers: model
+2. Use the template fields without changing its schema. Map the required layers
+   to concrete fields as follows:
+
+   | Required layer | Template field or fields | What to record |
+   | --- | --- | --- |
+   | Model inference | `Inference` | The observed response or tool-call selection; write `unknown` when no such observation is available. |
+   | Context assembly | `Context` | The model-visible instructions, files, tool results, or summaries, and which harness action assembled them. |
+   | Agent-loop decision | `Intent` and `State` | The next-loop transition—continue, request approval, retry, recover, or terminate—and any resulting session or task-state update. |
+   | Harness responsibility | `Context`, `Tool`, `Authority`, `State`, and `Verification` | Its applicable action: context assembly, tool routing/execution result, approval enforcement, state update/retry/termination, or verification gate. |
+
+   In `Tool`, distinguish a model-selected call from its routed execution and
+   result. A harness responsibility is an annotation in these existing fields,
+   not a new template column.
+3. Annotate every material event with one or more applicable layers: model
    inference, context assembly, agent loop, tool, environment, authority,
    state, verification, or human decision. Leave a label blank when it did not
    occur; do not infer hidden reasoning or unavailable telemetry.
-3. Mark the transition from the initial completion narrative to independent
+4. Mark the transition from the initial completion narrative to independent
    evidence, and name the earliest layer that could have prevented false
    completion. Explain why an earlier layer is unsupported or more expensive.
-4. Analyze all three hypotheses below. For each, cite Git or prepared-case
+5. Analyze all three hypotheses below. For each, cite Git or prepared-case
    evidence that supports it and evidence that weakens it. Do not select one by
    intuition:
 
@@ -151,16 +164,20 @@ Spend 18 minutes producing your own annotated trace.
    - the producing agent failed to consider interrupted publication; and
    - verification lacked fault injection.
 
-5. State what evidence is missing and what next observation would reduce that
+6. State what evidence is missing and what next observation would reduce that
    uncertainty. Keep the conclusion narrower than the evidence.
 
 ## Deliverable
 
 An annotated Markdown run trace using the shared template. Store it outside
 the code-under-test worktree and identify whether it uses a live learner run or
-prepared comparison material. Cite the baseline/reference commits, relevant
-paths, and check output summaries. Raw private transcripts, credentials,
-private source, and proprietary prompts do not belong in the artifact.
+prepared comparison material. Use the mapping above: `Inference` for model
+output, `Context` for context assembly, `Intent` plus `State` for agent-loop
+decisions, and the existing `Context`, `Tool`, `Authority`, `State`, and
+`Verification` fields for harness responsibility. Cite the baseline/reference
+commits, relevant paths, and check output summaries. Raw private transcripts,
+credentials, private source, and proprietary prompts do not belong in the
+artifact.
 
 ## Acceptance checks
 
