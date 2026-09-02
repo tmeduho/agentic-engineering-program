@@ -23,6 +23,9 @@
 | Authority and approval policy |  |  |
 | Permissions |  |  |
 | Environment, worktree, and network |  |  |
+| CPU, RAM, disk, and concurrency limits |  |  |
+| Resource-enforcement mechanism |  |  |
+| Infrastructure failure or exclusion rule |  |  |
 | Known unavailable telemetry | unknown | unknown |
 
 ## Observed outcomes
@@ -38,12 +41,12 @@ as learner-run measurements.
 
 ## Verification and review
 
-| Gate | Configuration A | Configuration B | Independent evidence/reviewer |
-| --- | --- | --- | --- |
-| Acceptance result |  |  |  |
-| Regression result |  |  |  |
-| Independent diff or evidence review |  |  |  |
-| Permission/safety boundary respected |  |  |  |
+| Gate | Configuration A | Configuration B | Evidence provenance: learner-run actual \| prepared/reference \| hypothetical | Independent evidence/reviewer |
+| --- | --- | --- | --- | --- |
+| Acceptance result |  |  |  |  |
+| Regression result |  |  |  |  |
+| Independent diff or evidence review |  |  |  |  |
+| Permission/safety boundary respected |  |  |  |  |
 
 ## Interpretation
 

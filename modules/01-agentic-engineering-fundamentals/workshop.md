@@ -12,8 +12,8 @@ and preserve its limits.
 
 Shared material must be sanitized: no raw transcripts, credentials, proprietary
 prompts, private source, or private absolute paths. Keep learner artifacts and
-command evidence outside code-under-test worktrees. The learner retains all
-approval authority; a facilitator can summarize evidence but cannot approve a
+command evidence outside code-under-test worktrees. The learner retains
+learner-owned approval authority; a facilitator can summarize evidence but cannot approve a
 decision for the learner.
 
 ## Async-first path
@@ -33,6 +33,7 @@ change a workflow decision.
 ## Artifact summary — <artifact and date>
 
 - Path: live | prepared | mixed
+- Capability evidenced: executed | critically analyzed
 - What I attempted or analyzed:
 - Observation: <directly evidenced result>
 - Evidence and provenance: <commit, command/result, sanitized pack item, or review>

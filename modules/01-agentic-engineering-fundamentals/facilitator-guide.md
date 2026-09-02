@@ -2,7 +2,7 @@
 
 This guide lets a competent software engineer facilitate the evidence review
 without being an expert in every agent product. The core remains
-provider-neutral, asynchronous-first, and learner-approved. The facilitator
+provider-neutral, asynchronous-first, and governed by learner-owned approval. The facilitator
 organizes evidence and synthesis; only the learner owns final approval,
 authority expansion, and the decision to adopt a practice.
 
@@ -31,15 +31,25 @@ Before opening async review or a meeting:
    data only; exclude raw transcripts, credentials, proprietary prompts,
    private source, and private absolute paths. Confirm no production,
    deployment, billing, destructive infrastructure, or unapproved authority.
-5. **Select live or prepared paths.** Choose by access, time, and safety, not
+   Run the focused private-path scan (`rg -n '/[U]sers/' README.md modules/01-agentic-engineering-fundamentals`) before internal-pilot handoff or release review; any tracked learner/facilitator hit blocks distribution until removed or replaced by a configured path.
+5. **Confirm platform and setup boundary.** This internal pilot supports macOS
+   or Linux with a POSIX shell. Treat dependency install as setup code execution,
+   separate from a measured agent run. A verified non-POSIX alternative remains
+   a public-release prerequisite.
+6. **Use optional independent risk material narrowly.** S11, NIST AI 600-1,
+   is optional facilitator/security material for risk framing and documenting
+   evaluation/verification considerations. It is voluntary guidance, not a
+   product-behavior source, a replacement for vendor documentation, or a
+   required unit reading.
+7. **Select live or prepared paths.** Choose by access, time, and safety, not
    prestige. Mark prepared evidence as prepared comparison material and retain
    unknown telemetry as `unknown`.
-6. **Publish the timeboxes.** State unit limits, stop conditions, the async
+8. **Publish the timeboxes.** State unit limits, stop conditions, the async
    deadline, and, if used, the fixed 75-minute meeting agenda in advance.
-7. **Create async threads.** Open one copyable Markdown thread per artifact
+9. **Create async threads.** Open one copyable Markdown thread per artifact
    summary/challenge pair, synthesis, and decision record; give solo learners a
    prepared critique and the solo-synthesis block at the same time.
-8. **Decide feedback capture.** Name the location, owner, privacy review, and
+10. **Decide feedback capture.** Name the location, owner, privacy review, and
    cadence for course feedback. Record proposed corrections with their evidence;
    do not silently change frozen tasks during a cohort.
 

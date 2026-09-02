@@ -178,6 +178,9 @@ Use this checklist after completing the live or prepared path:
   route started in a fresh session from a project-orientation link.
 - [ ] Prepared timings are labeled illustrative or `unknown`; no time claim is
   based on hop count or this pack.
+- [ ] One package/dependency item and one source-registry claim record
+  authority, provenance, freshness/corroboration, and retirement/recheck; an
+  unsupported or stale conclusion is marked `revise`.
 - [ ] The proposed map links all three source boundaries and both test files,
   but does not duplicate their rules.
 - [ ] The decision says keep, narrow, or reject, and states who would review

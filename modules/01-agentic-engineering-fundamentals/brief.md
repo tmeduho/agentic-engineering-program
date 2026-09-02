@@ -3,7 +3,7 @@
 - Status: draft
 - Lead: Codex
 - Adversarial reviewer and final verifier: Claude
-- Last source check: 2026-08-26
+- Source freshness metadata: [sources.md](sources.md) is the sole registry
 - Target learner: `../../PROFILE.md`
 
 ## Purpose
@@ -23,8 +23,12 @@ By the end of the module, the learner can:
 1. Trace model inference, context assembly, agent-loop decisions, tool execution, environment effects, authority, observations, and verification.
 2. Compare bounded context configurations while separating observations, explanations, and confounders.
 3. Design and test a repository knowledge structure with authority, freshness, discovery, precedence, and retirement rules.
-4. Conduct an N=1 comparison of two agent-system configurations without generalizing beyond the observed case.
-5. Write and execute a bounded workflow with decision rights, safety, escalation, evidence, and verification gates.
+4. Execute an N=1 comparison of two agent-system configurations, or critically
+   analyze the explicitly labeled prepared case, without generalizing beyond
+   the observed evidence.
+5. Execute a bounded workflow with decision rights, safety, escalation,
+   evidence, and verification gates, or critically analyze its prepared
+   validation dossier without claiming execution skill.
 
 ## Prerequisites
 
@@ -50,8 +54,12 @@ By the end of the module, the learner can:
 4. Harness engineering, authority, and N=1 comparison.
 5. Reusable workflows with verification and feedback.
 
-The five unit timeboxes are 45, 60, 75, 90, and 60 minutes. The async or
-optional synchronous discussion is 75 minutes, for a core total of 405 minutes.
+The five unit allocations (45, 60, 75, 90, and 60 minutes) and the 75-minute
+discussion are planned learner-work caps, not empirically established human
+completion estimates. Environment provisioning, facilitator preparation,
+dependency download, and peer waiting are outside the 405-minute cap; required
+in-task setup observation and configuration capture remain inside where named.
+A timed human/cohort pilot is required before learner approval or public release.
 
 ## Required deliverables
 
@@ -75,8 +83,8 @@ artifact and a falsifiable acceptance condition for each outcome.
 | Trace the agent system | Annotated run trace and competing failure hypotheses | The trace labels model inference, context assembly, agent-loop decision, tool execution, environment effect, authority, observation, and verification where they occur; for one failure it records competing hypotheses and evidence that rejects or leaves each unresolved. |
 | Compare bounded context | Bounded context inventory and comparison | The comparison records configurations and held-constant conditions, then separates observations, explanations, and confounders; it fails if it treats an explanation as an observation or omits a material uncontrolled variable. |
 | Design and test project knowledge | Repository knowledge map and before/after discovery evidence | The map assigns authority, freshness trigger, discovery path, precedence, and retirement rule to every listed knowledge artifact, and the evidence shows whether the proposed structure changed a specified discovery task. |
-| Conduct an N=1 comparison | N=1 comparative case study | The case study holds the stated task, baseline, acceptance checks, and authority boundary constant where possible; it records unavoidable differences and limits every conclusion to the observed configuration and case. |
-| Execute a bounded workflow | `workflow-v1` and validation record | The workflow names decision rights, safety boundaries, escalation and stop conditions, required evidence, and verification gates; its validation record includes the external acceptance result rather than agent self-report. |
+| Conduct an N=1 comparison or critically analyze it | N=1 comparative case study | A live case holds the stated task, baseline, acceptance checks, and authority boundary constant where possible; a prepared case is explicitly `critically analyzed`. Both record unavoidable differences and limit every conclusion to the observed configuration and evidence. |
+| Execute or critically analyze a bounded workflow | `workflow-v1` and validation record | A live validation records external acceptance independent of the producing agent. A prepared validation is labeled `critically analyzed` and cannot evidence execution skill. |
 
 The decision record states an evidence-backed practice to adopt, test further,
 or reject. It supports the artifact chain but does not add another core outcome.

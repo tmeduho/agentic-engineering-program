@@ -190,12 +190,22 @@ learner or historical agent executed a live repair.
 
 ## Learner use and acceptance record
 
-Copy `workflow-template.md` outside the code-under-test worktree. Use the live
-path only in a disposable checkout at the frozen baseline, or use this dossier
-as prepared comparison material. For every workflow step, record followed,
-impossible, ambiguous, or overridden, with the six required fields and the
-authority for any deviation. Preserve command outputs and review evidence; do
+Copy `workflow-template.md` outside the code-under-test worktree. Completed
+Units 1–4 artifacts are normal input; a prepared path uses only their named
+packs or a concise prepared-prior-artifact summary with provenance. Use the
+live path only in a disposable checkout at the frozen baseline, or use this
+dossier as prepared comparison material and label the capability `critically
+analyzed`, never executed. For every workflow step, record followed,
+impossible, ambiguous, or overridden, with inputs, authority, observable
+output, stop condition, verifier, retained evidence, and authority for any
+deviation. Preserve command outputs and review evidence; do
 not retain raw private transcripts, credentials, or proprietary prompts.
+
+For cold-reader validation, this prepared dossier may support only a design or
+critical analysis of a clean comparable-task check. It did not execute a
+cold-reader run; a live record must name the independent reader/source, one
+discriminating failure scenario, ambiguity/deviation/unsafe-action observations,
+and the external result.
 
 The validation record is complete only if it:
 

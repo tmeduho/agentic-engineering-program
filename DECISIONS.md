@@ -96,3 +96,16 @@ This is an append-only record of material curriculum decisions and agent disagre
 - Evidence: Learner approvals recorded during the 2026-09-02 design discussion and the independent design critique incorporated into the approved spec.
 - Change made: Module 01 outcomes, curriculum, lab, exercises, workshop, facilitation, and reviews will be aligned with the approved hybrid design.
 - Revisit when: A pilot shows that the timeboxes, artifact chain, provider-neutral fallbacks, or async format do not produce the intended learning.
+
+## D-007 — Separate capability evidence from prepared analysis and preserve Unit 4 test ownership
+
+- Date: 2026-09-02
+- Status: accepted
+- Decider: learner
+- Context: The internal pilot needs a no-cost prepared path without allowing a prepared dossier to masquerade as live implementation/workflow execution. Unit 4 also needs deterministic evaluation without preloading the agent's test-design task with the evaluator-owned test.
+- Proposal or critique: Label the capability evidenced by a path as `executed` or `critically analyzed`; allow either label to complete the course when the associated artifact contract is met. Keep Unit 4's exact frozen task responsible for designing/adding a test, then have an independent verifier apply/run the evaluator-owned reference acceptance test after the measured run and review the authored test separately.
+- Decision: Adopt both labels in the learner artifacts and decision record. Preserve immutable Unit 4 task/baseline/acceptance; do not preseed the evaluator-owned test in a measured run. Record test-design variance as a confounder.
+- Reason: This keeps prepared participation accessible while making assessment evidence honest, and avoids turning the evaluator's reference test into hidden task context.
+- Evidence: Task 12 fresh-learner and independent-review findings I-002, I-003, and I-005; the prepared dossier already distinguishes repository evidence from a live agent trace.
+- Change made: Updated Module 01 outcome/completion language, Unit 4/5 instructions and templates, lab, workshop, and prepared packs.
+- Revisit when: A timed human/cohort pilot establishes whether the labels and post-run evaluation procedure are understandable and usable without author assistance.

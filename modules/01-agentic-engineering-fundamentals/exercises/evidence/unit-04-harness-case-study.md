@@ -16,7 +16,7 @@
 The frozen task, acceptance conditions, authority, and stop condition are the
 ones in [Unit 4](../../units/04-harness-comparison.md#exercise). The task is at
 the baseline and ends after 35 minutes or two failed implementation approaches.
-The acceptance test is named `failed initialization publishes no partial ledger
+The evaluator-owned post-run acceptance test is named `failed initialization publishes no partial ledger
 and can be retried`; it requires no destination after injected failure, no
 staging entry, a successful retry, and a blocker-free check.
 
@@ -145,7 +145,9 @@ is one writer per ledger root; that model matters to the conclusion.
 
 ## Deterministic test and verification records
 
-**Named deterministic failure test** (actual repository evidence at `2c498f6`):
+**Evaluator-owned deterministic failure test** (actual repository evidence at
+`2c498f6`, applied/run by an independent verifier only after a measured live
+run):
 
 ```ts
 test("failed initialization publishes no partial ledger and can be retried", async () => {
@@ -206,6 +208,12 @@ caused Approach B. Those fields, along with historical elapsed time, token use,
 tool calls, approvals, and private reasoning, are `unknown`. The actual source
 and deterministic verification establish a bounded implementation property;
 the anonymous approaches are a case-study aid.
+
+For a live path, preserve the learner/agent-authored test separately. The
+evaluator-owned test above is not preseeded into the measured task; after the
+run, an independent verifier applies/runs it and reviews the authored test for
+coverage and scope. Test-design differences are a confounder, not a reason to
+alter the frozen task.
 
 **Case conclusion:** the reference test and source support a local conclusion:
 for the injected pre-publication failure in this repository’s one-writer local

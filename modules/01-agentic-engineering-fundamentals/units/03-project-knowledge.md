@@ -128,7 +128,13 @@ to the Agent Experiment Ledger main branch.
    discovery path, load strategy, freshness trigger, precedence, and
    supersession/deletion rule. Mark an index as an index and link it to its
    source of truth; preserve revision and raw-evidence provenance.
-4. Run the before probe from **only** a repository root listing. Use this exact
+4. Within the same current-state-map/probe work, assess one package or
+   dependency knowledge item from `package.json` and one research/source-registry
+   claim from [sources.md](../sources.md). For each, record authority,
+   provenance, freshness or corroboration, and retirement/recheck rule. A
+   conclusion is `revise` when it relies on an unsupported or stale claim; do
+   not add time beyond the existing map/probe allocation.
+5. Run the before probe from **only** a repository root listing. Use this exact
    question:
 
    ```text
@@ -141,12 +147,12 @@ to the Agent Experiment Ledger main branch.
    Record the actual path, result, start/end evidence, and unavailable
    telemetry. Do not add ambient context after the root listing and call it a
    before result.
-5. In the disposable checkout, propose the smallest architecture and evidence
+6. In the disposable checkout, propose the smallest architecture and evidence
    navigation map and link it from project orientation. Start a **fresh
    session** for the after probe with that concise map available from the
    orientation link. Run or inspect the after path, preserving the same
    question and recording the path rather than inferring a timing improvement.
-6. Review duplication and source-of-truth boundaries. Keep, narrow, or reject
+7. Review duplication and source-of-truth boundaries. Keep, narrow, or reject
    the map based on whether its discovery benefit justifies its maintenance and
    context cost. A rejected or narrowed proposal is a valid result. Leave the
    proposed map as disposable exercise material; do not merge it into P01's
@@ -178,6 +184,9 @@ The artifact is complete only if it:
 - states where the proposed map would be reviewed and maintained if adopted;
 - labels prepared material as prepared and unavailable timing/telemetry as
   `unknown`; and
+- assesses one package/dependency item and one source-registry claim for
+  authority, provenance, freshness/corroboration, and retirement, rejecting an
+  unsupported or stale conclusion; and
 - makes a bounded keep, revise, or reject decision about discovery benefit
   versus maintenance and context cost.
 

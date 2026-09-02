@@ -1,7 +1,7 @@
 # Module 01 Lab — Core Artifact Chain
 
 - Status: designed, not run
-- Core timebox: 405 minutes (6 hours 45 minutes)
+- Core timebox: planned 405-minute learner-work cap (6 hours 45 minutes)
 - Advanced experiment: [optional and elective, not a core requirement](advanced-lab.md)
 
 ## Module outcome
@@ -27,15 +27,21 @@ requires the learner's analysis and completed artifact.
 | 5 | 60 min | [`workflow-v1`](exercises/workflow-template.md), [Unit 5](units/05-reusable-workflows.md) | Validate the workflow on the frozen report task in a fresh isolated checkout. | Analyze [the prepared validation dossier](exercises/evidence/unit-05-workflow-validation.md). |
 | Decision record | 75 min | [Team decision record](exercises/team-decision-template.md) | Use the async, synchronous, or solo path. | Use the same path with prepared evidence clearly labeled. |
 
-The total is exactly 405 minutes. Timeboxes include required reading. Stop live
-work at the unit's limit and use its prepared pack rather than extending the
-task, widening authority, or presenting a partial run as a complete one.
+The total is exactly 405 planned learner-work minutes, not an empirical human
+completion estimate. Environment provisioning, facilitator preparation,
+dependency download, and peer waiting are outside the cap; unit-specified setup
+observation/configuration capture stays inside. Stop live work at the unit's
+limit and use its prepared pack rather than extending the task, widening
+authority, or presenting a partial run as a complete one. A timed human/cohort
+pilot is required before learner approval or public release.
 
 ## Setup, isolation, and privacy
 
-Run these commands **from the curriculum repository root**. They assume the
-internal-pilot Agent Experiment Ledger checkout is the sibling directory
-`../agent-experiment-ledger`:
+Run these commands **from the curriculum repository root** on the supported
+internal-pilot platform: macOS or Linux with a POSIX shell. They execute local
+code and dependency setup, so treat dependency installation as a separate
+setup code-execution boundary. They assume the internal-pilot Agent Experiment
+Ledger checkout is the sibling directory `../agent-experiment-ledger`:
 
 ```bash
 export MODULE01_LEDGER_REPO="$(cd ../agent-experiment-ledger && pwd -P)"
@@ -50,9 +56,10 @@ The two command results must resolve to these immutable commits:
 - Verified reference: `2c498f616583d1fd6aeeaa381552b47acdb71ab7`
 
 For another directory layout, set these same task-specific variables to their
-resolved absolute paths before continuing. During the internal pilot, the
-facilitator distributes or grants access to the sibling repository. Public
-checkout instructions belong to the later release plan.
+resolved paths before continuing. During the internal pilot, the facilitator
+distributes or grants access to the sibling repository. A verified PowerShell or
+other cross-platform setup is a public-release prerequisite, not an implied
+supported path.
 
 Create a disposable baseline checkout and an evidence directory outside it:
 
@@ -96,13 +103,17 @@ harness, provider, or evidence pack.
 3. Unit 3 produces a knowledge map plus before/after discovery evidence. It
    distinguishes an index from a source of truth and does not merge the
    disposable exercise map into the ledger.
-4. Unit 4 produces an N=1 case study of two stated agent-system
-   configurations or its explicitly asymmetric prepared fallback. It preserves
-   the frozen initialization task and obtains external source, test, and diff
-   evidence.
+4. Unit 4 produces an N=1 case study. A live path evidences `executed`; its
+   prepared fallback evidences `critically analyzed` only. The frozen task owns
+   test design; after the measured run, an independent verifier applies/runs
+   the evaluator-owned exact reference acceptance test and reviews the
+   agent-authored test. It preserves the frozen initialization task and obtains
+   external source, test, and diff evidence.
 5. Unit 5 produces `workflow-v1` and a validation record for the frozen
    report-request task. It records each workflow step, deviations, external
-   acceptance, and the local keep, revise, or remove decision.
+   acceptance, cold-reader validation or prepared analysis, and the local keep,
+   revise, or remove decision. A prepared dossier evidences `critically
+   analyzed`, not `executed` workflow skill.
 
 Use the async discussion when peers are available, the synchronous discussion
 when scheduled, or the solo challenge path when neither is available. Complete
@@ -113,7 +124,9 @@ paths. Peer availability cannot block core completion.
 
 Core completion requires all of the following:
 
-- all five unit artifacts are marked `complete`, not merely present;
+- all five unit artifacts are marked `complete`, not merely present, and the
+  decision record states whether each applicable capability was `executed` or
+  `critically analyzed`;
 - one decision record is complete through the async, synchronous, or solo
   path;
 - no open safety violation, including unapproved authority expansion, retained
@@ -144,4 +157,3 @@ decision. A handoff names the checkout and commit, retained evidence location,
 authority already used, last external result, next safe action, and why work
 stopped. A recovery must not silently change the frozen task, acceptance
 criteria, baseline, or authority boundary.
-

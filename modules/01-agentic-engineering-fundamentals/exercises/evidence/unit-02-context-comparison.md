@@ -10,6 +10,11 @@ This is a sanitized fallback, not a hidden answer key or benchmark. The
 prepared responses are illustrative comparison material. They are not live
 runs, measured provider performance, token telemetry, or proof that either
 configuration caused a result. Use the raw Git evidence to test the claims.
+Before a live A/B run, capture automatic repository instructions, memory,
+system/developer context, tool descriptions, inherited session state, and other
+ambient model-visible inputs. If these collapse or obscure the intended packet
+difference, mark the result non-comparable and use an isolatable configuration
+or this prepared analysis without a causal treatment claim.
 
 ## Frozen task and held constants
 
@@ -189,9 +194,9 @@ caused the result.
 The following was inspected directly with:
 
 ```sh
-git -C /Users/tmeduho/dev/learning/agent-experiment-ledger show \
+git -C "$MODULE01_LEDGER_REPO" show \
   bb65b5cec8c96c3ba3d89b0025473561c7c8146f:src/checks/check-ledger.ts
-git -C /Users/tmeduho/dev/learning/agent-experiment-ledger diff \
+git -C "$MODULE01_LEDGER_REPO" diff \
   bb65b5cec8c96c3ba3d89b0025473561c7c8146f \
   2c498f616583d1fd6aeeaa381552b47acdb71ab7 -- \
   src/checks/check-ledger.ts test/check.test.ts

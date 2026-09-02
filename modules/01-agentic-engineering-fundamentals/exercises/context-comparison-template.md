@@ -7,6 +7,8 @@
 - Held constant:
 - Evidence location: outside the code-under-test worktree
 - Unavailable telemetry or data (record as `unknown`):
+- Ambient/model-visible context captured before A and B (automatic repository instructions, memory, system/developer context, tool descriptions, and inherited session state):
+- Treatment-difference evidence and comparability decision: comparable | non-comparable
 
 ## Configuration inventory
 
@@ -20,6 +22,7 @@
 | Size/cost |  |  |
 | Retrieval timing and trigger |  |  |
 | Tools, permissions, and environment |  |  |
+| Ambient/model-visible context actually present |  |  |
 
 ## Predictions before results
 

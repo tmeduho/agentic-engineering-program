@@ -26,10 +26,10 @@ Read these files in order:
 5. Use the optional meeting only when it is useful.
 6. Treat the advanced lab as elective.
 
-Module 01 is a draft being prepared for public distribution. Its sample-project
-release location and access method, plus both the curriculum and sample-project
-licenses, are not finalized. During the internal pilot, access uses the sibling
-repository described in the Module 01 lab.
+Module 01 is an internal-pilot draft, not a public release. Public distribution
+requires learner decisions on the sample-project release location/access method
+and both the curriculum and sample-project licenses. During the internal pilot,
+access uses the documented sibling repository layout in the Module 01 lab.
 
 ## Alternating lead and reviewer
 
@@ -50,7 +50,8 @@ The reviewer does not optimize for agreement. The reviewer tries to disprove the
 4. **Adversarial review** — the reviewer scores the module with `evals/curriculum-rubric.md` and records evidence-backed findings in its review file. The reviewer does not rewrite the module during this step.
 5. **Revision and rebuttal** — the lead accepts, rejects, or defers every finding; updates the module; and logs material decisions in `DECISIONS.md`.
 6. **Verification** — the reviewer checks the final artifacts and reruns any reproducible checks. New problems reopen review.
-7. **Learner decision** — the learner approves the module, accepts a documented exception, or sends it back.
+7. **Learner decision** — the learner exercises learner-owned approval: approve
+   the module, accept a documented exception, or send it back.
 
 ## Status lifecycle
 

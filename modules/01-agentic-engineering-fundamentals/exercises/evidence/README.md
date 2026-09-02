@@ -15,7 +15,9 @@ checks.
   commit or baseline, path, and command/output reference where applicable.
 - Unavailable telemetry remains `unknown`; do not estimate it or borrow it
   from another harness.
-- Prepared results cannot be presented as learner-run measurements.
+- Prepared results cannot be presented as learner-run measurements or execution
+  capability. They can evidence `critically analyzed` work when the learner
+  completes the stated analysis and provenance record.
 - Store packs and learner evidence outside code-under-test worktrees.
 
 ## Minimum pack index

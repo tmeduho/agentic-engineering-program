@@ -30,7 +30,8 @@ tasks, baseline, authority, and verification.
 
 Use a non-production repository or an isolated representative checkout. Before
 the first run, declare and record permissions, network state, time ceiling,
-and tool spend ceiling. Use synthetic or approved data; do not retain raw
+tool spend ceiling, CPU, RAM, disk, concurrency limit, resource-enforcement
+mechanism, and infrastructure-failure/exclusion rule. Use synthetic or approved data; do not retain raw
 private transcripts, credentials, proprietary prompts, private source, or
 absolute private paths. Disable deployment, release, billing, account
 administration, destructive infrastructure actions, and access to unrelated
@@ -111,7 +112,9 @@ For every treatment run:
 
 1. Record the immutable baseline, worktree path, clean Git state, harness,
    model/settings when visible, tools, permissions, network state, time/spend
-   limits, and start time.
+   limits, CPU/RAM/disk/concurrency limits, resource enforcement,
+   infrastructure failures/exclusions, and start time. Record unavailable
+   values as `unknown`.
 2. Apply the assigned context, let the agent work only within the frozen
    boundary, and record every human intervention and why it occurred.
 3. Stop at the declared limit or an agent completion claim; preserve the final
@@ -146,6 +149,7 @@ Use one metrics row per run:
 | `context_treatment` | A, B, C, or selected-treatment cross-harness run. |
 | `context_size` | Initially supplied and later retrieved bytes/tokens, where observed. |
 | `permissions` | Filesystem, network, command, and approval policy. |
+| `resources`, `enforcement`, `infrastructure_exclusion` | CPU, RAM, disk, concurrency, enforcement mechanism, and excluded/failed infrastructure condition; use `unknown` where unavailable. |
 | `wall_minutes`, `reported_tokens`, `reported_cost` | Observed values; record `unknown` when unavailable. |
 | `human_interventions`, `wrong_turns` | Evidence-backed count and explanation. |
 | `files_changed`, `diff_lines` | Final scope, noting generated files separately. |

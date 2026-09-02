@@ -29,7 +29,7 @@ private transcripts, proprietary prompts, private source, or private absolute
 paths. The setup, authority limits, pinned revisions, stop rules, and recovery
 path are in [the lab](lab.md#setup-isolation-and-privacy).
 
-## Core path — 405 minutes
+## Core path — planned 405-minute learner-work cap
 
 Complete these in order. The timeboxes include required reading and the
 decision-record activity.
@@ -43,10 +43,19 @@ decision-record activity.
 | 5 | 60 min | [Unit 5 — Reusable workflows](units/05-reusable-workflows.md) and [`workflow-v1`](exercises/workflow-template.md) |
 | Decision | 75 min | [Workshop](workshop.md) and a [team decision record](exercises/team-decision-template.md) |
 
+These allocations are planned learner-work caps, not evidence that a typical
+human finishes in 405 minutes. Environment provisioning, facilitator
+preparation, dependency download, and peer waiting are outside the cap; setup
+observation/configuration capture stays inside where a unit says so. A timed
+human/cohort pilot is required before learner approval or public release.
+
 The [core lab](lab.md) connects these five artifacts into one artifact chain;
 it adds no sixth implementation task. If live access, time, or safety prevents
 a run, use the matching sanitized [evidence pack index](exercises/evidence/README.md)
-and complete the same analysis honestly as prepared comparison material.
+and complete the same analysis honestly as prepared comparison material. Mark
+the final decision-record capability as `executed` only for the relevant live
+path, or `critically analyzed` for a prepared path; both can complete the
+course, but neither label may imply the other.
 
 ## Collaboration and completion
 
@@ -57,7 +66,8 @@ meeting is useful, use its optional 75-minute agenda; attendance never replaces
 the async path. If peers are unavailable, use the solo fallback and label the
 decision record `solo`.
 
-Only the learner can approve a decision or expand authority. Facilitators and
+Only the learner exercises learner-owned approval for a decision or authority
+expansion. Facilitators and
 peers can challenge and synthesize evidence, but cannot approve work for the
 learner. [The facilitator guide](facilitator-guide.md) covers preparation,
 evaluation, and recovery.

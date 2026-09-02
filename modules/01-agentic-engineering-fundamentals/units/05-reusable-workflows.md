@@ -113,8 +113,12 @@ not claim a baseline test failure that was never run.
 ## Exercise
 
 Create a copy of [workflow-template.md](../exercises/workflow-template.md)
-outside the P01 code-under-test worktree. Derive `workflow-v1` from evidence in
-your artifacts from Units 1–4, not from preferences alone. For **every** step,
+outside the P01 code-under-test worktree. Completed Units 1–4 artifacts are the
+normal prerequisite. For a prepared path, use only a bounded substitute built
+from the named Unit 1–4 prepared packs or a concise prepared-prior-artifact
+summary with commit/pack provenance; label it `critically analyzed`, never
+learner execution. Derive `workflow-v1` from that evidence, not preferences.
+For **every** step,
 state all six fields: inputs; authority; observable output; stop condition;
 verifier; and retained evidence. Remove a step if its only support is personal
 preference or one unexplained correlation. The remaining steps must still
@@ -146,9 +150,12 @@ then run it, `pnpm check`, `pnpm test`, and `pnpm build`. Stop at 20 minutes or
 after two failed approaches, preserve the evidence, and use the dossier rather
 than extending the run.
 
-For either path, record each workflow step as **followed**, **impossible**,
-**ambiguous**, or **overridden**, with the evidence and authority behind that
-status. A status is data, not a reason to silently rewrite the workflow. Revise
+For either path, fill the template's mandatory per-step table with
+**followed**, **impossible**, **ambiguous**, or **overridden**, plus inputs,
+authority, observable output, stop condition, verifier, and retained evidence.
+Name a human decision owner and escalation recipient; a solo prepared learner
+is the default owner unless another authorized human is named. A status is data,
+not a reason to silently rewrite the workflow. Revise
 `workflow-v1` only when the record shows a recurring decision or risk; one
 awkward step, missing tool, or isolated result is evidence to investigate, not
 enough to add durable machinery.
@@ -159,8 +166,9 @@ A completed `workflow-v1` using the shared template and a validation record
 outside the P01 worktree. It must include the frozen task, exact baseline and
 reference, selected context and authority, tools/environment/permissions,
 human and agent decision rights, stop/recovery/escalation/handoff rules,
-step-status record, retained metrics, external acceptance results, and one
-keep, revise, or remove decision. Cite the prepared dossier when used and mark
+step-status record, retained metrics, external acceptance results with
+provenance, cold-reader validation record or prepared analysis, and one keep,
+revise, or remove decision. Cite the prepared dossier when used and mark
 all unavailable telemetry `unknown`.
 
 ## Acceptance checks
@@ -175,8 +183,13 @@ The artifact is complete only if it:
 - completes the frozen task or analyzes the prepared dossier, including the
   complete invalid-request matrix and preservation of valid Markdown and CSV;
 - records external acceptance and regression results, the independent review
-  result, deviations, unavailable telemetry, and any prepared-versus-live
+  result, explicit learner-run/prepared/reference/hypothetical provenance,
+  deviations, unavailable telemetry, and any prepared-versus-live
   limitation;
+- includes cold-reader validation on a clean comparable task without author
+  help, recording ambiguity, deviation, unsafe action, external result, and a
+  discriminating failure scenario; a prepared path may only design/analyze that
+  validation and must state that it was not executed;
 - identifies one keep, revise, or remove decision that is proportional to the
   evidence and adoption cost; and
 - makes no general performance, provider, or workflow-improvement claim from

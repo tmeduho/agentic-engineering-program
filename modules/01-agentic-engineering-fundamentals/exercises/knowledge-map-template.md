@@ -15,6 +15,16 @@ authority, lifecycle, or discovery behavior.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
+## Research and libraries check
+
+Complete this within the existing map/probe work; it does not add a separate
+exercise. A stale or unsupported conclusion is `revise`.
+
+| Item | Authority and provenance | Freshness or corroboration | Retirement or recheck rule | Conclusion and evidence |
+| --- | --- | --- | --- | --- |
+| One package/dependency knowledge item |  |  |  |  |
+| One source-registry research claim |  |  |  |  |
+
 ## Before discovery probe
 
 - Exact question:

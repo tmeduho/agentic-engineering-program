@@ -148,17 +148,21 @@ for a dependency or scope change. Before starting the measured run:
    that separately; do not grant network to the measured task.
 3. Run `pnpm check`, `pnpm test`, and `pnpm build` before mutation. Preserve
    command, exit code, and result location.
-4. Before implementation, add the named failure-injection test and run the
-   focused test so its pre-repair result is explicit. If it cannot be expressed
-   without changing the frozen task, stop and record the ambiguity.
+4. Do **not** preseed the evaluator-owned named acceptance test before the
+   measured agent run. The frozen task makes test design part of the learner or
+   agent work. Preserve the agent-authored test(s) and test-design rationale as
+   an outcome; different tests are a recorded confounder, not grounds to alter
+   the task.
 5. Record agent/harness and visible model/settings, context sources,
    permissions, approval policy, start time, interventions, each failed
    approach, and stop reason. Mark unavailable telemetry `unknown`.
-6. Run the focused test after the final mutation. Then run `pnpm check`,
-   `pnpm test`, and `pnpm build`; inspect destination and staging state; and
-   obtain an independent diff review. The reviewer must inspect acceptance,
-   CLI/error-contract scope, cleanup, publication boundary, and unrelated
-   changes.
+6. After the measured run, an independent verifier applies or runs the
+   evaluator-owned exact reference acceptance test named `failed initialization
+   publishes no partial ledger and can be retried`. The verifier records its
+   result, reviews the agent-authored test separately, then runs `pnpm check`,
+   `pnpm test`, and `pnpm build`, inspects destination/staging state, and
+   reviews acceptance, CLI/error-contract scope, cleanup, publication boundary,
+   and unrelated changes.
 
 **Configuration B — prepared dossier fallback.** Review the linked prepared
 case study instead of claiming a live second run. It changes only the named
@@ -199,9 +203,12 @@ The artifact is complete only if it:
   network observations, and gives the measured task no network authority;
 - includes the named failure-injection test, focused result, final
   `pnpm check`, `pnpm test`, and `pnpm build` evidence, destination/staging
-  inspection, and an external diff or source review;
+  inspection, evaluator-owned post-run acceptance-test result, agent-authored
+  test review, and an external diff or source review;
 - identifies the independent reviewer or clearly labels the prepared review,
-  and records permissions, approval events, interventions, and stop reason;
+  and records permissions, approval events, interventions, stop reason, CPU,
+  RAM, disk, concurrency, resource-enforcement, and infrastructure
+  failure/exclusion data as observed or `unknown`;
 - marks unavailable model, tool, cost, time, or token telemetry as `unknown`
   rather than estimating it;
 - separates observations from mechanism hypotheses, records confounders and

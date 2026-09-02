@@ -18,13 +18,14 @@
 | S08 | [Configure permissions](https://code.claude.com/docs/en/permissions) | Anthropic | First-party product documentation | not stated | 2026-09-02 | Current Claude Code permission rules, modes, sandboxing, and approval boundaries. | core; current product behavior checked inside the 30-day window; permissions, sandboxing, and approvals are documented control surfaces, not universal equivalents. |
 | S09 | [How Claude remembers your project](https://code.claude.com/docs/en/memory) | Anthropic | First-party product documentation | not stated | 2026-09-02 | Current Claude Code memory files, scopes, imports, discovery, and project instruction behavior. | core; current product behavior checked inside the 30-day window; memory behavior is Claude Code-specific and configuration-dependent. |
 | S10 | [Model guidance](https://developers.openai.com/api/docs/guides/latest-model) | OpenAI | First-party product documentation | not stated | 2026-09-02 | Visible model-family settings, reasoning/context management, tool behavior, and guidance to benchmark configuration changes on representative work. | core; current model documentation checked inside the 30-day window; names, defaults, settings, and tool support can change by family and version. |
+| S11 | [NIST AI 600-1: Generative AI Profile](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence) | NIST | Official technical publication | 2024-07-26 | 2026-09-02 | Optional facilitator/security material for scoped risk framing, documented governance, and evaluation/verification considerations. | optional; NIST says AI RMF 1.0 is being revised, so use this as voluntary risk-management guidance, not as a current product-behavior source or mandatory unit reading. |
 
 ## Scope and local evidence
 
 | ID | Source | Publisher/author | Type | Published/version | Checked | Status | Use and constraint |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | R01 | [`../../research/mega-dev-curriculum.md`](../../research/mega-dev-curriculum.md) | not stated | Local research snapshot | not stated | 2026-08-26 | supporting | Supports only MEGA's public agenda and format snapshot. It does not establish paid lesson depth, technical truth, or parity. |
-| P01 | Agent Experiment Ledger — repository: `/Users/tmeduho/dev/learning/agent-experiment-ledger` | not stated | Primary local repository evidence | reference revision `2c498f616583d1fd6aeeaa381552b47acdb71ab7`; exercise baseline `bb65b5cec8c96c3ba3d89b0025473561c7c8146f` | 2026-09-02 | core | Git history, source, tests, and README support the prepared cases, their lifecycle/evidence boundaries, and their deterministic checks. The absolute path is authoring evidence, not a public distribution location. |
+| P01 | Agent Experiment Ledger — internal-pilot sibling repository, configured by `MODULE01_LEDGER_REPO` | not stated | Primary local repository evidence | reference revision `2c498f616583d1fd6aeeaa381552b47acdb71ab7`; exercise baseline `bb65b5cec8c96c3ba3d89b0025473561c7c8146f` | 2026-09-02 | core | Git history, source, tests, and README support the prepared cases, their lifecycle/evidence boundaries, and their deterministic checks. Public repository location/access is a deferred release prerequisite. |
 
 ## Unit-to-source map
 
@@ -38,7 +39,7 @@ case rather than a required reading.
 | 2. Context engineering | S02, S06, S09, P01 | S02 | S06, S09, P01 |
 | 3. Project knowledge | S02, S09, P01 | S09 | S02, P01 |
 | 4. Harness comparison | S01, S03, S07, S08, P01 | S08 | S01, S03, S07, P01 |
-| 5. Reusable workflows | S03, S04, S05, P01 | S03 | S04, S05, P01 |
+| 5. Reusable workflows | S03, S04, S05, S11, P01 | S03 | S04, S05, S11, P01 |
 
 R01 maps to the program's public-agenda/format provenance only. It is not a
 unit reading or technical authority, so it is intentionally absent from the

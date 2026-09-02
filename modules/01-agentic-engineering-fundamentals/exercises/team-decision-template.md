@@ -3,6 +3,7 @@
 - Artifact status: complete | revise | not attempted
 - Decision identity and date:
 - Participants: solo | names/roles
+- Capability evidenced by the completed chain: executed | critically analyzed
 - Facilitator/recorder, if applicable:
 - Evidence location: outside the code-under-test worktree
 

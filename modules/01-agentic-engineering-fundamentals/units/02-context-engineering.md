@@ -149,25 +149,32 @@ record unavailable telemetry as `unknown`.
    [context-comparison-template.md](../exercises/context-comparison-template.md)
    to predict one failure mode for A and B. State what evidence would falsify
    each prediction.
-2. Copy the exact A and B packets from the prepared comparison. Run one or both
+2. Before A and B, capture every model-visible or ambient input you cannot
+   suppress: automatic repository instructions, memory, system/developer
+   context, tool descriptions, inherited session state, and environment facts.
+   Keep proof that the intended packets differ. If automatic `AGENTS.md` or
+   other ambient context collapses A/B, or you cannot bound the difference,
+   mark the run **non-comparable**; switch to an isolatable harness/configuration
+   or use prepared analysis without a causal treatment claim.
+3. Copy the exact A and B packets from the prepared comparison. Run one or both
    with the same model, harness, permissions, baseline, timebox, and acceptance
    format. Do not silently add a browser, memory, instructions, or retrieved
    source to A. If an implementation cannot suppress an ambient context source,
    record it as an uncontrolled difference rather than calling the comparison
    controlled.
-3. Build the configuration inventory. For every B-only item, record provenance,
+4. Build the configuration inventory. For every B-only item, record provenance,
    authority, freshness/checked date, placement, byte cost, retrieval trigger,
    and failure behavior. Mark tools, permissions, environment, and unavailable
    telemetry explicitly.
-4. Record observations separately from explanations. Navigation behavior such
+5. Record observations separately from explanations. Navigation behavior such
    as “opened `src/checks/check-ledger.ts` first” is an observation. “The
    orientation note caused that behavior” is a hypothesis requiring support and
    competing explanations. Record wrong turns, human interventions, and a cost
    proxy such as packet bytes, elapsed minutes, tool calls, or `unknown`.
-5. Compare the result against the raw baseline and the bounded reference repair
+6. Compare the result against the raw baseline and the bounded reference repair
    in the prepared pack. Identify the missing `Dirent.isDirectory()` prefilter
    test without claiming that a live agent must reproduce either prepared path.
-6. Make a keep, revise, or reject decision for **each** B-only item. Explain
+7. Make a keep, revise, or reject decision for **each** B-only item. Explain
    whether the item earned its context cost for this task, what would falsify
    that decision, and what follow-up evidence would be needed for a broader
    claim.
@@ -208,7 +215,11 @@ The artifact is complete only if it:
 
 Mark it `revise` if it says configuration B is better merely because it found
 the filter, attributes an explanation as an observation, hides ambient context,
-or treats bytes as a token count.
+or treats bytes as a token count. Mark it `revise` if it calls an ambiently
+collapsed or otherwise unbounded A/B pair comparable. If live work cannot
+complete both treatments inside the 20-minute comparison limit, label any mixed
+evidence non-comparable and make no performance or treatment claim; stop and
+use prepared analysis.
 
 ## Async discussion
 
