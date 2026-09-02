@@ -32,7 +32,7 @@ By the end of the module, the learner can:
 - A local copy of Agent Experiment Ledger at exercise baseline `bb65b5cec8c96c3ba3d89b0025473561c7c8146f` and verified reference revision `2c498f616583d1fd6aeeaa381552b47acdb71ab7`.
 - Git, Node.js 22 or newer, and pnpm 10.26.1 for live code exercises.
 - An isolated worktree or equivalent disposable checkout.
-- Permission to retain sanitized learning artifacts.
+- Permission to retain sanitized learning artifacts outside code-under-test worktrees.
 
 ## Non-goals
 
@@ -62,8 +62,7 @@ optional synchronous discussion is 75 minutes, for a core total of 405 minutes.
 - `workflow-v1` and its validation record.
 - One decision record from async, synchronous, or solo review.
 
-`advanced-lab.md` is elective. Its controlled experiment may extend the core
-artifacts, but it cannot block core completion or add a core outcome.
+`advanced-lab.md` is elective and exploratory unless replication conditions are met. Its controlled experiment may extend the core artifacts, but it cannot block core completion or add a core outcome.
 
 ## Acceptance criteria
 
@@ -84,7 +83,7 @@ or reject. It supports the artifact chain but does not add another core outcome.
 
 All time-sensitive claims must meet `../../RUBRIC.md` freshness rules at
 verification time. The module must pass the shared rubric and Claude must
-verify the final revision.
+verify the final revision. Only the learner may mark Module 01 approved.
 
 ## Known risks
 
