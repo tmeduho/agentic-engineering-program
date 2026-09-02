@@ -6,9 +6,9 @@ Claude is the adversarial reviewer and final verifier for Module 01. Claude must
 
 ## Current state
 
-- Status: awaiting independent adversarial review
+- Status: ready for independent adversarial review
 - Review date: not run
-- Revision or commit: not set
+- Revision or commit: `6380db1837654b2d812ed404bcb49dbf1a31b5f2`
 - Verdict: not issued
 
 ## Independent research pass
@@ -75,4 +75,3 @@ Complete this section only after Codex records dispositions and revises the modu
 - Quality-gate result:
 
 Claude may recommend `pass`; only the learner may mark the module `approved`.
-

@@ -1,6 +1,9 @@
 # Module 01 — Agentic Engineering Fundamentals
 
-**Status:** draft being prepared for public distribution.
+- Status: in-review
+
+**Design policy:** draft prepared for eventual public distribution; release and
+approval prerequisites remain separate from this in-review curriculum status.
 
 This text-first module is for experienced software engineers who want to make
 agentic engineering choices with bounded authority and evidence, rather than
