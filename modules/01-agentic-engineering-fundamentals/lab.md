@@ -111,11 +111,14 @@ harness, provider, or evidence pack.
    reference test, frozen behavior invariants, and evaluator seam adaptation
    while explicitly recording no candidate run, seam, evaluator post-run test,
    or focused candidate result. The frozen task owns
-   test design; after the measured run, an independent verifier uses the
-   candidate's documented deterministic seam for a behavior-level acceptance
-   test: inject failure immediately before candidate publication; require
-   rejection/failure, no destination, no unpublished staging, a clean retry,
-   and a blocker-free ledger check. The verifier separately reviews the
+   test design; after the producing session stops, a second engineer or
+   fresh-context agent without access to that conversation acts as the
+   independent verifier. The evaluator-owned test remains withheld until this
+   post-run phase, and the producer's conclusion is not evidence. The verifier
+   uses the candidate's documented deterministic seam for a behavior-level
+   acceptance test: inject failure immediately before candidate publication;
+   require rejection/failure, no destination, no unpublished staging, a clean
+   retry, and a blocker-free ledger check. The verifier separately reviews the
    agent-authored test, records seam/test design variance as a confounder, and
    fails acceptance when no observable seam exists. It preserves the frozen
    initialization task and obtains external source, test, and diff evidence.
@@ -147,7 +150,9 @@ Core completion requires all of the following:
   sensitive material, production use, or evidence kept in a code worktree;
 - Units 4 and 5 include external verification: acceptance and regression
   evidence plus an independent source or diff review, rather than producing
-  agent self-report;
+  agent self-report. For live Unit 4 work, the verifier is a second engineer or
+  fresh-context agent without the producing conversation and receives the
+  evaluator test only after the producing session stops;
 - every artifact records material uncertainty and confounders, including
   live-versus-prepared limits where applicable; and
 - every conclusion stays within its recorded task, baseline, configuration,

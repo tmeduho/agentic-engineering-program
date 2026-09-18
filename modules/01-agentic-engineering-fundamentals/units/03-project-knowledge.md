@@ -1,7 +1,7 @@
 # Unit 3 — Durable Project Knowledge
 
-**Core timebox:** 75 minutes: lesson 12 minutes; required reading 10 minutes;
-current-state map 18 minutes; before/after discovery probe 25 minutes;
+**Core timebox:** 75 minutes: lesson 12 minutes; required reading 6 minutes;
+current-state map 22 minutes; before/after discovery probe 25 minutes;
 self-check and async post 10 minutes.
 
 **Source map:** [S09](../sources.md#technical-sources) is the sole required
@@ -81,7 +81,7 @@ retirement.
 
 ## Required reading
 
-Read S09, [“CLAUDE.md vs auto memory”](https://code.claude.com/docs/en/memory#claudemd-vs-auto-memory), for 10 minutes. Identify the documented writer,
+Read S09, [“CLAUDE.md vs auto memory”](https://code.claude.com/docs/en/memory#claudemd-vs-auto-memory), for 6 minutes. Identify the documented writer,
 scope, and load behavior for `CLAUDE.md` and auto memory, then compare those
 mechanisms with the authority and retirement rules in this unit.
 
@@ -148,7 +148,9 @@ to the Agent Experiment Ledger main branch.
    Record the actual path, result, start/end evidence, and unavailable
    telemetry. Do not add ambient context after the root listing and call it a
    before result. Close and preserve this fresh context before continuing.
-3. At both pinned revisions, inspect `AGENTS.md`, `README.md`,
+3. At both pinned revisions, inspect `AGENTS.md` and `CLAUDE.md`,
+   recording their actual load behavior, precedence, one-line divergence, and
+   retirement/review rule, plus `README.md`,
    `docs/superpowers/specs/2026-08-27-agent-experiment-ledger-design.md`,
    `docs/superpowers/plans/2026-08-27-agent-experiment-ledger-v0.md`, and
    `package.json`. Inspect the representative source files
@@ -198,6 +200,9 @@ The artifact is complete only if it:
 
 - has one row for every listed knowledge artifact, assigning owner, authority,
   discovery, freshness, precedence, and retirement;
+- includes separate rows for `AGENTS.md` and `CLAUDE.md`, records their
+  divergence and actual harness load behavior (or `unknown`), and states how
+  their precedence and retirement are resolved;
 - distinguishes every index from its source of truth and keeps the source path,
   commit, and raw-evidence provenance for material claims;
 - records the exact before and after discovery paths, with the before starting

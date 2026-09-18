@@ -122,3 +122,29 @@ This is an append-only record of material curriculum decisions and agent disagre
 - Evidence: Task 12 independent-review finding I-008 and controller disposition for fix round 1.
 - Change made: Provisional documentation only; no required reading was added.
 - Revisit when: A bounded learner-facing source selection is proposed for the learner's explicit decision.
+
+## D-009 — Proposed contraction of the Unit 4 comparison outcome
+
+- Date: 2026-09-18
+- Status: proposed
+- Decider: learner (pending)
+- Context: Claude finding C-001 correctly observes that Unit 4's live run and prepared dossier are two evidence paths, not two agent-system configurations. The approved brief and roadmap still promise a two-configuration comparison, while the unit has a fixed 90-minute cap and a provider-neutral, no-cost prepared route.
+- Proposal or critique: An independent redesign review recommends contracting Unit 4 to one bounded run or prepared implementation dossier assessed against an explicit harness-control and independent-verification contract, followed by one falsifiable proposed configuration change. Preserving the existing comparison outcome would instead require a genuinely paired dossier or two live runs, verified tool controls, and a larger or revalidated time budget.
+- Decision: Pending learner decision. Do not silently treat the existing dossier as a second configuration, shorten two implementation runs without evidence, or claim C-001 is closed.
+- Reason: The contraction is the smallest rigorous 90-minute, provider-neutral design, but it changes an approved outcome and therefore requires learner authority under the roadmap change rule.
+- Evidence: Claude review C-001; independent Unit 4 redesign audit dated 2026-09-18; current Unit 4 arithmetic of `12 + 10 + 10 + 35 + 18 + 5 = 90` minutes.
+- Change made: No outcome or comparison-structure change pending the learner's decision. Other review findings may be remediated independently.
+- Revisit when: The learner chooses the single-case contraction or authorizes the additional paired evidence and time-budget redesign needed to retain a true two-configuration comparison.
+
+## D-010 — Retain S01's visible publication date
+
+- Date: 2026-09-18
+- Status: rejected
+- Decider: Codex
+- Context: Claude finding C-006 reported that S01's `2026-08-19` publication date was not visible on 2026-09-04 and proposed changing it to `not stated`.
+- Proposal or critique: Remove the recorded date unless a visible first-party source supports it.
+- Decision: Reject the requested metadata change and retain `2026-08-19`.
+- Reason: On 2026-09-18 the cited first-party article visibly displays “Aug 19, 2026.” The reviewer's earlier observation remains a valid time-bounded observation, but it no longer describes the current page.
+- Evidence: OpenAI, “Codex as a platform,” `https://developers.openai.com/blog/codex-as-a-platform`, checked 2026-09-18; `research/module-01-review-source-validation-2026-09-18.md`.
+- Change made: Preserve S01's publication date and record the recheck in the source registry.
+- Revisit when: The visible source metadata changes or a stable first-party archive supersedes the rolling page.

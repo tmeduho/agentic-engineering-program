@@ -22,6 +22,9 @@
 | Harness and version |  |  |
 | Model/settings when visible |  |  |
 | Context treatment |  |  |
+| Repository instruction files present |  |  |
+| Instruction files actually loaded and precedence |  |  |
+| Known instruction-file divergence and treatment |  |  |
 | Authority and approval policy |  |  |
 | Permissions |  |  |
 | Environment, worktree, and network |  |  |
@@ -34,14 +37,23 @@
 
 | Configuration | Outcome | Interventions | Wrong turns | Wall time | Available usage data | Evidence reference | Evidence type | Uncertainty |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| A |  |  |  |  |  |  | actual repository evidence |  |
-| B |  |  |  |  |  |  | actual repository evidence |  |
+| A |  |  |  |  |  |  |  |  |
+| B |  |  |  |  |  |  |  |  |
 
 Evidence type is one of: `actual repository evidence`, `prepared comparison
 material`, or `hypothetical counterexample`. Do not describe prepared results
 as learner-run measurements.
 
 ## Verification and review
+
+For a live path, name a second engineer or fresh-context agent as the
+independent verifier. The verifier starts only after the producing session
+stops, has no access to the producing conversation, treats no producer
+conclusion as evidence, and receives the candidate checkout with the evaluator
+test still withheld. The verifier may adapt the evaluator-owned test only to
+the documented candidate seam and may not change production behavior. If that
+channel is unavailable, use the prepared path and do not claim live
+acceptance.
 
 | Gate | Configuration A | Configuration B | Evidence provenance: learner-run actual \| prepared/reference \| hypothetical | Independent evidence/reviewer |
 | --- | --- | --- | --- | --- |

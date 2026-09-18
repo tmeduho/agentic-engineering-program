@@ -73,8 +73,13 @@ establish provider superiority.
 
 ## Required reading
 
-Read S08, [“Permission system”](https://code.claude.com/docs/en/permissions#permission-system)
-through [“How permissions interact with sandboxing”](https://code.claude.com/docs/en/permissions#how-permissions-interact-with-sandboxing), for 10 minutes.
+For 10 minutes, read two discrete S08 excerpts: [“Permission
+system”](https://code.claude.com/docs/en/permissions#permission-system),
+stopping before “Manage permissions,” and [“How permissions interact with
+sandboxing”](https://code.claude.com/docs/en/permissions#how-permissions-interact-with-sandboxing).
+For the second excerpt, stop at the next heading of the same or higher level.
+Do not read the intervening or following reference material as part of the
+required span.
 Record one control that is an approval rule and one that is a sandbox boundary;
 say what evidence would show that they interact.
 
@@ -142,9 +147,14 @@ production behavior. If the candidate exposes no observable seam, acceptance
 fails. Preserve seam/test-design variance as a confounder.
 
 **Configuration A — live, bounded run.** Use one available coding agent with
-the frozen task, P01 `AGENTS.md`, normal repository discovery, workspace-only
-writes, no network authority during the measured run, and approval required
-for a dependency or scope change. Before starting the measured run:
+the frozen task, P01's `AGENTS.md` and `CLAUDE.md` under the selected harness's
+normal repository discovery, workspace-only writes, no network authority
+during the measured run, and approval required for a dependency or scope
+change. The two instruction files exist at both P01 pins and differ by one
+review-verification instruction in `CLAUDE.md`. Record which file or files the
+harness actually loaded, their precedence when observable, and whether that
+known divergence is an uncontrolled difference; use `unknown` rather than
+assuming a load rule. Before starting the measured run:
 
 1. Create the isolated checkout and record its absolute path, baseline SHA,
    OS/runtime, Node version, pnpm version, and clean Git status.
@@ -159,19 +169,26 @@ for a dependency or scope change. Before starting the measured run:
    agent work. Preserve the agent-authored test(s) and test-design rationale as
    an outcome; different tests are a recorded confounder, not grounds to alter
    the task.
-5. Record agent/harness and visible model/settings, context sources,
-   permissions, approval policy, start time, interventions, each failed
-   approach, and stop reason. Mark unavailable telemetry `unknown`.
-6. After the measured run, an independent verifier writes or runs an
-   evaluator-owned behavior-level test through the candidate's documented
-   deterministic injection seam. It must inject failure immediately before
+5. Record agent/harness and visible model/settings, context sources including
+   actual instruction-file loading and precedence, permissions, approval
+   policy, start time, interventions, each failed approach, and stop reason.
+   Mark unavailable telemetry `unknown`.
+6. After the producing session stops, an independent verifier writes or runs
+   an evaluator-owned behavior-level test through the candidate's documented
+   deterministic injection seam. The verifier is a second engineer or a
+   fresh-context agent without access to the producing conversation; the
+   producer's conclusion is not evidence. The evaluator test remains withheld
+   until this post-run phase. It must inject failure immediately before
    candidate publication; assert rejection/failure, absent destination, no
    unpublished staging entry, clean retry, and blocker-free `checkLedger`.
-   The verifier may adapt only to that seam and must not change production
-   behavior. If no observable seam exists, mark acceptance failed. Record seam
-   and test-design variance as confounders, review the agent-authored test
-   separately, then run `pnpm check`, `pnpm test`, and `pnpm build` and inspect
-   scope, cleanup, publication boundary, and unrelated changes.
+   The verifier may inspect the candidate checkout and documented seam, may
+   adapt only to that seam, and must not change production behavior. If no
+   independent verifier is available, switch to the prepared path and record
+   that live acceptance was not completed. If no observable seam exists, mark
+   acceptance failed. Record seam and test-design variance as confounders,
+   review the agent-authored test separately, then run `pnpm check`,
+   `pnpm test`, and `pnpm build` and inspect scope, cleanup, publication
+   boundary, and unrelated changes.
 
 **Configuration B — prepared dossier fallback.** Review the linked prepared
 case study instead of claiming a live second run. It changes only the named
@@ -211,6 +228,9 @@ The artifact is complete only if it:
 
 - holds the exact task, baseline, acceptance conditions, and authority boundary
   constant for the stated comparison;
+- records both P01 instruction files, which file or files the harness actually
+  loaded, their precedence when observable, and the known one-line divergence
+  as controlled, uncontrolled, or `unknown`;
 - names one intended changed dimension, or explicitly uses the prepared dossier
   and records every unavoidable live-versus-prepared difference;
 - records setup separately from the measured run, including package-store and
@@ -224,9 +244,11 @@ The artifact is complete only if it:
   explicitly records that no candidate run, seam, evaluator test, or focused
   candidate result exists; it may cite prepared/reference full verification but
   does not substitute it for live acceptance;
-- identifies the independent reviewer or clearly labels the prepared review,
-  and records permissions, approval events, interventions, stop reason, CPU,
-  RAM, disk, concurrency, resource-enforcement, and infrastructure
+- identifies the independent reviewer as a second engineer or fresh-context
+  agent without the producing conversation, or clearly labels the prepared
+  review; records that the evaluator test was withheld until after the producer
+  stopped; and records permissions, approval events, interventions, stop
+  reason, CPU, RAM, disk, concurrency, resource-enforcement, and infrastructure
   failure/exclusion data as observed or `unknown`;
 - marks unavailable model, tool, cost, time, or token telemetry as `unknown`
   rather than estimating it;
@@ -255,6 +277,11 @@ required to separate it from model or context effects?** Challenge one peer’s
 claim; working solo, write the strongest alternative explanation.
 
 ## Optional depth
+
+Read S08's permission-rule syntax, wildcards, tool-specific rules, hooks, and
+working-directory material. Map each relevant product control to the inventory
+above without assuming that another harness implements the same rule language
+or enforcement boundary.
 
 Design, but do not run, a replicated experiment. Specify at least three fresh
 repetitions per configuration, fixed model/version where visible, fixed task
