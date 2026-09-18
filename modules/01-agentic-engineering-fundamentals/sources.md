@@ -38,7 +38,7 @@ case rather than a required reading.
 | 1. Models, loops, and harnesses | S01, S06, S10, P01 | S01 | S06, S10, P01 |
 | 2. Context engineering | S02, S06, S09, P01 | S02 | S06, S09, P01 |
 | 3. Project knowledge | S02, S09, P01 | S09 | S02, P01 |
-| 4. Harness comparison | S01, S03, S07, S08, P01 | S08 | S01, S03, S07, P01 |
+| 4. Harness controls and independent verification | S01, S03, S07, S08, P01 | S08 | S01, S03, S07, P01 |
 | 5. Reusable workflows | S03, S04, S05, S11, P01 | S03 | S04, S05, S11, P01 |
 
 R01 maps to the program's public-agenda/format provenance only. It is not a
@@ -56,7 +56,7 @@ five unit source lists.
 | Completion text is not environment verification. | S01, S05, P01 | Units 1 and 5 | Completion text is an agent claim; the module requires external acceptance results, state inspection, and deterministic checks for the prepared case. |
 | Repository knowledge needs authority, freshness, and discovery rules. | S09, S02, P01 | Unit 3 | The rules are a maintainability design for the learner's repository, not a claim that a provider's memory mechanism is sufficient. |
 | More context and more harness structure are not automatically better. | S02, S03, S04 | Units 2 and 4 | These sources support bounded, representative comparisons; benefits and costs depend on the task, model family, and configuration. |
-| One case study cannot establish universal model or harness superiority. | S03, S04, P01 | Unit 4 | Unit 4 is an N=1 comparison with recorded confounders; it can support a local workflow decision only. |
+| One bounded case cannot establish a harness effect or superiority. | S03, S04, P01 | Unit 4 | The case can evaluate a local control/verification contract and motivate one falsifiable next configuration change; it cannot attribute an outcome to the harness or rank harnesses. Two-configuration experiments are elective in `advanced-lab.md`. |
 
 ## Verification notes
 

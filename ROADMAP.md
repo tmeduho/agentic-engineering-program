@@ -13,9 +13,11 @@ The sequence is mastery-paced, not bound to four calendar weeks.
 
 ## Module 01 — Agentic Engineering Fundamentals
 
-Outcome: reason about and experimentally compare model, context, knowledge,
-harness, and workflow choices; leave behind a reusable evidence-backed
-engineering workflow whose live and prepared capability evidence is explicit.
+Outcome: reason about model, context, knowledge, harness, and workflow choices;
+evaluate a bounded harness control and independent-verification contract;
+design one falsifiable next configuration change; and leave behind a reusable
+evidence-backed engineering workflow whose live and prepared capability
+evidence is explicit.
 
 ## Module 02 — Agent Systems
 

@@ -23,7 +23,7 @@ requires the learner's analysis and completed artifact.
 | 1 | 45 min | [Annotated run trace](exercises/run-trace-template.md), [Unit 1](units/01-models-loops-harnesses.md) | Trace a sanitized run in a disposable checkout. | Analyze [the initialization reconstruction](exercises/evidence/unit-01-run-trace.md). |
 | 2 | 60 min | [Context comparison](exercises/context-comparison-template.md), [Unit 2](units/02-context-engineering.md) | Run the frozen read-only packets under the stated controls. | Analyze [the prepared packet comparison](exercises/evidence/unit-02-context-comparison.md). |
 | 3 | 75 min | [Knowledge map](exercises/knowledge-map-template.md), [Unit 3](units/03-project-knowledge.md) | Run the before/after discovery probe in a disposable checkout. | Analyze [the prepared knowledge audit](exercises/evidence/unit-03-knowledge-audit.md). |
-| 4 | 90 min | [N=1 harness case study](exercises/harness-case-study-template.md), [Unit 4](units/04-harness-comparison.md) | Perform the bounded task in an isolated checkout. | Analyze [the prepared case study](exercises/evidence/unit-04-harness-case-study.md). |
+| 4 | 90 min | [Harness-control case study](exercises/harness-case-study-template.md), [Unit 4](units/04-harness-comparison.md) | Perform and independently verify one bounded task; assess controls and propose one untested configuration change. | Analyze [the prepared dossier](exercises/evidence/unit-04-harness-case-study.md), its control/evidence limits, and one untested configuration change. |
 | 5 | 60 min | [`workflow-v1`](exercises/workflow-template.md), [Unit 5](units/05-reusable-workflows.md) | Validate the workflow on the frozen report task in a fresh isolated checkout. | Analyze [the prepared validation dossier](exercises/evidence/unit-05-workflow-validation.md). |
 | Decision record | 75 min | [Team decision record](exercises/team-decision-template.md) | Use the async, synchronous, or solo path. | Use the same path with prepared evidence clearly labeled. |
 
@@ -106,11 +106,12 @@ harness, provider, or evidence pack.
    root-listing-only before probe in a fresh context before named inventory or
    prepared results, then uses a second fresh context with only the proposed
    map for after. It does not merge the disposable exercise map into the ledger.
-4. Unit 4 produces an N=1 case study. A live path evidences `executed`; its
-   prepared fallback evidences `critically analyzed` only: it analyzes the
-   reference test, frozen behavior invariants, and evaluator seam adaptation
-   while explicitly recording no candidate run, seam, evaluator post-run test,
-   or focused candidate result. The frozen task owns
+4. Unit 4 evaluates one bounded run or prepared dossier against an explicit
+   harness-control and independent-verification contract. A live path evidences
+   `executed`; its prepared fallback evidences `critically analyzed` only:
+   it analyzes the reference test, frozen behavior invariants, and evaluator seam adaptation
+   while explicitly recording that the dossier contains no candidate run, seam,
+   evaluator post-run test, or focused candidate result. The frozen task owns
    test design; after the producing session stops, a second engineer or
    fresh-context agent without access to that conversation acts as the
    independent verifier. The evaluator-owned test remains withheld until this
@@ -122,6 +123,14 @@ harness, provider, or evidence pack.
    agent-authored test, records seam/test design variance as a confounder, and
    fails acceptance when no observable seam exists. It preserves the frozen
    initialization task and obtains external source, test, and diff evidence.
+   Both paths assess all ten harness dimensions with configured/observed value,
+   evidence, uncertainty, and consequence, separating instructions from
+   enforcement and unknown historical controls from the unit contract. They
+   decide the unit's three control scenarios and propose one explicitly
+   untested configuration change with a target failure, expected observation,
+   falsifier, enforcement mechanism, and held constants. Candidate observations,
+   reference evidence, and proposed changes remain separate. The two paths are
+   not two measured configurations and establish no configuration effect.
 5. Unit 5 produces `workflow-v1` and a validation record for the frozen
    report-request task. It records each workflow step, deviations, external
    acceptance, cold-reader validation or prepared analysis, and the local keep,
@@ -153,6 +162,10 @@ Core completion requires all of the following:
   agent self-report. For live Unit 4 work, the verifier is a second engineer or
   fresh-context agent without the producing conversation and receives the
   evaluator test only after the producing session stops;
+- Unit 4's case study assesses all ten control dimensions, answers its three
+  request scenarios, and specifies one falsifiable configuration change as
+  untested; reference correctness cannot stand in for historical harness
+  enforcement or candidate acceptance;
 - every artifact records material uncertainty and confounders, including
   live-versus-prepared limits where applicable; and
 - every conclusion stays within its recorded task, baseline, configuration,

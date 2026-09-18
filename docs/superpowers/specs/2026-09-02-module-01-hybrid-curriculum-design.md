@@ -124,7 +124,7 @@ experiment is an elective advanced lab.
 | 1. Models, loops, and harnesses | 45 minutes | Trace a real agent run and diagnose a failure at the correct layer | Annotated run trace and competing failure hypotheses |
 | 2. Context engineering | 60 minutes | Compare bounded context configurations and inspect their effects | Context inventory and comparison |
 | 3. Project knowledge | 75 minutes | Audit project knowledge and test one proposed improvement | Knowledge map and before/after discovery evidence |
-| 4. Harnesses | 90 minutes | Compare two agent-system configurations on a bounded case | N=1 comparative case study |
+| 4. Harnesses | 90 minutes | Evaluate a bounded harness control and independent-verification contract, then design a falsifiable next configuration change | `harness-control case study` |
 | 5. Workflows | 60 minutes | Build and execute a reusable workflow | workflow-v1 and validation record |
 | Async or synchronous workshop | 75 minutes | Challenge findings and make one decision | Decision record, team-authored when peers are available |
 
@@ -205,8 +205,9 @@ The five core artifacts form one connected chain:
 1. The run trace establishes what the agent system actually did.
 2. The context comparison tests how model-visible inputs changed behavior.
 3. The knowledge map turns useful context into maintainable project structure.
-4. The harness case study compares system configurations and their
-   observability, authority, and outcomes.
+4. The harness-control case study evaluates observability, authority, acceptance,
+   and independent verification for one bounded case, then proposes a
+   falsifiable next configuration change.
 5. workflow-v1 combines the strongest supported practices into an executable
    process.
 
@@ -221,9 +222,10 @@ File existence is never sufficient. Exercises require raw-evidence references,
 observed behavior, competing hypotheses where causality is discussed,
 disconfirming evidence, confounders, and explicit uncertainty.
 
-Unit 4 is an N=1 comparative case study. It may reveal useful differences but
-cannot isolate model, harness, and stochastic effects or establish universal
-superiority.
+Unit 4 is a bounded harness-control case study. It may expose a control gap or
+support a local next-change proposal, but one case cannot establish that a
+harness caused an outcome or that one harness is superior. Two-configuration
+experiments belong to the elective advanced lab.
 
 Unit 5 validates that workflow-v1 is understandable, executable, bounded, and
 capable of producing the required evidence. One execution does not prove that
@@ -258,13 +260,12 @@ lab aims to compare providers.
 
 ## Provider neutrality and fallbacks
 
-The core requires two agent-system configurations, not two named commercial
-products. Valid comparisons include:
-
-- two different harnesses;
-- two models in one harness;
-- one model/harness with two permission or context configurations; or
-- a learner run compared with a prepared evidence dossier.
+The core requires one bounded case/control contract, not two agent-system
+configurations. A learner may use a live case or prepared dossier, but the
+dossier is evidence for critical analysis, not a second configuration. The
+case must identify controls, independent verification, unknowns, and one
+falsifiable next configuration change. Two-configuration experiments remain
+elective in `advanced-lab.md`.
 
 Codex and Claude remain useful examples and retain their curriculum governance
 roles. Learners do not need access to both.
@@ -413,7 +414,7 @@ The Module 01 redesign is ready for learner approval when:
 | Topic parity becomes shallow checkbox coverage | Require teach/touch/defer rationale plus artifacts |
 | Exercises exceed the time budget | Seed bounded tasks and provide evidence-pack fallbacks |
 | Polished artifacts hide weak reasoning | Require provenance, disconfirming evidence, and explicit uncertainty |
-| Provider access differs across coworkers | Compare configurations and provide prepared dossiers |
+| Provider access differs across coworkers | Evaluate one bounded case/control contract and provide prepared dossiers; reserve paired configuration experiments for the advanced lab |
 | Prior project familiarity biases comparison | Label the core a case study and prefer a fresh advanced fixture |
 | Async discussion stalls | Provide challenge templates, facilitator synthesis, and solo critiques |
 | Source behavior changes | Track checked dates and isolate provider-specific material |

@@ -42,7 +42,7 @@ decision-record activity.
 | 1 | 45 min | [Unit 1 — Models, loops, and harnesses](units/01-models-loops-harnesses.md) and an [annotated run trace](exercises/run-trace-template.md) |
 | 2 | 60 min | [Unit 2 — Context engineering](units/02-context-engineering.md) and a [context comparison](exercises/context-comparison-template.md) |
 | 3 | 75 min | [Unit 3 — Project knowledge](units/03-project-knowledge.md) and a [repository knowledge map](exercises/knowledge-map-template.md) |
-| 4 | 90 min | [Unit 4 — Harness comparison](units/04-harness-comparison.md) and an [N=1 harness case study](exercises/harness-case-study-template.md) |
+| 4 | 90 min | [Unit 4 — Harness Controls and Independent Verification](units/04-harness-comparison.md) and a [harness-control case study](exercises/harness-case-study-template.md) |
 | 5 | 60 min | [Unit 5 — Reusable workflows](units/05-reusable-workflows.md) and [`workflow-v1`](exercises/workflow-template.md) |
 | Decision | 75 min | [Workshop](workshop.md) and a [team decision record](exercises/team-decision-template.md) |
 
