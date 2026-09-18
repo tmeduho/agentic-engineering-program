@@ -15,7 +15,8 @@ module verified, approved, published, or public-ready.
 - Review-record commit: intentionally not named here; this record cannot review
   the commit that contains it.
 - Provisional decisions: D-007 and D-008 remain proposed with learner decision
-  pending. The learner accepted D-009 on 2026-09-18.
+  pending. The learner accepted D-009 through superseding decision D-011 on
+  2026-09-18.
 - Remaining prerequisites: timed human/cohort and live cold-reader pilot;
   public P01 access/release; curriculum and P01 licenses; verified non-POSIX
   instructions; bounded required non-vendor reading decision; and the recorded
@@ -30,7 +31,7 @@ does not modify or impersonate `claude-review.md`.
 
 | Finding | Disposition | Evidence and change | Status |
 | --- | --- | --- | --- |
-| C-001 | accept | The learner accepted D-009. Unit 4 now evaluates one bounded live run or prepared dossier against a ten-dimension harness-control and independent-verification contract, requires decisions for three concrete control requests, and produces one explicitly untested falsifiable configuration-change proposal. The brief, lab, roadmap, approved design, implementation plan, template, dossier, source map, facilitation, and evidence index now use that outcome. The two evidence paths are not represented as configurations; paired experiments remain elective in `advanced-lab.md`. | fixed; pending Claude verification |
+| C-001 | accept | The learner accepted the D-009 proposal through D-011. Unit 4 now evaluates one bounded live run or prepared dossier against a ten-dimension harness-control and independent-verification contract, requires decisions for three concrete control requests, and produces one explicitly untested falsifiable configuration-change proposal. The brief, lab, roadmap, approved design, implementation plan, template, dossier, source map, facilitation, and evidence index now use that outcome. The two evidence paths are not represented as configurations; paired experiments remain elective in `advanced-lab.md`. | fixed; pending Claude verification |
 | C-002 | accept | S10 is now explicitly a rolling current-model page checked 2026-09-18; the stale GPT-5.6 note and unsupported representative-workload attribution were removed from `sources.md`, `research/source-index.md`, and Unit 1. Stable claims no longer rely on S10. | fixed; pending Claude verification |
 | C-003 | accept | Units 2 and 4, the Unit 2/4 prepared packs, and the Unit 4 template now name both P01 instruction files, their one-line divergence, actual harness loading and precedence, and `unknown`/uncontrolled handling. The pinned P01 evidence remains unchanged. | fixed; pending Claude verification |
 | C-004 | accept | Unit 3 and its prepared audit now inspect separate `AGENTS.md` and `CLAUDE.md` rows with authority, discovery/loading, precedence, freshness, and retirement treatment. | fixed; pending Claude verification |
@@ -45,17 +46,17 @@ does not modify or impersonate `claude-review.md`.
 
 | Gate affected by Claude's review | Current result | Reason |
 | --- | --- | --- |
-| Outcomes are measurable and fully covered. | pass pending verifier | D-009 replaced the unsupported comparison promise with the assessed harness-control case outcome. |
+| Outcomes are measurable and fully covered. | pass pending verifier | D-011 accepted D-009 and replaced the unsupported comparison promise with the assessed harness-control case outcome. |
 | No unaccepted major findings remain. | pass pending verifier | C-001 through C-005 have implemented remedies; Claude must verify them. |
 | Fast-moving claims satisfy the source-freshness policy. | pass pending verifier | C-002 was corrected and rechecked on 2026-09-18. |
 | The lab exercises the stated skills rather than adjacent skills. | pass pending verifier | Unit 4 now directly assesses control classification, independent verification, request decisions, and falsifiable next-change design. |
-| Every reviewer finding has a lead disposition. | pass | C-001 through C-010 are dispositioned above; D-009 and D-010 record the scope decision and material disagreement. |
+| Every reviewer finding has a lead disposition. | pass | C-001 through C-010 are dispositioned above; D-011 records the learner's scope decision and D-010 records the material disagreement. |
 
 The standards re-review of the first correction set found no
 documented-standard breach. It flagged repeated independent-verifier language
 as a possible duplication smell; the repetition is retained because the unit,
 template, prepared pack, and lab route must remain usable as self-contained
-learner artifacts. A fresh independent D-009 design critique found no
+learner artifacts. A fresh independent D-011 design critique found no
 substantive defect in the contracted live/prepared assessment, provenance
 separation, or falsifiable checks. The final standards/spec re-review remains
 recorded in the handoff verification evidence for the revision containing this

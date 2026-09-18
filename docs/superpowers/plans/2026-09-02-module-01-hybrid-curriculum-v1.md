@@ -24,10 +24,10 @@ commits.
 
 **Spec:** docs/superpowers/specs/2026-09-02-module-01-hybrid-curriculum-design.md
 
-> **D-009 supersession (2026-09-18):** The learner-approved D-009 decision
-> supersedes this plan's original Unit 4 two-configuration requirement. The
-> historical task structure below is retained for provenance, but current
-> implementation must produce a bounded harness-control case study with
+> **D-011 supersession (2026-09-18):** The learner-approved D-011 decision
+> accepts D-009 and supersedes this plan's original Unit 4 two-configuration
+> requirement. The historical task structure below is retained for provenance,
+> but current implementation must produce a bounded harness-control case study with
 > independent verification and one falsifiable next configuration change.
 
 ## Global Constraints

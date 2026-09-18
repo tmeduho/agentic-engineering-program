@@ -123,20 +123,18 @@ This is an append-only record of material curriculum decisions and agent disagre
 - Change made: Provisional documentation only; no required reading was added.
 - Revisit when: A bounded learner-facing source selection is proposed for the learner's explicit decision.
 
-## D-009 — Contract the Unit 4 comparison outcome
+## D-009 — Proposed contraction of the Unit 4 comparison outcome
 
 - Date: 2026-09-18
-- Status: accepted
-- Decider: learner
-- Approval: Learner approved on 2026-09-18.
-- Context: Claude finding C-001 correctly observes that Unit 4's live run and prepared dossier are two evidence paths, not two agent-system configurations. The then-current approved brief and roadmap promised a two-configuration comparison, while the unit had a fixed 90-minute cap and a provider-neutral, no-cost prepared route.
+- Status: proposed
+- Decider: learner (pending)
+- Context: Claude finding C-001 correctly observes that Unit 4's live run and prepared dossier are two evidence paths, not two agent-system configurations. The approved brief and roadmap still promise a two-configuration comparison, while the unit has a fixed 90-minute cap and a provider-neutral, no-cost prepared route.
 - Proposal or critique: An independent redesign review recommends contracting Unit 4 to one bounded run or prepared implementation dossier assessed against an explicit harness-control and independent-verification contract, followed by one falsifiable proposed configuration change. Preserving the existing comparison outcome would instead require a genuinely paired dossier or two live runs, verified tool controls, and a larger or revalidated time budget.
-- Decision: Contract the core Unit 4 outcome to evaluating one bounded harness case/control contract (live or prepared) and designing one falsifiable next configuration change. Do not treat the prepared dossier as a second configuration. Keep true two-configuration experiments elective in `advanced-lab.md`.
+- Decision: Pending learner decision. Do not silently treat the existing dossier as a second configuration, shorten two implementation runs without evidence, or claim C-001 is closed.
 - Reason: The contraction is the smallest rigorous 90-minute, provider-neutral design, but it changes an approved outcome and therefore requires learner authority under the roadmap change rule.
 - Evidence: Claude review C-001; independent Unit 4 redesign audit dated 2026-09-18; current Unit 4 arithmetic of `12 + 10 + 10 + 35 + 18 + 5 = 90` minutes.
-- Change made: Updated the roadmap, approved design, historical implementation plan, learner-facing curriculum labels, source claim map, facilitator examples, and evidence-pack index. Unit 4 is now learner-facing as **Harness Controls and Independent Verification**, with a `harness-control case study` artifact. The 405-minute core total, provider neutrality, MEGA Week 1 harness coverage, and elective advanced experiment remain unchanged.
-- Affected artifacts: `ROADMAP.md`; the approved design and historical implementation plan; Module 01's brief, curriculum, lab, Unit 4 lesson, template, prepared pack, source map, facilitator guide, evidence-pack index, and Codex review response.
-- Revisit when: A learner-approved redesign proposes a replicated or paired experiment with adequate controls and a separately validated time budget.
+- Change made: No outcome or comparison-structure change pending the learner's decision. Other review findings may be remediated independently.
+- Revisit when: The learner chooses the single-case contraction or authorizes the additional paired evidence and time-budget redesign needed to retain a true two-configuration comparison.
 
 ## D-010 — Retain S01's visible publication date
 
@@ -150,3 +148,16 @@ This is an append-only record of material curriculum decisions and agent disagre
 - Evidence: OpenAI, “Codex as a platform,” `https://developers.openai.com/blog/codex-as-a-platform`, checked 2026-09-18; `research/module-01-review-source-validation-2026-09-18.md`.
 - Change made: Preserve S01's publication date and record the recheck in the source registry.
 - Revisit when: The visible source metadata changes or a stable first-party archive supersedes the rolling page.
+
+## D-011 — Accept the Unit 4 outcome contraction
+
+- Date: 2026-09-18
+- Status: accepted
+- Decider: learner
+- Context: D-009 proposed resolving Claude finding C-001 by replacing the unsupported core two-configuration promise with a bounded harness-control case study that fits the existing 90-minute, provider-neutral format.
+- Proposal or critique: Evaluate one live run or prepared dossier against an explicit harness-control and independent-verification contract, then design one falsifiable next configuration change without claiming a measured effect. Keep paired or replicated comparisons elective in `advanced-lab.md`.
+- Decision: Accept the D-009 proposal and supersede its pending decision state. The prepared dossier is an alternative evidence path, not a second agent-system configuration.
+- Reason: The contracted outcome directly assesses control classification, authority, independent verification, uncertainty, and next-experiment design without inventing paired evidence or silently shortening two implementation runs.
+- Evidence: The learner's explicit approval on 2026-09-18; Claude review C-001; the independent Unit 4 redesign and final spec review; the unchanged timebox arithmetic `12 + 10 + 10 + 35 + 18 + 5 = 90` minutes.
+- Change made: Updated the roadmap, approved design, historical implementation plan, Module 01 brief/curriculum/lab, Unit 4 lesson/template/prepared pack, source map, facilitator examples, evidence-pack index, and Codex review response. The 405-minute core total, provider neutrality, MEGA Week 1 harness coverage, live/prepared capability labels, and elective advanced experiment remain unchanged.
+- Revisit when: A learner-approved redesign proposes a paired or replicated experiment with adequate controls and a separately validated time budget.
