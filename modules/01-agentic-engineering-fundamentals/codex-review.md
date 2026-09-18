@@ -52,15 +52,17 @@ does not modify or impersonate `claude-review.md`.
 | The lab exercises the stated skills rather than adjacent skills. | pass pending verifier | Unit 4 now directly assesses control classification, independent verification, request decisions, and falsifiable next-change design. |
 | Every reviewer finding has a lead disposition. | pass | C-001 through C-010 are dispositioned above; D-011 records the learner's scope decision and D-010 records the material disagreement. |
 
-The standards re-review of the first correction set found no
-documented-standard breach. It flagged repeated independent-verifier language
-as a possible duplication smell; the repetition is retained because the unit,
-template, prepared pack, and lab route must remain usable as self-contained
-learner artifacts. A fresh independent D-011 design critique found no
-substantive defect in the contracted live/prepared assessment, provenance
-separation, or falsifiable checks. The final standards/spec re-review remains
-recorded in the handoff verification evidence for the revision containing this
-response.
+The final two-axis re-review of `e3e0154...3230c4c` found no spec findings and
+no documented-standard breach. It verified that D-009 remains byte-for-byte
+historical and D-011 appends the learner's superseding approval. Repeated
+live/prepared contract language and the broad synchronization surface remain
+judgment-call duplication/shotgun smells; they are retained because the unit,
+template, prepared pack, lab, and facilitator route serve distinct,
+self-contained readers. An independent design critique found no substantive
+defect in the contracted assessment, provenance separation, or falsifiable
+checks. Local validation resolved all 97 local links and re-ran the pinned
+sample project's two focused evaluator tests, type-check, 121-test suite, and
+build successfully.
 
 The sections below are the original 2026-09-02 pre-Claude self-review of
 `9bb8290`. They are preserved as historical evidence and do not override the
