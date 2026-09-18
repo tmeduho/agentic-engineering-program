@@ -6,20 +6,21 @@ module verified, approved, published, or public-ready.
 
 ## Current handoff
 
-- Status: revision implemented for C-002 through C-005 and C-007 through
-  C-009; C-001 remains open behind learner-pending D-009. The module is not
-  ready for Claude final verification until that scope decision is made.
-- Revised content commit: `5e8fa05cf817`.
+- Status: revision implemented for C-001 through C-005 and C-007 through
+  C-009; C-006 is rejected with current evidence and C-010 is recorded. The
+  module is ready for Claude's independent final verification, not verified or
+  approved.
+- Revised content commits: `5e8fa05cf817` and `69ed4a5`.
 - Claude review record commit: `2950b7f1b926`.
 - Review-record commit: intentionally not named here; this record cannot review
   the commit that contains it.
-- Provisional decisions: D-007, D-008, and D-009 remain proposed with learner
-  decision pending.
+- Provisional decisions: D-007 and D-008 remain proposed with learner decision
+  pending. The learner accepted D-009 on 2026-09-18.
 - Remaining prerequisites: timed human/cohort and live cold-reader pilot;
   public P01 access/release; curriculum and P01 licenses; verified non-POSIX
   instructions; bounded required non-vendor reading decision; and the recorded
-  network/package-store setup limitation. C-001 and Claude's final verification
-  are internal release gates.
+  network/package-store setup limitation. Claude's final verification remains
+  an internal release gate.
 
 ## Response to Claude's 2026-09-04 review
 
@@ -29,7 +30,7 @@ does not modify or impersonate `claude-review.md`.
 
 | Finding | Disposition | Evidence and change | Status |
 | --- | --- | --- | --- |
-| C-001 | accept diagnosis; defer remedy to learner | A live run and prepared dossier are evidence paths, not two agent-system configurations. An independent redesign found that two unchanged live runs exceed the 90-minute cap and that the current dossier is not paired configuration evidence. D-009 proposes the smallest rigorous correction: contract Unit 4 to one bounded harness-control case study plus one falsifiable proposed configuration change. Retaining the comparison outcome instead requires a new paired dossier or two verified live configurations and a redesigned budget. | **open** — learner scope decision required; no outcome text was silently changed. |
+| C-001 | accept | The learner accepted D-009. Unit 4 now evaluates one bounded live run or prepared dossier against a ten-dimension harness-control and independent-verification contract, requires decisions for three concrete control requests, and produces one explicitly untested falsifiable configuration-change proposal. The brief, lab, roadmap, approved design, implementation plan, template, dossier, source map, facilitation, and evidence index now use that outcome. The two evidence paths are not represented as configurations; paired experiments remain elective in `advanced-lab.md`. | fixed; pending Claude verification |
 | C-002 | accept | S10 is now explicitly a rolling current-model page checked 2026-09-18; the stale GPT-5.6 note and unsupported representative-workload attribution were removed from `sources.md`, `research/source-index.md`, and Unit 1. Stable claims no longer rely on S10. | fixed; pending Claude verification |
 | C-003 | accept | Units 2 and 4, the Unit 2/4 prepared packs, and the Unit 4 template now name both P01 instruction files, their one-line divergence, actual harness loading and precedence, and `unknown`/uncontrolled handling. The pinned P01 evidence remains unchanged. | fixed; pending Claude verification |
 | C-004 | accept | Unit 3 and its prepared audit now inspect separate `AGENTS.md` and `CLAUDE.md` rows with authority, discovery/loading, precedence, freshness, and retirement treatment. | fixed; pending Claude verification |
@@ -44,19 +45,21 @@ does not modify or impersonate `claude-review.md`.
 
 | Gate affected by Claude's review | Current result | Reason |
 | --- | --- | --- |
-| Outcomes are measurable and fully covered. | fail | C-001 remains open pending D-009. |
-| No unaccepted major findings remain. | fail | C-001 is accepted but unresolved. |
+| Outcomes are measurable and fully covered. | pass pending verifier | D-009 replaced the unsupported comparison promise with the assessed harness-control case outcome. |
+| No unaccepted major findings remain. | pass pending verifier | C-001 through C-005 have implemented remedies; Claude must verify them. |
 | Fast-moving claims satisfy the source-freshness policy. | pass pending verifier | C-002 was corrected and rechecked on 2026-09-18. |
-| The lab exercises the stated skills rather than adjacent skills. | fail | The current Unit 4 artifact still does not exercise a true two-configuration comparison. |
+| The lab exercises the stated skills rather than adjacent skills. | pass pending verifier | Unit 4 now directly assesses control classification, independent verification, request decisions, and falsifiable next-change design. |
 | Every reviewer finding has a lead disposition. | pass | C-001 through C-010 are dispositioned above; D-009 and D-010 record the scope decision and material disagreement. |
 
-The standards re-review of `2950b7f...5e8fa05` found no documented-standard
-breach. It flagged repeated independent-verifier language as a possible
-duplication smell; the repetition is retained because the curriculum policy
-requires the unit, template, prepared pack, and lab route to remain usable as
-self-contained learner artifacts. The spec re-review found the substantive
-fixes correct and C-001 appropriately unresolved; it identified this response
-record and the Unit 3 time rebalance as the remaining documentation changes.
+The standards re-review of the first correction set found no
+documented-standard breach. It flagged repeated independent-verifier language
+as a possible duplication smell; the repetition is retained because the unit,
+template, prepared pack, and lab route must remain usable as self-contained
+learner artifacts. A fresh independent D-009 design critique found no
+substantive defect in the contracted live/prepared assessment, provenance
+separation, or falsifiable checks. The final standards/spec re-review remains
+recorded in the handoff verification evidence for the revision containing this
+response.
 
 The sections below are the original 2026-09-02 pre-Claude self-review of
 `9bb8290`. They are preserved as historical evidence and do not override the
