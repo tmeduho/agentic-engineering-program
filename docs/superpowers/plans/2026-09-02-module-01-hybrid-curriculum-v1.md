@@ -24,6 +24,12 @@ commits.
 
 **Spec:** docs/superpowers/specs/2026-09-02-module-01-hybrid-curriculum-design.md
 
+> **D-011 supersession (2026-09-18):** The learner-approved D-011 decision
+> accepts D-009 and supersedes this plan's original Unit 4 two-configuration
+> requirement. The historical task structure below is retained for provenance,
+> but current implementation must produce a bounded harness-control case study with
+> independent verification and one falsifiable next configuration change.
+
 ## Global Constraints
 
 - Read AGENTS.md, CHARTER.md, PROFILE.md, RUBRIC.md, ROADMAP.md, DECISIONS.md,
@@ -37,8 +43,9 @@ commits.
   five units plus 75 minutes for async or synchronous discussion.
 - Include required reading inside each unit timebox and cap it at 15 minutes.
 - Keep the core provider-neutral. No learner must have both Codex and Claude.
-- Treat Unit 4 as an N=1 case study and the advanced lab as exploratory unless
-  conditions are replicated.
+- Treat Unit 4 as a bounded harness-control case study; keep true
+  two-configuration experiments in the elective advanced lab unless conditions
+  are separately replicated and approved.
 - Never claim that one execution proves workflow improvement.
 - Every live-run exercise needs a timebox, stop condition, sanitized evidence
   fallback, expected repository state, and external verification procedure.
@@ -217,8 +224,9 @@ The outcomes must state that the learner can:
    explanations, and confounders.
 3. Design and test a repository knowledge structure with authority, freshness,
    discovery, precedence, and retirement rules.
-4. Conduct an N=1 comparison of two agent-system configurations without
-   generalizing beyond the observed case.
+4. Evaluate a bounded harness-control and independent-verification contract,
+   then design one falsifiable next configuration change without generalizing
+   beyond the observed case.
 5. Write and execute a bounded workflow with decision rights, safety,
    escalation, evidence, and verification gates.
 
@@ -938,7 +946,7 @@ git commit -m "docs: author Module 01 knowledge unit"
 
 ---
 
-### Task 7: Author Unit 4 — harness comparison
+### Task 7: Author Unit 4 — harness controls and independent verification
 
 **Files:**
 
@@ -949,8 +957,9 @@ git commit -m "docs: author Module 01 knowledge unit"
 
 - Consumes: S01, S03, S07, S08, P01,
   harness-case-study-template.md, and Unit 3's orientation proposal.
-- Produces: an N=1 case study and an independently reviewed implementation
-  artifact.
+- Produces: a `harness-control case study` and an independently reviewed
+  implementation artifact, plus one falsifiable proposed next configuration
+  change.
 
 - [ ] **Step 1: Write outcomes and the 90-minute schedule**
 
@@ -995,25 +1004,23 @@ Acceptance requires the test named "failed initialization publishes no partial
 ledger and can be retried", no destination after injected failure, no staging
 entry, a successful retry, and a blocker-free check.
 
-- [ ] **Step 4: Define two comparable configurations**
+- [ ] **Step 4: Define the bounded case/control contract**
 
-Configuration A is the learner's available agent with the frozen task,
-AGENTS.md, normal repository discovery, workspace-only writes, no network, and
-approval for dependency or scope changes.
+The live case is the learner's available agent with the frozen task, repository
+instructions, normal repository discovery, workspace-only writes, no network,
+and approval for dependency or scope changes. Record the actual loaded
+instruction files, precedence, and unknowns rather than assuming `AGENTS.md`
+alone is present.
 
 Dependency installation occurs during setup before the measured agent run. If
 the package store is not already populated, record the setup network access
 separately; the task run itself receives no network authority.
 
-Configuration B changes exactly one named system dimension:
-
-- another harness with equivalent authority;
-- another model in the same harness;
-- the same harness with the Unit 3 orientation map; or
-- the prepared anonymous implementation dossier.
-
-Record every unavoidable difference. Do not call the result a provider
-benchmark.
+The prepared path is a dossier for critical analysis, not Configuration B or a
+second agent-system configuration. Both paths must state the control contract,
+independent-verification procedure, missing telemetry, and one falsifiable
+next configuration change. Record every unavoidable difference and do not call
+the result a provider benchmark.
 
 - [ ] **Step 5: Build the implementation dossier**
 
@@ -1045,37 +1052,53 @@ The live path must:
 2. run pnpm install --frozen-lockfile during setup and record whether it used
    network access;
 3. run pnpm check, pnpm test, and pnpm build before mutation;
-4. add the failure-injection test before implementation;
-5. capture agent configuration, permissions, start time, interventions, and
-   stop reason;
-6. run the focused test;
-7. run pnpm check, pnpm test, and pnpm build after the final mutation; and
-8. obtain an independent diff review or use the prepared review.
+4. withhold the evaluator-owned acceptance test while preserving the producing
+   agent's own test and rationale;
+5. capture the ten harness dimensions, permissions, start time, interventions,
+   stop reason, and unknowns;
+6. after the producing session stops, have a second engineer or fresh-context
+   agent adapt and run the evaluator-owned behavior test only through the
+   candidate's documented deterministic seam;
+7. run pnpm check, pnpm test, and pnpm build after the final mutation and
+   inspect the destination/staging state; and
+8. obtain an independent diff/source review. If the independent verifier or a
+   candidate seam is unavailable, do not claim live acceptance; use the
+   prepared path or mark the artifact revise.
+
+The prepared path analyzes the reference test, frozen behavior invariants,
+and evaluator seam adaptation while recording that the dossier supplies no
+candidate run, candidate seam, evaluator post-run test, or focused candidate
+result. It must not borrow the reference hook as a universal candidate API.
 
 - [ ] **Step 7: Write acceptance checks**
 
 A complete case study:
 
 - holds the task, baseline, acceptance, and authority constant;
-- changes one named configuration dimension or uses the dossier;
+- evaluates the named control contract or critically analyzes the dossier;
+- proposes one falsifiable next configuration change and its disconfirming
+  result;
 - reports unavailable telemetry as unknown;
 - includes external test and diff evidence;
 - distinguishes observation from mechanism;
 - records confounders; and
-- limits conclusions to the observed task and configurations.
+- limits conclusions to the observed task, case, evidence path, and proposed
+  future test.
 
 - [ ] **Step 8: Add discussion and optional depth**
 
-Async prompt: "Which observed difference belongs to the harness, and what
-evidence would be required to separate it from model or context effects?"
+Async prompt: "What evidence would show that this control is enforced, and
+what additional evidence would be needed to claim it changes outcomes?"
 
 Optional depth: design a replicated experiment without running it.
 
 - [ ] **Step 9: Validate and commit Unit 4**
 
 Run the ten-heading structural check against 04-harness-comparison.md. Confirm
-the evidence pack contains two approaches, the failure test, verification
-output, diff evidence, permissions, and explicit provenance.
+the evidence pack contains the bounded control contract, failure test,
+independent-verification analysis, proposed next-change falsifier, diff
+evidence, permissions, and explicit provenance. Do not require two core
+configurations; those belong to the elective advanced lab.
 
 ~~~bash
 git add modules/01-agentic-engineering-fundamentals/units/04-harness-comparison.md modules/01-agentic-engineering-fundamentals/exercises/evidence/unit-04-harness-case-study.md

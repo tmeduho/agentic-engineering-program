@@ -1,6 +1,6 @@
 # Module 01 Brief — Agentic Engineering Fundamentals
 
-- Status: in-review
+- Status: verified
 - Lead: Codex
 - Adversarial reviewer and final verifier: Claude
 - Source freshness metadata: [sources.md](sources.md) is the sole registry
@@ -23,9 +23,11 @@ By the end of the module, the learner can:
 1. Trace model inference, context assembly, agent-loop decisions, tool execution, environment effects, authority, observations, and verification.
 2. Compare bounded context configurations while separating observations, explanations, and confounders.
 3. Design and test a repository knowledge structure with authority, freshness, discovery, precedence, and retirement rules.
-4. Execute an N=1 comparison of two agent-system configurations, or critically
-   analyze the explicitly labeled prepared case, without generalizing beyond
-   the observed evidence.
+4. Evaluate a bounded run or prepared dossier against an explicit
+   harness-control and independent-verification contract, and propose one
+   falsifiable configuration change without claiming a measured configuration
+   effect. Label live execution `executed` and prepared analysis
+   `critically analyzed`.
 5. Execute a bounded workflow with decision rights, safety, escalation,
    evidence, and verification gates, or critically analyze its prepared
    validation dossier without claiming execution skill.
@@ -51,7 +53,7 @@ By the end of the module, the learner can:
 1. Model, agent loop, and harness boundaries.
 2. Context engineering as allocation of a finite resource.
 3. Durable project knowledge and progressive disclosure.
-4. Harness engineering, authority, and N=1 comparison.
+4. Harness controls and independent verification.
 5. Reusable workflows with verification and feedback.
 
 The five unit allocations (45, 60, 75, 90, and 60 minutes) and the 75-minute
@@ -66,7 +68,8 @@ A timed human/cohort pilot is required before learner approval or public release
 - An annotated run trace and competing failure hypotheses.
 - A bounded context inventory and comparison.
 - A repository knowledge map and before/after discovery evidence.
-- An N=1 comparative case study of two agent-system configurations.
+- A harness-control case study with independent verification and one untested,
+  falsifiable proposed configuration change.
 - `workflow-v1` and its validation record.
 - One decision record from async, synchronous, or solo review.
 
@@ -83,7 +86,7 @@ artifact and a falsifiable acceptance condition for each outcome.
 | Trace the agent system | Annotated run trace and competing failure hypotheses | The trace labels model inference, context assembly, agent-loop decision, tool execution, environment effect, authority, observation, and verification where they occur; for one failure it records competing hypotheses and evidence that rejects or leaves each unresolved. |
 | Compare bounded context | Bounded context inventory and comparison | The comparison records configurations and held-constant conditions, then separates observations, explanations, and confounders; it fails if it treats an explanation as an observation or omits a material uncontrolled variable. |
 | Design and test project knowledge | Repository knowledge map and before/after discovery evidence | The map assigns authority, freshness trigger, discovery path, precedence, and retirement rule to every listed knowledge artifact, and the evidence shows whether the proposed structure changed a specified discovery task. |
-| Conduct an N=1 comparison or critically analyze it | N=1 comparative case study | A live case holds the stated task, baseline, acceptance checks, and authority boundary constant where possible; a prepared case is explicitly `critically analyzed`. Both record unavoidable differences and limit every conclusion to the observed configuration and evidence. |
+| Evaluate harness controls and independent verification | Harness-control case study and untested configuration-change proposal | Both paths preserve the frozen task, baseline, acceptance checks, and authority boundary; assess all ten harness dimensions with configured/observed values, evidence, uncertainty, and consequences; and distinguish instructions from enforcement. Live acceptance requires independent candidate evaluation; prepared analysis records missing candidate evidence. The proposal names a target failure, expected observation, falsifier, enforcement mechanism, and held constants without claiming a measured effect. |
 | Execute or critically analyze a bounded workflow | `workflow-v1` and validation record | A live validation records external acceptance independent of the producing agent. A prepared validation is labeled `critically analyzed` and cannot evidence execution skill. |
 
 The decision record states an evidence-backed practice to adopt, test further,
@@ -96,7 +99,8 @@ verify the final revision. Only the learner may mark Module 01 approved.
 ## Known risks
 
 - Agent-system configurations can expose different telemetry and permission models, limiting strict equivalence.
-- N=1 evidence can support a local workflow decision but not a general provider or harness ranking.
+- A single case can support a bounded control or verification decision, not a
+  measured configuration effect or a general provider or harness ranking.
 - Prepared evidence packs may omit telemetry; record unavailable values as unknown rather than inventing estimates.
 - A task that is too easy will hide context and harness differences; a task that is too broad will introduce uncontrolled variance.
 

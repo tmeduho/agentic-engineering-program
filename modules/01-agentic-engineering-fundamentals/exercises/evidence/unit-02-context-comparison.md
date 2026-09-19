@@ -16,6 +16,15 @@ ambient model-visible inputs. If these collapse or obscure the intended packet
 difference, mark the result non-comparable and use an isolatable configuration
 or this prepared analysis without a causal treatment claim.
 
+P01 contains both root instruction files, `AGENTS.md` and `CLAUDE.md`, at the
+baseline and reference pins. They differ by one review-verification line in
+`CLAUDE.md`. The bounded Configuration B packet below explicitly supplies the
+`AGENTS.md` text; it does not silently supply `CLAUDE.md`. Before treating A/B
+as comparable, record which file(s) the selected harness actually loads, their
+precedence, and whether the divergence is present. If that load behavior is
+not observable, record it as `unknown` and treat it as an uncontrolled
+difference rather than assuming `AGENTS.md` was the only ambient instruction.
+
 ## Prediction gate — stop before prepared results
 
 Before reading any later section, copy
@@ -152,6 +161,7 @@ acceptance format remain A’s content, not B-only context.
 | Added item | Provenance and authority | Freshness | Placement and trigger | Cost / failure behavior | Decision prompt |
 | --- | --- | --- | --- | --- | --- |
 | `AGENTS.md` | Baseline `AGENTS.md`; repository instruction, authoritative for repository work but subordinate to harness/system rules | Exact baseline commit | Included at packet start; read before source exploration | Adds broad workflow rules; can be over-broad for a read-only task or stale on another revision | Did its constraints change this investigation? |
+| `CLAUDE.md` | Baseline `CLAUDE.md`; a second root instruction file with one additional review-verification line; actual loading is harness-specific | Exact baseline commit | Not included in the fenced B packet; inspect automatic loading and precedence before calling A/B comparable | The extra line can change independent-review behavior; if loading is unobservable, retain `unknown` | Which file(s) loaded, in what precedence, and did the divergence remain uncontrolled? |
 | README artifacts/privacy/integrity excerpt | Baseline `README.md`; repository documentation and evidence boundary, not a replacement for source behavior | Exact baseline commit | Included before exploration | Adds provenance and read-only framing; can restate the task without locating traversal | Did it prevent an invalid action or merely repeat a boundary? |
 | Design integrity section | Baseline design specification; stated product contract via `AGENTS.md` | Exact baseline commit | Included before exploration | Explains invariants; can bias the agent toward intended design instead of current behavior | Did it identify a testable invariant? |
 | Design filesystem-safety section | Baseline design specification; stated product contract via `AGENTS.md` | Exact baseline commit | Included before exploration | Narrows symlink concern; could make a learner assume code conforms | Did it generate a falsifiable raw-source question? |

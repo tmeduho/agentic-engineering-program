@@ -159,8 +159,13 @@ record unavailable telemetry as `unknown`.
 2. Before A and B, capture every model-visible or ambient input you cannot
    suppress: automatic repository instructions, memory, system/developer
    context, tool descriptions, inherited session state, and environment facts.
-   Keep proof that the intended packets differ. If automatic `AGENTS.md` or
-   other ambient context collapses A/B, or you cannot bound the difference,
+   For P01, inspect both root instruction files (`AGENTS.md` and `CLAUDE.md`)
+   and record which file(s) the selected harness actually loaded, their
+   precedence, and the one-line divergence between them. If loading is not
+   observable, record it as `unknown`; do not assume that a named file was
+   loaded. Keep proof that the intended packets differ. If automatic
+   repository instructions (including `AGENTS.md` or `CLAUDE.md`) collapse A/B,
+   or you cannot bound the difference,
    mark the run **non-comparable**; switch to an isolatable harness/configuration
    or use prepared analysis without a causal treatment claim.
 3. Copy the exact A and B packets from the prepared comparison. Run one or both

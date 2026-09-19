@@ -100,10 +100,11 @@ Then mark which of those are specific to that documented product and which are
 provider-neutral roles this unit uses as analytical labels.
 
 For comparison, S06 describes Claude Code’s current loop, terminal access, and
-contexts; S10 documents current OpenAI model-family context and tool settings.
-They are optional because their named settings and behavior are product- and
-version-specific. Do not infer an equivalent control surface in another
-harness.
+contexts. S10 is OpenAI’s rolling current-model guide for visible model-family
+context and tool settings. They are optional because their named settings and
+behavior are product- and version-specific; record S10’s checked date and
+model-family heading before relying on it. Do not infer an equivalent control
+surface in another harness.
 
 ## Worked example
 
@@ -208,5 +209,6 @@ Compare S06 and S10. Identify one behavior each source documents about its own
 system, then write the provider-specific qualifier that prevents it becoming a
 universal claim. For example, distinguish a documented product’s context or
 permission behavior from the generic analytical roles of context, authority,
-and environment. Record the page’s checked date from [sources.md](../sources.md)
-and recheck before relying on a current-product detail.
+and environment. Record the page’s checked date from [sources.md](../sources.md);
+for rolling S10, also record its current model-family heading and recheck before
+relying on a current-product detail.

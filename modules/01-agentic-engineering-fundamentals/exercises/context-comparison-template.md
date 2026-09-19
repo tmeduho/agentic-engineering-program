@@ -35,8 +35,8 @@
 
 | Configuration | Observed behavior | Evidence reference | Evidence type | Wrong turns | Human interventions | Uncertainty |
 | --- | --- | --- | --- | --- | --- | --- |
-| A |  |  | actual repository evidence |  |  |  |
-| B |  |  | actual repository evidence |  |  |  |
+| A |  |  |  |  |  |  |
+| B |  |  |  |  |  |  |
 
 Evidence type is one of: `actual repository evidence`, `prepared comparison
 material`, or `hypothetical counterexample`. Prepared comparison material is

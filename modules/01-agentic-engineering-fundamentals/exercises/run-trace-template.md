@@ -14,7 +14,7 @@ inapplicable label blank rather than inferring it.
 
 | Order/time | Event | Intent | Context | Inference | Tool | Environment | Observation | State | Authority | Verification | Human decision | Evidence reference | Evidence type | Uncertainty |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  |  |  |  |  |  | actual repository evidence |  |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 Evidence type is one of: `actual repository evidence`, `prepared comparison
 material`, or `hypothetical counterexample`.

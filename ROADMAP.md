@@ -6,16 +6,18 @@ The sequence is mastery-paced, not bound to four calendar weeks.
 
 | Module | Theme | Five-unit progression | Lead | Reviewer | Status |
 | --- | --- | --- | --- | --- | --- |
-| 01 | Agentic Engineering Fundamentals | models and loops → context → knowledge → harnesses → workflows | Codex | Claude | in-review |
+| 01 | Agentic Engineering Fundamentals | models and loops → context → knowledge → harnesses → workflows | Codex | Claude | verified |
 | 02 | Agent Systems | agent mechanics → primitives → tools and data → custom systems → multi-agent systems | Claude | Codex | planned |
 | 03 | AI-Native Product Engineering | product judgment → intent and specs → delegated development → verification → learning after release | Codex | Claude | planned |
 | 04 | Autonomous Engineering | autonomy → control planes → orchestration → event-driven work → self-improvement | Claude | Codex | planned |
 
 ## Module 01 — Agentic Engineering Fundamentals
 
-Outcome: reason about and experimentally compare model, context, knowledge,
-harness, and workflow choices; leave behind a reusable evidence-backed
-engineering workflow whose live and prepared capability evidence is explicit.
+Outcome: reason about model, context, knowledge, harness, and workflow choices;
+evaluate a bounded harness control and independent-verification contract;
+design one falsifiable next configuration change; and leave behind a reusable
+evidence-backed engineering workflow whose live and prepared capability
+evidence is explicit.
 
 ## Module 02 — Agent Systems
 

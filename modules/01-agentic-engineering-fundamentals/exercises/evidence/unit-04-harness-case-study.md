@@ -1,4 +1,4 @@
-# Unit 4 Prepared Evidence — Harness Case Study
+# Unit 4 Prepared Evidence — Harness Controls and Independent Verification
 
 - **Artifact status:** prepared comparison material plus actual repository
   evidence; it is a sanitized fallback, not a learner-run measurement.
@@ -26,32 +26,63 @@ candidate evaluator oracle.
 | --- | --- | --- | --- | --- | --- |
 | Baseline source and test | Unit 4 case study | actual repository evidence | `git show bb65b5c:src/config/service.ts`; `git show bb65b5c:test/init.test.ts` | Incremental baseline publication and absence of the named test | Whether a historical interruption occurred |
 | Reference implementation and test | Unit 4 case study | actual repository evidence | `git diff bb65b5c..2c498f6 -- src/config/service.ts src/storage/staged-directory.ts test/init.test.ts` | Staging, validation, rename, and the named test | Cross-filesystem and concurrent-writer behavior |
+| Repository instruction files | Unit 4 case study | actual repository evidence | `git show <pin>:AGENTS.md`; `git show <pin>:CLAUDE.md`; file diff at both pins | Both files exist and `CLAUDE.md` adds one review-verification instruction | Which file or files a historical or learner-selected harness loaded, and their runtime precedence |
 | Command records | Unit 4 case study | actual repository evidence | Disposable checkouts at both pinned revisions; exact results below | Baseline and reference verification outcomes | Agent/model/harness behavior that produced the historical repair |
-| Anonymous approaches and review | Unit 4 case study | prepared comparison material | Sanitized reconstruction from the actual source/test diff | A review exercise about publication boundaries | A timed, live second implementation run or causal attribution |
+| Anonymous approaches and review | Unit 4 case study | prepared comparison material | Sanitized reconstruction from the actual source/test diff | A review exercise about publication boundaries | A live candidate run or causal attribution |
 
 The evidence pack is outside P01 code-under-test worktrees. It can support a
 local inspection and a prepared-review fallback. It cannot support a provider
 benchmark, token comparison, agent ranking, or an assertion that a particular
 agent followed either approach.
 
-## Frozen configurations and controls
+## Prepared path and control contract
 
-| Property | Configuration A | Configuration B |
+The live path and this prepared path are alternative evidence paths, not two
+agent-system configurations. This dossier supports `critically analyzed`
+completion: inspect repository evidence, assess the explicit Unit 4 controls,
+and propose one falsifiable but untested configuration change. It contains no
+historical model/harness/settings, tool trace, approval events, interventions,
+or usage measurements. Write those values as `unknown`.
+
+The table below supplies evidence boundaries for the ten-dimension assessment;
+the learner completes its uncertainty and consequence fields in the template.
+The unit's required controls describe the exercise contract, not the historical
+configuration that produced the reference repair.
+
+| Harness dimension | Required control or available evidence | Historical configuration/observation limit |
 | --- | --- | --- |
-| Evidence source | Live learner’s available agent, if run | Prepared anonymous dossier in this file |
-| Frozen task, baseline, acceptance, authority | Exact Unit 4 task; `bb65b5c`; named test and state checks; workspace-only writes/no task-run network | Same frozen case boundary; review-only, no new authority |
-| Context | Task, P01 `AGENTS.md`, normal discovery | This sanitized dossier and cited source/test/diff evidence |
-| Intended changed dimension | — | **Evidence source: live bounded work → prepared anonymous dossier** |
-| Model/harness/settings | Record when visible; otherwise `unknown` | `unknown`; deliberately not attributed to a provider |
-| Time, tool trace, interventions, usage | Record if actually observed; otherwise `unknown` | `unknown` |
-| Unavoidable asymmetries | A is a live mutable checkout under a 35-minute/two-failure stop | B is an after-the-fact source/test review with no live tool, approval, or timing trace |
+| Context assembly and compaction | Task and repository instructions; pinned `AGENTS.md`/`CLAUDE.md` evidence below | Loaded files, precedence, memory, and compaction are `unknown`. |
+| Tool schemas, routing, and observations | Exact source/test commands and results below | Historical agent tool schemas and routing are `unknown`; shell verification is not an agent trace. |
+| Task and session state | Frozen baseline/task and retained evidence outside code worktrees | Historical session persistence and handoffs are `unknown`. |
+| Sandbox, filesystem, network, and command authority | Unit contract: disposable workspace writes, no measured-run network; setup separately recorded | Recorded verification environment is available below; historical agent enforcement is `unknown`. |
+| Approval policy | Unit contract: human authorization before dependency, scope, or authority expansion | Historical approval mode and events are `unknown`. |
+| Interface effects | This dossier provides source, tests, diffs, and command outcomes | The producing agent's interface is `unknown`. |
+| Progress and handoff | Unit contract: retain evidence and stop reason; independent acceptance | No historical progress or completion transcript exists. |
+| Retry, recovery, and termination | Unit contract: 35 minutes/two failed approaches; reference failure/retry test below | Application retry evidence does not establish agent retry/termination policy. |
+| Telemetry and missing measurements | Recorded verification commands, results, and environment below | Agent timing, usage, resource limits, and intervention telemetry are `unknown`. |
+| Stable interfaces versus stale scaffolding | Frozen CLI/error contracts and candidate-owned evaluator seam; reference API below | No evidence establishes that historical harness scaffolding was necessary or optimal. |
 
-Configuration B is an explicitly permitted dossier fallback, not a controlled
-second agent configuration. Do not compare its absent time, cost, tool count,
-or model identity with A. A future live B may change **only** context treatment
-by adding Unit 3’s proposed orientation map in a fresh session; it must record
-that map’s file-pointer advantage, context cost, maintenance status, and every
-ambient context difference.
+At both pins, `CLAUDE.md` adds one instruction absent from `AGENTS.md`: review
+Codex-authored work by independently verifying behavior and repository state
+rather than accepting the producing agent's summary. Do not edit the pinned
+evidence to remove that difference. A live learner records which instruction
+file or files the selected harness actually loaded and their precedence; if
+that cannot be observed, the value is `unknown` and the divergence remains an
+uncontrolled difference.
+
+Do not use this dossier's absent time, cost, tool count, or model identity as
+measurements for a comparison. The implementation strategies below are not
+harness configurations. No historical harness control can be inferred from
+their correctness or from the reference verification results.
+
+For completion, assess the unit's three request scenarios against its required
+controls, then write an **untested** proposal with a target failure, expected
+observation, falsifier, enforcement mechanism, and held constants. Separate
+that proposal from actual reference evidence. For example, existing green
+baseline tests cannot establish the requested new behavior: a future
+completion-control proposal must say how missing independent acceptance would
+prevent success being recorded and what observation would falsify that claim.
+Do not present the proposed mechanism as a historical fact or measured effect.
 
 **Prepared environment and permission record:** the actual source/test commands
 ran only in detached disposable worktrees, never in P01’s main checkout. The
@@ -190,7 +221,7 @@ reference command was executed in a disposable reference checkout. Package
 setup in that checkout first attempted resolution but the sandbox reported
 `ENOTFOUND`; its completed focused/full verification therefore used the same
 lockfile’s already-materialized disposable dependency tree. That environment
-difference is recorded here and must not be hidden in a live comparison.
+difference is recorded here and must not be hidden in a live case record.
 
 ## Prepared independent review and bounded conclusion
 
@@ -222,15 +253,21 @@ may fill from the reference test.
 
 For a live path, preserve the learner/agent-authored test separately. The exact
 reference test above is not preseeded into the measured task and is not applied
-to the candidate. After the run, an independent verifier writes or runs a
-behavior-level test through the candidate's documented deterministic injection
-seam only. It injects deterministic failure immediately before candidate
-publication; requires operation rejection/failure, an absent destination, no
-unpublished staging entry, a clean retry, and a blocker-free ledger check; and
+to the candidate. After the producing session stops, a second engineer or
+fresh-context agent without access to the producing conversation acts as the
+independent verifier. The evaluator-owned test remains withheld until that
+post-run phase, and the producer's conclusion is not evidence. The verifier
+writes or runs a behavior-level test through the candidate's documented
+deterministic injection seam only. It injects deterministic failure immediately
+before candidate publication; requires operation rejection/failure, an absent
+destination, no unpublished staging entry, a clean retry, and a blocker-free
+ledger check; and
 reviews the authored test separately. The verifier may adapt only to that
 documented seam and may not change production behavior. If no observable seam
 exists, acceptance fails. Seam and test-design variance are confounders, not
 reasons to alter the frozen task or force `publicationHooks.beforePublish`.
+If no independent verifier is available, the learner uses the prepared path
+and records that no live candidate acceptance was completed.
 
 **Case conclusion:** the reference test and source support a local conclusion:
 for the injected pre-publication failure in this repository’s one-writer local
