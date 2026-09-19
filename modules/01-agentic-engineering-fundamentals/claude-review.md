@@ -230,15 +230,117 @@ Finding IDs use `C-001`, `C-002`, and so on. Use only the severities defined in 
 
 ## Final verification
 
-Complete this section only after Codex records dispositions and revises the module.
+Verification date: 2026-09-18. This section supersedes the `revise` verdict
+recorded above, which remains as the historical first-review record.
 
-- Revision or commit verified:
-- Source freshness rechecked:
-- Each accepted finding verified:
-- Rejected/deferred findings and decision IDs reviewed:
-- Reproducible checks rerun:
-- New findings:
-- Final recommendation: pass | revise | reject
-- Quality-gate result:
+- **Revision or commit verified:** `2a0676f802116f28b038a281b1a377f2e2ec1eb2`,
+  covering content commits `5e8fa05`, `e3e0154`, `69ed4a5`, `112eac9`, and
+  `3230c4c` against the reviewed baseline `9bb8290`. The working tree was clean
+  throughout. `git log 2950b7f..HEAD -- claude-review.md` is empty: Codex did
+  not edit or impersonate this review record. Verification was read-only; no
+  curriculum file was modified.
+
+- **Source freshness rechecked (2026-09-18):** S01 and S10 refetched directly.
+  Both sit inside the 30-day product window. S02–S09 and S11 remain at their
+  2026-09-02 check, 16 days old, inside the 30-day product and 90-day
+  engineering windows; their anchors were verified on 2026-09-04 and no claim
+  built on them changed in this revision. P01 pins are immutable and reresolved.
+
+### Each accepted finding verified
+
+| Finding | Disposition | Verification at `2a0676f` | Result |
+| --- | --- | --- | --- |
+| C-001 | accept | Outcome 4 was **contracted**, not narrowed to fit the exercise. `brief.md` outcome 4, its acceptance row, deliverables, known risks, `ROADMAP.md`, `curriculum.md`, `lab.md` stage 4 and completion rubric, Unit 4, the template, and the dossier all state the same harness-control and independent-verification contract. The dossier's "Frozen configurations and controls" A/B table is gone. Repo-wide grep finds no residual two-configuration promise for Module 01; the two `N=1` hits in the historical plan are a grep pattern and a prohibited-claim example. The exercise now requires the ten-dimension assessment, three request decisions, and one `untested` proposal, and every one is gated by an acceptance check. Paired comparison survives as elective work in `advanced-lab.md`, which is byte-identical to the reviewed revision. Authorized by learner decision **D-011**. | **closed** |
+| C-002 | accept | Refetched the S10 URL. It is now headed "Using GPT-6 Astra" (26 occurrences; `GPT-5.6 Sol` appears twice, as the prior model) — the rolling drift the finding predicted. The words `representative` and `benchmark` occur **zero** times on the page; the only related sentence remains "start with `low` and compare results." The unsupported "benchmark configuration changes on representative work" attribution is removed from `sources.md` and `research/source-index.md`, S10 is relabelled a rolling page in both the registry row and its status cell, the verification note now records the family actually read, and S10 is dropped from the two claim-map rows it could not support. Unit 1 lines 103 and 209 now require recording S10's model-family heading and checked date. | **closed** |
+| C-003 | accept | Reproduced at both pins: `AGENTS.md` (626 B, blob `2866fc1`) and `CLAUDE.md` (768 B, blob `d59d1f0`) both exist, are byte-identical across `bb65b5c` and `2c498f6`, and differ from each other by exactly one line — the review-verification instruction. Remedied in every named site and two I did not name: Unit 4's live path and acceptance checks, the template's three instruction-file fields, the dossier's control table and evidence row, Unit 2 step 2, plus the Unit 2 and Unit 3 prepared packs. The learner must now record which file(s) actually loaded, precedence, and whether the divergence is uncontrolled, with `unknown` explicitly permitted instead of assumption. | **closed** |
+| C-004 | accept | `CLAUDE.md` added to Unit 3 step 3's inspected list, to the prepared audit's artifact table with authority/discovery/freshness/precedence/retirement, and to the required-artifact provenance table. A new acceptance check requires separate rows for both files, the recorded divergence, actual load behaviour or `unknown`, and how precedence and retirement resolve. The lesson's own drift example is now exercised rather than discarded. | **closed** |
+| C-005 | accept | Measured the new span on the current S08 markdown rendering. The two discrete excerpts — `Permission system` stopping before `Manage permissions` (769 words) and `How permissions interact with sandboxing` stopping at `Managed settings` (299 words) — total **1,068 words, ~5.3 minutes** at 200 wpm against the unchanged 10-minute allocation, leaving room for the required note. The reviewed span measured 8,891 words (~44 minutes): an **88% cut**. Rule syntax, wildcards, tool-specific rules, hooks, and working directories moved to optional depth. Unit 3's reading dropped 10→6 minutes with the 4 minutes reassigned to the map. All five unit timeboxes still sum exactly (45/60/75/90/60) and the 405-minute core total is intact. | **closed** |
+| C-007 | accept | No template preselects an evidence type: `grep "| actual repository evidence"` across `exercises/*.md` returns nothing. All three templates retain the exact three-value vocabulary inline. | **closed** |
+| C-008 | accept | `exercises/evidence/README.md` now lists all five packs with consuming exercise, evidence type, provenance, sanitization review, what each supports, and what stays uncertain. Repo-wide link check: **97 local links, 0 broken** — matching the lead's count exactly. | **closed** |
+| C-009 | accept | Unit 4 step 6, its acceptance checks, the template's verification section, the dossier, and `lab.md`'s completion rubric now all define the solo verifier as a second engineer or fresh-context agent without access to the producing conversation, hold the evaluator artifact until the producing session stops, state that the producer's conclusion is not evidence, and route an unavailable verifier to the prepared path without a live-acceptance claim. Unit 4 now matches Unit 5's precision. | **closed** |
+
+### Rejected/deferred findings and decision IDs reviewed
+
+| Item | Review |
+| --- | --- |
+| **C-006 — rejected by the lead (D-010)** | **Rejection upheld; I withdraw the finding.** The raw HTML of the S01 article contains `Aug 19, 2026` exactly once, inside the article `<header>` in a `<span class="text-default font-medium">` rendered directly above the `<h1>` and beside the `Codex` tag. It is a visible publication date and `sources.md` is correct to keep it. The root cause of my error is method, not judgement: markdown-converted fetches drop that non-prose header — a `WebFetch` of the same URL today still reports no date visible anywhere. D-010 states the disagreement fairly and preserves my 2026-09-04 observation as time-bounded rather than dismissing it. Source-quality scoring is corrected accordingly below. |
+| **C-010 — note, recorded** | Verified and **the lead's narrowing of my wording is correct**. `agents.md` confirms both claims verbatim: stewardship "by the Agentic AI Foundation under the Linux Foundation," and "the closest one takes precedence" / "The closest `AGENTS.md` to the edited file wins." The lead's added qualifier — that this is not evidence every implementation follows that precedence — is right and I adopt it. On arXiv 2606.25447, the abstract contains **no** instance of `interact`, `additive`, `compose`, `joint`, or `jointly`; it reports that harness-aware post-training improves in-distribution performance and OOD robustness while a minimal harness suffers "a drastic performance drop" under tool-environment shift. My "interact rather than compose additively" over-read the paper; "joint, configuration-dependent effects in ALFWorld" is the accurate statement. Correct handling: neither source promoted, D-008 still learner-pending. |
+| **D-011 — learner acceptance of the D-009 contraction** | Reviewed. D-009 is preserved byte-for-byte as the pending proposal and D-011 appends the superseding acceptance rather than rewriting history, which is the right record shape. The C-001 closure rests entirely on this decision being genuine — see new finding C-013. |
+| **D-007, D-008** | Both remain `proposed`, learner-pending. Neither was silently promoted to an accepted exception, and neither is used to discharge a finding. |
+| **Deferred release prerequisites** | Unchanged and still correctly excluded from the internal gate: timed human/cohort and live cold-reader pilot, public P01 access and release, curriculum and P01 licences, verified non-POSIX instructions, the D-008 reading decision, and the recorded network/package-store setup limitation. |
+
+### Reproducible checks rerun
+
+| # | Check | Result at `2a0676f` |
+| --- | --- | --- |
+| 1 | Both P01 pins resolve; `AGENTS.md`/`CLAUDE.md` blob identity across pins | Resolve; both files identical across pins, one-line divergence between them |
+| 2 | Unit 4 reference seam `publicationHooks.beforePublish` | Real at `2c498f6` in `src/config/service.ts:99`, `src/experiments/service.ts:168`, `src/runs/service.ts:267` — still production surface, so the no-forcing rule still binds |
+| 3 | Four named regression tests cited by Units 1, 2, 5 | All present at the reference pin |
+| 4 | All Unit 3 inspected paths, including the newly added `CLAUDE.md` | Present at both pins |
+| 5 | Repo-wide local link integrity | 40 markdown files, 97 links, 0 broken |
+| 6 | MEGA matrix counts | Still exactly 18 Teach / 9 Touch, matching the stated claim |
+| 7 | Timebox arithmetic after the Unit 3/4 rebalance | 12+10+18+5=45; 12+12+8+23+5=60; 12+6+22+25+10=75; 12+10+10+35+18+5=90; 10+10+12+20+8=60; 330+75=405 |
+| 8 | S08 required-reading span measurement | 1,068 words / ~5.3 min against a 10-minute allocation |
+| 9 | S10 live content and attribution | GPT-6 Astra; zero `representative`/`benchmark` occurrences |
+| 10 | S01 visible publication date in raw HTML | `Aug 19, 2026` present in the article header |
+
+Checks 7 and 8 of the first review — the Node `--test-name-pattern` false-green
+that Unit 5's acceptance gate is built on — were not rerun. Unit 5 and its
+evidence pack are unchanged in this revision and both P01 pins are immutable,
+so those results stand by construction. No verification was run against P01's
+main checkout, and no worktree was created or removed.
+
+### New findings
+
+| ID | Severity | Artifact | Finding | Required change |
+| --- | --- | --- | --- | --- |
+| C-011 | note | `DECISIONS.md` D-011; C-001 closure | The entire C-001 closure depends on D-011 recording a real learner decision to contract an approved outcome. That is the one claim in this revision I cannot verify from the repository — the record is self-attesting and the commit author is the same for every commit. Nothing suggests it is wrong, and it is the learner's own record to make. | Learner confirms D-011 reflects their actual decision before marking the module `approved`. No agent change required. |
+| C-012 | note | Unit 4 lesson/template/pack, `lab.md`, `facilitator-guide.md` | The live/prepared contract language is now restated in five files. The lead identified this itself and retained it deliberately for self-contained readers, which is defensible, but the revision grew the surface that must be changed together: a future edit to the verifier definition or the three request scenarios has five sites to keep in sync. | None now. Track as maintenance cost; if Module 02 restates the same contract, extract it to one shared page rather than a sixth copy. |
+| C-013 | note | `units/04-harness-comparison.md` filename | The unit is retitled "Harness Controls and Independent Verification" but the file is still `04-harness-comparison.md`, and `sources.md` and `curriculum.md` now carry the new title against the old path. All links resolve, so this is cosmetic. | Optional. Renaming costs link churn across eight references for no learner benefit; leaving it is the cheaper choice. |
+
+No new `blocker`, `major`, or `minor` finding. C-011 through C-013 are
+non-blocking observations and none gates verification.
+
+### Revised scores
+
+| Dimension | First review | Now | Basis for the change |
+| --- | ---: | ---: | --- |
+| Technical correctness | 4 | **5** | Both deductions closed and independently reverified (C-002, C-003); the third, C-006, was my error, not a module defect. |
+| Technical depth | 5 | 5 | Unchanged. The ten-dimension control inventory is now assessed rather than merely presented. |
+| Production relevance | 5 | 5 | Unchanged. |
+| Source quality and currency | 3 | **4** | S10's unsupported attribution removed and the page correctly labelled rolling and rechecked; S01 upheld. Not 5: S10 stays a rolling URL by choice, and D-008's non-vendor required reading is still unresolved. |
+| Lab validity | 4 | **5** | All three named deductions closed (C-001, C-003, C-005). The un-run timed pilot was a stated improvement, not a deduction, and remains a release prerequisite. |
+| Verification quality | 4 | **5** | C-009 closed with a concrete solo default in five places, plus the withheld-artifact and producer-conclusion rules. |
+| Personal relevance | 5 | 5 | Unchanged. |
+| Coherence and efficiency | 4 | 4 | C-005, C-007, and C-008 closed, but the revision materially grew the repeated-contract synchronization surface (C-012). The gains and the new cost offset. |
+| **Total / 40** | **34** | **38** | `5 + 5 + 5 + 4 + 5 + 5 + 5 + 4 = 38`. |
+
+I raised five dimensions on verified evidence and held two that improved less
+than their closures alone would suggest. The lead's own final self-score was
+35/40; I am above it, which I record deliberately — the revision closed more
+than it claimed, and lowering a score to preserve distance from the lead would
+be the same failure as raising one to agree with them.
+
+- **Final recommendation: `pass`** — recommend moving Module 01 to `verified`.
+
+- **Quality-gate result: all 13 gates pass.** Total 38/40 clears 32; no
+  dimension below 3; technical correctness 5 and lab validity 5 both clear the
+  4 floor; no open blockers; no open majors; every stated outcome is exercised
+  by the curriculum and checked by the lab; the lab has a baseline, reproducible
+  procedure, captured evidence, acceptance checks, and an independent
+  verification step with a defined solo default; every time-sensitive claim is
+  currently sourced or explicitly labelled rolling; beginner material is absent;
+  the lead dispositioned all ten findings; and this verification examined the
+  revision at `2a0676f` rather than the original draft.
+
+The four gates that failed the first review — outcome coverage, unaccepted
+majors, source freshness, and whether the lab exercises the stated skills — all
+pass. The structural one is genuinely fixed rather than reworded: Unit 4 no
+longer promises a comparison it never ran, and the outcome it now states is the
+one its exercise and acceptance checks actually assess. The honest route would
+have been available in the other direction too — keeping the comparison wording
+and letting the dossier stand in for a second configuration — and the lead did
+not take it.
 
 Claude may recommend `pass`; only the learner may mark the module `approved`.
+Release prerequisites listed above remain open and are outside this gate.
