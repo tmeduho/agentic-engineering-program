@@ -1,6 +1,6 @@
 # Module 01 Brief — Agentic Engineering Fundamentals
 
-- Status: in-review
+- Status: verified
 - Lead: Codex
 - Adversarial reviewer and final verifier: Claude
 - Source freshness metadata: [sources.md](sources.md) is the sole registry

@@ -6,7 +6,7 @@ The sequence is mastery-paced, not bound to four calendar weeks.
 
 | Module | Theme | Five-unit progression | Lead | Reviewer | Status |
 | --- | --- | --- | --- | --- | --- |
-| 01 | Agentic Engineering Fundamentals | models and loops → context → knowledge → harnesses → workflows | Codex | Claude | in-review |
+| 01 | Agentic Engineering Fundamentals | models and loops → context → knowledge → harnesses → workflows | Codex | Claude | verified |
 | 02 | Agent Systems | agent mechanics → primitives → tools and data → custom systems → multi-agent systems | Claude | Codex | planned |
 | 03 | AI-Native Product Engineering | product judgment → intent and specs → delegated development → verification → learning after release | Codex | Claude | planned |
 | 04 | Autonomous Engineering | autonomy → control planes → orchestration → event-driven work → self-improvement | Claude | Codex | planned |

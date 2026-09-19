@@ -1,27 +1,40 @@
 # Codex Review Record — Module 01
 
-This is the lead self-review. It records readiness for Claude's independent
-adversarial review; it is not independent verification and does not make the
-module verified, approved, published, or public-ready.
+This is the lead self-review and verification closeout record. Claude's
+independent final verification supports the module's `verified` status. This
+record does not make the module learner-approved, published, or public-ready.
 
 ## Current handoff
 
-- Status: revision implemented for C-001 through C-005 and C-007 through
-  C-009; C-006 is rejected with current evidence and C-010 is recorded. The
-  module is ready for Claude's independent final verification, not verified or
-  approved.
-- Revised content commits: `5e8fa05cf817` and `69ed4a5`.
-- Claude review record commit: `2950b7f1b926`.
-- Review-record commit: intentionally not named here; this record cannot review
-  the commit that contains it.
+- Status: `verified`. Claude's final verification at `2a0676f80211` passed all
+  13 hard gates with a score of 38/40 and no open blocker, major, or minor
+  finding. The module is not learner-approved, published, or public-ready.
+- Revised content commits: `5e8fa05cf817` through `2a0676f80211`.
+- Claude first-review record commit: `2950b7f1b926`.
+- Claude final-verification record commit: `6b121ce`.
+- Lead closeout commit: intentionally not named here; this record cannot name
+  the commit that contains its latest state.
 - Provisional decisions: D-007 and D-008 remain proposed with learner decision
   pending. The learner accepted D-009 through superseding decision D-011 on
   2026-09-18.
-- Remaining prerequisites: timed human/cohort and live cold-reader pilot;
-  public P01 access/release; curriculum and P01 licenses; verified non-POSIX
-  instructions; bounded required non-vendor reading decision; and the recorded
-  network/package-store setup limitation. Claude's final verification remains
-  an internal release gate.
+- Remaining approval and release prerequisites: timed human/cohort and live
+  cold-reader pilot; public P01 access/release; curriculum and P01 licenses;
+  verified non-POSIX instructions; bounded required non-vendor reading decision;
+  and the recorded network/package-store setup limitation.
+
+### Final-verification closeout
+
+- C-011 does not gate `verified`. D-011 records the learner's explicit approval
+  of the Unit 4 contraction; the whole module still requires a separate
+  learner-owned approval decision after the remaining approval prerequisites.
+- C-012 is retained as a maintenance-cost note. Do not copy the live/prepared
+  contract into Module 02; extract a shared contract first if reuse is needed.
+- C-013 is intentionally left unchanged: the historical Unit 4 filename costs
+  less than renaming eight valid references and has no learner-facing effect.
+- Claude's D-011 review row says "see new finding C-013" where the authenticity
+  note is C-011. The reviewer-authored file remains unchanged; this closeout
+  records the non-substantive cross-reference correction without impersonating
+  the reviewer.
 
 ## Response to Claude's 2026-09-04 review
 
@@ -31,25 +44,25 @@ does not modify or impersonate `claude-review.md`.
 
 | Finding | Disposition | Evidence and change | Status |
 | --- | --- | --- | --- |
-| C-001 | accept | The learner accepted the D-009 proposal through D-011. Unit 4 now evaluates one bounded live run or prepared dossier against a ten-dimension harness-control and independent-verification contract, requires decisions for three concrete control requests, and produces one explicitly untested falsifiable configuration-change proposal. The brief, lab, roadmap, approved design, implementation plan, template, dossier, source map, facilitation, and evidence index now use that outcome. The two evidence paths are not represented as configurations; paired experiments remain elective in `advanced-lab.md`. | fixed; pending Claude verification |
-| C-002 | accept | S10 is now explicitly a rolling current-model page checked 2026-09-18; the stale GPT-5.6 note and unsupported representative-workload attribution were removed from `sources.md`, `research/source-index.md`, and Unit 1. Stable claims no longer rely on S10. | fixed; pending Claude verification |
-| C-003 | accept | Units 2 and 4, the Unit 2/4 prepared packs, and the Unit 4 template now name both P01 instruction files, their one-line divergence, actual harness loading and precedence, and `unknown`/uncontrolled handling. The pinned P01 evidence remains unchanged. | fixed; pending Claude verification |
-| C-004 | accept | Unit 3 and its prepared audit now inspect separate `AGENTS.md` and `CLAUDE.md` rows with authority, discovery/loading, precedence, freshness, and retirement treatment. | fixed; pending Claude verification |
-| C-005 | accept | Unit 4 now assigns two discrete S08 excerpts rather than the intervening reference span, and moves rule syntax and tool-specific detail to optional depth. Unit 3's short S09 excerpt is reduced from 10 to 6 minutes, with the recovered time assigned to the knowledge map. | fixed; pending Claude verification |
-| C-006 | reject | The official S01 page visibly displays “Aug 19, 2026” as of 2026-09-18. D-010 records the time-bounded disagreement; the source registry retains the date and current checked evidence. | rejected with evidence; pending Claude review of D-010 |
-| C-007 | accept | The run-trace, context-comparison, and harness-case templates no longer preselect `actual repository evidence`; each retains the exact three-value evidence vocabulary. | fixed; pending Claude verification |
-| C-008 | accept | The evidence index now links all five prepared packs and records consumer, evidence type, provenance, support, and uncertainty. | fixed; pending Claude verification |
-| C-009 | accept | Unit 4, its template and prepared pack, and the lab now define the solo verifier as a second engineer or fresh-context agent without the producing conversation. The evaluator artifact remains withheld until the producing session stops; no available verifier means use the prepared path without a live-acceptance claim. | fixed; pending Claude verification |
+| C-001 | accept | The learner accepted the D-009 proposal through D-011. Unit 4 now evaluates one bounded live run or prepared dossier against a ten-dimension harness-control and independent-verification contract, requires decisions for three concrete control requests, and produces one explicitly untested falsifiable configuration-change proposal. The brief, lab, roadmap, approved design, implementation plan, template, dossier, source map, facilitation, and evidence index now use that outcome. The two evidence paths are not represented as configurations; paired experiments remain elective in `advanced-lab.md`. | closed by Claude final verification |
+| C-002 | accept | S10 is now explicitly a rolling current-model page checked 2026-09-18; the stale GPT-5.6 note and unsupported representative-workload attribution were removed from `sources.md`, `research/source-index.md`, and Unit 1. Stable claims no longer rely on S10. | closed by Claude final verification |
+| C-003 | accept | Units 2 and 4, the Unit 2/4 prepared packs, and the Unit 4 template now name both P01 instruction files, their one-line divergence, actual harness loading and precedence, and `unknown`/uncontrolled handling. The pinned P01 evidence remains unchanged. | closed by Claude final verification |
+| C-004 | accept | Unit 3 and its prepared audit now inspect separate `AGENTS.md` and `CLAUDE.md` rows with authority, discovery/loading, precedence, freshness, and retirement treatment. | closed by Claude final verification |
+| C-005 | accept | Unit 4 now assigns two discrete S08 excerpts rather than the intervening reference span, and moves rule syntax and tool-specific detail to optional depth. Unit 3's short S09 excerpt is reduced from 10 to 6 minutes, with the recovered time assigned to the knowledge map. | closed by Claude final verification |
+| C-006 | reject | The official S01 page visibly displays “Aug 19, 2026” as of 2026-09-18. D-010 records the time-bounded disagreement; the source registry retains the date and current checked evidence. | rejection upheld; finding withdrawn by Claude |
+| C-007 | accept | The run-trace, context-comparison, and harness-case templates no longer preselect `actual repository evidence`; each retains the exact three-value evidence vocabulary. | closed by Claude final verification |
+| C-008 | accept | The evidence index now links all five prepared packs and records consumer, evidence type, provenance, support, and uncertainty. | closed by Claude final verification |
+| C-009 | accept | Unit 4, its template and prepared pack, and the lab now define the solo verifier as a second engineer or fresh-context agent without the producing conversation. The evaluator artifact remains withheld until the producing session stops; no available verifier means use the prepared path without a live-acceptance claim. | closed by Claude final verification |
 | C-010 | note accepted; no required curriculum change | The source-validation note confirms `agents.md` as a qualified cross-tool candidate and narrows the paper claim to joint, configuration-dependent effects in ALFWorld. D-008 remains learner-pending, so neither source was promoted to required reading. | recorded; no content gate claimed closed |
 
-### Post-revision hard-gate status
+### Post-verification hard-gate status
 
 | Gate affected by Claude's review | Current result | Reason |
 | --- | --- | --- |
-| Outcomes are measurable and fully covered. | pass pending verifier | D-011 accepted D-009 and replaced the unsupported comparison promise with the assessed harness-control case outcome. |
-| No unaccepted major findings remain. | pass pending verifier | C-001 through C-005 have implemented remedies; Claude must verify them. |
-| Fast-moving claims satisfy the source-freshness policy. | pass pending verifier | C-002 was corrected and rechecked on 2026-09-18. |
-| The lab exercises the stated skills rather than adjacent skills. | pass pending verifier | Unit 4 now directly assesses control classification, independent verification, request decisions, and falsifiable next-change design. |
+| Outcomes are measurable and fully covered. | pass | D-011 accepted D-009 and replaced the unsupported comparison promise with the assessed harness-control case outcome; Claude verified the resulting contract. |
+| No unaccepted major findings remain. | pass | Claude closed C-001 through C-005 and reported no new blocker, major, or minor finding. |
+| Fast-moving claims satisfy the source-freshness policy. | pass | C-002 was corrected, rechecked on 2026-09-18, and independently verified. |
+| The lab exercises the stated skills rather than adjacent skills. | pass | Claude verified that Unit 4 directly assesses control classification, independent verification, request decisions, and falsifiable next-change design. |
 | Every reviewer finding has a lead disposition. | pass | C-001 through C-010 are dispositioned above; D-011 records the learner's scope decision and D-010 records the material disagreement. |
 
 The final two-axis re-review of `e3e0154...3230c4c` found no spec findings and
